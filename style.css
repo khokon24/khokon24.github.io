@@ -38,12 +38,12 @@ footer {
     margin-top: 40px;
 }
 Add style.css
-.contact-container a {
+#contact a {
     color: #00ffff;
     text-decoration: none;
     font-weight: 500;
 }
 
-.contact-container a:hover {
+#contact a:hover {
     color: #00cccc;
 }

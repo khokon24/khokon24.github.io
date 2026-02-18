@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khokon Ahmed | Web Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 7%;
+    background:rgba(0,0,0,0.5);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#00f5c4;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#00f5c4;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:110px 20px 90px;
+}
+
+.hero h1{
+    font-size:34px;
+    line-height:1.3;
+}
+
+.hero h1 span{
+    color:#00f5c4;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:16px;
+}
+
+.brand{
+    color:#00f5c4;
+    font-weight:600;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 22px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.primary{
+    background:#00f5c4;
+    color:black;
+}
+
+.primary:hover{
+    background:white;
+}
+
+.outline{
+    border:2px solid #00f5c4;
+    color:#00f5c4;
+}
+
+.outline:hover{
+    background:#00f5c4;
+    color:black;
+}
+
+/* SECTION */
+section{
+    padding:80px 7%;
+    text-align:center;
+}
+
+.projects{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-top:30px;
+}
+
+.project{
+    padding:25px;
+    border-radius:12px;
+}
+
+.corporate{background:#1abc9c;}
+.ecommerce{background:#e67e22;}
+.landing{background:#9b59b6;}
+
+/* CONTACT */
+.contact-info p{
+    margin:10px 0;
+}
+
+.contact-info i{
+    margin-right:6px;
+    color:#00f5c4;
+}
+
+.contact-info a{
+    color:#00f5c4;
+    text-decoration:none;
+}
+
+form{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+form input, form textarea{
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+form button{
+    padding:12px;
+    border:none;
+    background:#00f5c4;
+    font-weight:bold;
+    border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.5);
+    font-size:14px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    color:white;
+    text-decoration:none;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">khokon<span>.Dev</span></div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <h1>I’m <span>Khokon Ahmed</span></h1>
+    <p>Founder of <span class="brand">khokonweb</span> | Professional Web Developer</p>
+
+    <div class="buttons">
+        <a href="https://www.fiverr.com/khokondev" target="_blank" class="btn primary">Hire Me</a>
+        <a href="#contact" class="btn outline">Contact</a>
+    </div>
+</section>
+
+<section id="work">
+    <h2>My Projects</h2>
+    <div class="projects">
+        <div class="project corporate">
+            <h3>Corporate Website</h3>
+            <p>Modern business responsive website.</p>
+        </div>
+        <div class="project ecommerce">
+            <h3>E-commerce Store</h3>
+            <p>Online shop with clean UI.</p>
+        </div>
+        <div class="project landing">
+            <h3>Landing Page</h3>
+            <p>High converting landing design.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-info">
+        <p><i class="fa-solid fa-envelope"></i> contact.khokonweb@gmail.com</p>
+        <p><i class="fa-brands fa-github"></i> github.com/khokon24</p>
+        <p><i class="fa-solid fa-briefcase"></i> fiverr.com/khokondev</p>
+        <p>
+<i class="fa-brands fa-whatsapp"></i>
+<a href="https://wa.me/8801739656582?text=Hello%20Khokon%20Ahmed%2C%20I%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank">
+Chat on WhatsApp
+</a>
+</p>
+    </div>
+
+    <form action="https://formspree.io/f/xojnlako" method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <!-- Hidden Fields -->
+    <input type="hidden" name="_subject" value="New message from khokon.Dev Portfolio">
+    <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="thankyou.html">
+<input type="hidden" name="_next" value="thankyou.html">
+<input type="hidden" name="_subject" value="New Message from Khokon Portfolio">
+<input type="hidden" name="_next" value="thankyou.html">
+<input type="hidden" name="_next" value="https://khokon24.github.io/thankyou.html">
+    <button type="submit">Send Message</button>
+
+</form>
+</section>
+
+<footer>
+    © 2026 Khokon Ahmed | All Rights Reserved
+</footer>
+
+<a href="https://wa.me/8801739656582" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>

@@ -1,109 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khokon Ahmed | Professional Web Developer</title>
-<meta name="description" content="Khokon Ahmed is a professional web developer. Expert in responsive websites, landing pages & WordPress development.">
-<link rel="stylesheet" href="style.css">
-</head>
+    <title>Weather App - Khokon Ahmed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#00c6ff,#0072ff);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
 
+        .card{
+            background:#fff;
+            padding:30px;
+            border-radius:15px;
+            width:300px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        input{
+            width:80%;
+            padding:8px;
+            margin-bottom:10px;
+        }
+
+        button{
+            padding:8px 15px;
+            border:none;
+            background:#0072ff;
+            color:#fff;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .result{
+            margin-top:15px;
+        }
+    </style>
+</head>
 <body>
 
-<!-- HERO SECTION -->
+<div class="card">
+    <h2>Weather App</h2>
+    <p>By Khokon Ahmed</p>
 
-<section class="hero">
-  <div class="container hero-container">
+    <input type="text" id="city" placeholder="Enter City Name">
+    <br>
+    <button onclick="getWeather()">Search</button>
 
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Khokon Ahmed</span></h1>
-      <h2>Professional Web Developer</h2>
-      <p>
-        I build modern, responsive and high-converting websites 
-        for businesses worldwide. Expert in HTML, CSS, JavaScript & WordPress.
-      </p>
+    <div class="result" id="result"></div>
+</div>
 
-      <div class="hero-buttons">
-        <a href="https://www.fiverr.com/khokondev" class="btn-primary" target="_blank">Hire Me</a>
-        <a href="#services" class="btn-secondary">My Services</a>
-      </div>
-    </div>
+<script>
+async function getWeather(){
+    const city = document.getElementById("city").value;
+    const result = document.getElementById("result");
 
-    <div class="hero-image">
-      <img src="profile.jpg" alt="Khokon Ahmed">
-    </div>
+    if(city === ""){
+        result.innerHTML = "Please enter city name";
+        return;
+    }
 
-  </div>
-</section>
+    const apiKey = "f487867752c283bfd975a0bed3445f02";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-<!-- SERVICES -->
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
 
-<section class="section" id="services">
-  <div class="container">
-    <h2>My Services</h2>
-
-    <div class="services">
-
-      <div class="service-box design">
-        <h3>Website Design</h3>
-        <p>Modern, responsive & business-focused website design.</p>
-      </div>
-
-      <div class="service-box wordpress">
-        <h3>WordPress Development</h3>
-        <p>Professional WordPress website & customization services.</p>
-      </div>
-
-      <div class="service-box landing">
-        <h3>Landing Pages</h3>
-        <p>High-converting landing pages for marketing campaigns.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-  <div class="container">
-    <h2>Contact Me</h2>
-
-    <div class="contact-box">
-
-      <p>Email:
-        <a href="mailto:contact.khokonweb@gmail.com">
-          contact.khokonweb@gmail.com
-        </a>
-      </p>
-
-      <p>WhatsApp:
-        <a href="https://wa.me/8801739656582" target="_blank">
-          Chat on WhatsApp
-        </a>
-      </p>
-
-      <p>Fiverr:
-        <a href="https://www.fiverr.com/khokondev" target="_blank">
-          fiverr.com/khokondev
-        </a>
-      </p>
-
-      <br>
-
-      <a href="https://www.fiverr.com/khokondev"
-         class="btn-primary"
-         target="_blank">
-         Hire Me on Fiverr
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Khokon Ahmed | All Rights Reserved
-</footer>
+        if(data.cod === "404"){
+            result.innerHTML = "City not found";
+        }else{
+            result.innerHTML = `
+                <h3>${data.name}</h3>
+                <p>Temperature: ${data.main.temp} °C</p>
+                <p>Weather: ${data.weather[0].description}</p>
+            `;
+        }
+    }catch(error){
+        result.innerHTML = "Error fetching data";
+    }
+}
+</script>
 
 </body>
 </html>

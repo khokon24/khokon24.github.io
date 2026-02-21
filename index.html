@@ -1,92 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Weather App - Khokon Ahmed</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg,#00c6ff,#0072ff);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
-
-        .card{
-            background:#fff;
-            padding:30px;
-            border-radius:15px;
-            width:300px;
-            text-align:center;
-            box-shadow:0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        input{
-            width:80%;
-            padding:8px;
-            margin-bottom:10px;
-        }
-
-        button{
-            padding:8px 15px;
-            border:none;
-            background:#0072ff;
-            color:#fff;
-            border-radius:5px;
-            cursor:pointer;
-        }
-
-        .result{
-            margin-top:15px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khokon Ahmed | Professional Web Developer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
-    <h2>Weather App</h2>
-    <p>By Khokon Ahmed</p>
+<nav>
+    <div class="logo">Khokon<span>Dev</span></div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <input type="text" id="city" placeholder="Enter City Name">
-    <br>
-    <button onclick="getWeather()">Search</button>
+<section class="hero">
+    <h1>Hello, I'm <span>Khokon Ahmed</span></h1>
+    <p>Professional Web Developer | HTML | CSS | JavaScript</p>
+    <a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Hire Me on Fiverr</a>
+</section>
 
-    <div class="result" id="result"></div>
-</div>
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate web developer from Bangladesh.
+        I build modern, responsive and professional websites using
+        HTML, CSS and JavaScript.
+    </p>
+</section>
 
-<script>
-async function getWeather(){
-    const city = document.getElementById("city").value;
-    const result = document.getElementById("result");
+<section id="services" class="section dark">
+    <h2>My Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Website Design</h3>
+            <p>Modern, responsive and clean UI design.</p>
+        </div>
+        <div class="card">
+            <h3>Frontend Development</h3>
+            <p>Professional coding with clean structure.</p>
+        </div>
+        <div class="card">
+            <h3>Bug Fixing</h3>
+            <p>Fix HTML, CSS and layout issues fast.</p>
+        </div>
+    </div>
+</section>
 
-    if(city === ""){
-        result.innerHTML = "Please enter city name";
-        return;
-    }
+<section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Weather App</h3>
+            <p>Live weather application using API integration.</p>
+            <a href="projects/weather-app/index.html" class="project-btn">View Project</a>
+        </div>
+    </div>
+</section>
 
-    const apiKey = "f487867752c283bfd975a0bed3445f02";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+<section id="contact" class="section dark">
+    <h2>Contact Me</h2>
+    <p>Email: contact.khokonweb@gmail.com</p>
+    <p>WhatsApp: 01739656582</p>
+</section>
 
-    try{
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if(data.cod === "404"){
-            result.innerHTML = "City not found";
-        }else{
-            result.innerHTML = `
-                <h3>${data.name}</h3>
-                <p>Temperature: ${data.main.temp} °C</p>
-                <p>Weather: ${data.weather[0].description}</p>
-            `;
-        }
-    }catch(error){
-        result.innerHTML = "Error fetching data";
-    }
-}
-</script>
+<footer>
+    <p>© 2026 Khokon Ahmed | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>

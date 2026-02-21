@@ -4,161 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khokon Ahmed | Professional Web Developer</title>
-  <link rel="stylesheet" href="style.css">
 
 <meta name="description" content="Khokon Ahmed is a professional web developer. Expert in responsive websites, landing pages & WordPress development.">
 
-<style>
-
-body{
-  margin:0;
-  font-family:'Segoe UI', sans-serif;
-  background:#f4f6f9;
-}
-
-/* HERO SECTION */
-
-.hero{
-  padding:80px 20px;
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color:white;
-}
-
-.hero-container{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-}
-
-.hero-text{
-  flex:1;
-  min-width:280px;
-}
-
-.hero-text h1{
-  font-size:42px;
-  margin-bottom:10px;
-}
-
-.hero-text span{
-  color:#00e0ff;
-}
-
-.hero-text h2{
-  font-weight:400;
-  margin-bottom:20px;
-}
-
-.hero-text p{
-  margin-bottom:30px;
-  line-height:1.6;
-}
-
-.hero-buttons a{
-  text-decoration:none;
-  padding:12px 25px;
-  margin-right:10px;
-  border-radius:30px;
-  transition:.3s;
-}
-
-.btn-primary{
-  background:#00e0ff;
-  color:black;
-}
-
-.btn-primary:hover{
-  background:white;
-}
-
-.btn-secondary{
-  border:2px solid white;
-  color:white;
-}
-
-.btn-secondary:hover{
-  background:white;
-  color:black;
-}
-
-.hero-image{
-  flex:1;
-  text-align:center;
-  min-width:280px;
-}
-
-.hero-image img{
-  width:280px;
-  border-radius:50%;
-  box-shadow:0 10px 40px rgba(0,0,0,0.5);
-}
-
-/* SERVICES */
-
-.section{
-  padding:80px 20px;
-  text-align:center;
-}
-
-.section h2{
-  margin-bottom:40px;
-  font-size:30px;
-}
-
-.services{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:30px;
-}
-
-.service-box{
-  background:white;
-  padding:30px;
-  width:280px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:.3s;
-}
-
-.service-box:hover{
-  transform:translateY(-10px);
-}
-
-/* CONTACT */
-
-.contact{
-  background:#111;
-  color:white;
-}
-
-/* FOOTER */
-
-footer{
-  background:#000;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-
-@media(max-width:768px){
-  .hero-text h1{
-    font-size:32px;
-  }
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- HERO -->
-
 <section class="hero">
-  <div class="hero-container">
+  <div class="container hero-container">
 
     <div class="hero-text">
       <h1>Hi, I'm <span>Khokon Ahmed</span></h1>
@@ -169,7 +25,7 @@ footer{
       </p>
 
       <div class="hero-buttons">
-      <a href="https://www.fiverr.com/khokondev" class="btn" target="_blank">Hire Me</a>
+        <a href="https://www.fiverr.com/khokondev" class="btn-primary" target="_blank">Hire Me</a>
         <a href="#services" class="btn-secondary">My Services</a>
       </div>
     </div>
@@ -182,41 +38,54 @@ footer{
 </section>
 
 <!-- SERVICES -->
-
 <section class="section" id="services">
-  <h2>My Services</h2>
+  <div class="container">
+    <h2>My Services</h2>
 
-  <div class="services">
-    <div class="service-box">
-      <h3>Website Design</h3>
-      <p>Modern, responsive & business focused website design.</p>
-    </div>
+    <div class="services">
+      <div class="service-box">
+        <h3>Website Design</h3>
+        <p>Modern, responsive & business-focused website design.</p>
+      </div>
 
-    <div class="service-box">
-      <h3>WordPress Development</h3>
-      <p>Professional WordPress website & customization services.</p>
-    </div>
+      <div class="service-box">
+        <h3>WordPress Development</h3>
+        <p>Professional WordPress website & customization services.</p>
+      </div>
 
-    <div class="service-box">
-      <h3>Landing Pages</h3>
-      <p>High converting landing pages for marketing campaigns.</p>
+      <div class="service-box">
+        <h3>Landing Pages</h3>
+        <p>High-converting landing pages for marketing campaigns.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact Me</h2>
 
-<section class="section contact" id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:contact.khokonweb@gmail.com">contact.khokonweb@gmail.com</a></p>
-  <p>WhatsApp: 
-<a href="https://wa.me/8801739656582" target="_blank">
-Chat on WhatsApp
-</a>
-  </p>
-  <p>Fiverr: 
-<a href="https://www.fiverr.com/khokondev" class="btn btn-primary" target="_blank">Hire Me</a>
-</p>
+    <div class="contact-box">
+      <p>Email: 
+        <a href="mailto:contact.khokonweb@gmail.com">
+          contact.khokonweb@gmail.com
+        </a>
+      </p>
+
+      <p>WhatsApp: 
+        <a href="https://wa.me/8801739656582" target="_blank">
+          Chat on WhatsApp
+        </a>
+      </p>
+
+      <p>Fiverr: 
+        <a href="https://www.fiverr.com/khokondev" target="_blank">
+          Visit My Fiverr Profile
+        </a>
+      </p>
+    </div>
+  </div>
 </section>
 
 <footer>

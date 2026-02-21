@@ -133,21 +133,28 @@ body{
 
 /* CONTACT */
 
-.contact{
-  background:#111;
-  color:white;
-}
-.contact a {
+.contact {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+.contact p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.contact a {
+  color: #00d4ff;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s ease;
 }
 
 .contact a:hover {
-  color: #00bfff;
-  text-shadow: 0 0 8px rgba(0,191,255,0.7);
-  }
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0,212,255,0.8);
+}
 
 /* FOOTER */
 

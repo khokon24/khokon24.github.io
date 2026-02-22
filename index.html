@@ -10,18 +10,29 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="logo">Khokon Ahmed</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
 <h1>Hello, I'm <span>Khokon Ahmed</span></h1>
 <h3>I am a <span class="typing"></span></h3>
-<br>
-<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn btn-primary">
+<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">
 Hire Me on Fiverr
 </a>
 </section>
 
 <!-- SERVICES -->
-<section>
+<section id="services">
 <h2>My Services</h2>
 <div class="grid">
 
@@ -44,61 +55,52 @@ Hire Me on Fiverr
 </section>
 
 <!-- SKILLS -->
-<section>
+<section id="skills">
 <h2>My Skills</h2>
 
 <div class="skill">
 <p>HTML</p>
-<div class="bar">
-<div class="progress" data-width="95%"></div>
-</div>
+<div class="bar"><div class="progress" data-width="95%"></div></div>
 </div>
 
 <div class="skill">
 <p>CSS</p>
-<div class="bar">
-<div class="progress" data-width="90%"></div>
-</div>
+<div class="bar"><div class="progress" data-width="90%"></div></div>
 </div>
 
 <div class="skill">
 <p>JavaScript</p>
-<div class="bar">
-<div class="progress" data-width="85%"></div>
-</div>
+<div class="bar"><div class="progress" data-width="85%"></div></div>
 </div>
 
 </section>
 
 <!-- PROJECTS -->
-<section>
+<section id="projects">
 <h2>My Projects</h2>
 <div class="grid">
 
 <div class="project">
-<img src="https://via.placeholder.com/400x250" alt="Project 1">
+<img src="https://picsum.photos/400/250?1">
 <div class="overlay">
 <h3>Landing Page</h3>
-<br>
-<a href="#" class="btn btn-primary">View Project</a>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
 <div class="project">
-<img src="https://via.placeholder.com/400x250" alt="Project 2">
+<img src="https://picsum.photos/400/250?2">
 <div class="overlay">
 <h3>Portfolio Website</h3>
-<br>
-<a href="#" class="btn btn-primary">View Project</a>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
 <div class="project">
-<img src="https://via.placeholder.com/400x250" alt="Project 3">
+<img src="https://picsum.photos/400/250?3">
 <div class="overlay">
 <h3>Web App</h3>
-<br>
-<a href="#" class="btn btn-primary">View Project</a>
+<a href="#" class="btn">View Project</a>
 </div>
 </div>
 
@@ -106,15 +108,15 @@ Hire Me on Fiverr
 </section>
 
 <!-- CONTACT -->
-<section>
+<section id="contact">
 <h2>Contact Me</h2>
-<div class="card">
+<div class="card contact-card">
 
 <input type="text" placeholder="Your Name">
 <input type="email" placeholder="Your Email">
 <textarea rows="4" placeholder="Your Message"></textarea>
 
-<button class="btn btn-primary">Send Message</button>
+<button class="btn">Send Message</button>
 
 </div>
 </section>
@@ -123,7 +125,6 @@ Hire Me on Fiverr
 © 2026 Khokon Ahmed | All Rights Reserved
 </footer>
 
-<!-- TYPING + SKILL ANIMATION -->
 <script>
 const texts=["Frontend Developer","Website Designer","Freelancer"];
 let count=0,index=0,currentText="",letter="";

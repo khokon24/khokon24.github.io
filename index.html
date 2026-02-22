@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khokon Ahmed | Web Designer</title>
+<title>Khokon Ahmed | Web Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -12,7 +12,6 @@
 html{scroll-behavior:smooth;}
 body{background:#000;color:#fff;overflow-x:hidden;}
 
-/* NAVBAR */
 nav{
 display:flex;justify-content:space-between;align-items:center;
 padding:20px 10%;background:#000;
@@ -26,7 +25,6 @@ nav ul li a:hover{color:#00f5ff;}
 section{padding:100px 10%;}
 .section-title{text-align:center;font-size:38px;margin-bottom:50px;color:#00f5ff;}
 
-/* HERO */
 .hero{
 min-height:100vh;
 display:flex;justify-content:center;align-items:center;text-align:center;
@@ -54,12 +52,10 @@ background:#00f5ff;color:#000;font-weight:700;
 text-decoration:none;display:inline-block;
 }
 
-/* ABOUT */
 .about{background:#0b1c22;}
 .about-container{display:flex;gap:50px;flex-wrap:wrap;}
 .about-text,.about-skills{flex:1;min-width:260px;}
 
-/* SERVICES & PROJECTS */
 .service-container,.project-container{
 display:flex;gap:25px;flex-wrap:wrap;justify-content:center;
 }
@@ -73,9 +69,11 @@ transform:translateY(-8px);
 box-shadow:0 0 15px #00f5ff;
 }
 
-/* CONTACT */
+.contact-wrapper{
+display:flex;gap:40px;flex-wrap:wrap;
+}
 .contact-form{
-max-width:600px;margin:auto;
+flex:1;min-width:280px;
 display:flex;flex-direction:column;gap:18px;
 }
 .contact-form input,
@@ -90,13 +88,15 @@ background:#00f5ff;font-weight:700;cursor:pointer;
 .form-status{text-align:center;font-weight:600;}
 
 .contact-info{
-text-align:center;margin-top:40px;
+flex:1;min-width:250px;
+background:#111;padding:25px;border-radius:15px;
 }
-.contact-info p{
-margin:8px 0;color:#ccc;
+.contact-info p{margin:12px 0;color:#ccc;}
+.contact-info a{
+color:#00f5ff;text-decoration:none;font-weight:600;
 }
+.contact-info a:hover{text-decoration:underline;}
 
-/* WHATSAPP FLOAT */
 .whatsapp-float{
 position:fixed;
 bottom:25px;
@@ -114,11 +114,9 @@ transition:.3s;
 }
 .whatsapp-float:hover{transform:scale(1.1);}
 
-/* SCROLL ANIMATION */
 .reveal{opacity:0;transform:translateY(60px);transition:1s;}
 .reveal.active{opacity:1;transform:translateY(0);}
 
-/* FOOTER */
 footer{text-align:center;padding:25px;background:#111;margin-top:40px;}
 
 @media(max-width:768px){
@@ -154,7 +152,7 @@ nav{flex-direction:column;gap:12px;}
 <h2 class="section-title">About Me</h2>
 <div class="about-container">
 <div class="about-text">
-<p>I build responsive, modern and clean websites that help businesses grow.</p>
+<p>I build responsive and modern websites that help businesses grow online.</p>
 </div>
 <div class="about-skills">
 <p>HTML - 95%</p>
@@ -180,15 +178,15 @@ nav{flex-direction:column;gap:12px;}
 <div class="project-box"><h3>Ecommerce Landing</h3></div>
 <div class="project-box"><h3>Portfolio Website</h3></div>
 </div>
+</div>
 </section>
 
 <section id="contact" class="reveal">
 <h2 class="section-title">Contact Me</h2>
 
-<form class="contact-form" 
-      action="https://formspree.io/f/xojnlako" 
-      method="POST">
+<div class="contact-wrapper">
 
+<form class="contact-form" action="https://formspree.io/f/xojnlako" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -197,40 +195,50 @@ nav{flex-direction:column;gap:12px;}
 </form>
 
 <div class="contact-info">
-<p>Email: contact.khokonweb@gmail.com</p>
-<p>Phone: +8801739656582</p>
-<p>WhatsApp: +8801739656582</p>
+<p>📧 Email:<br>
+<a href="mailto:contact.khokonweb@gmail.com">contact.khokonweb@gmail.com</a></p>
+
+<p>📞 Phone:<br>
+<a href="tel:+8801739656582">+8801739656582</a></p>
+
+<p>💬 WhatsApp:<br>
+<a href="https://wa.me/8801739656582" target="_blank">Chat Now</a></p>
+
+<p>💻 GitHub:<br>
+<a href="https://khokon24.github.io" target="_blank">khokon24.github.io</a></p>
+
+<p>🎯 Fiverr:<br>
+<a href="https://www.fiverr.com/khokondev" target="_blank">fiverr.com/khokondev</a></p>
 </div>
 
+</div>
 </section>
 
 <footer>
 <p>© 2026 Khokon Ahmed | All Rights Reserved</p>
 </footer>
 
-<a href="https://wa.me/8801739656582" 
-   class="whatsapp-float" 
-   target="_blank">💬</a>
+<a href="https://wa.me/8801739656582" class="whatsapp-float" target="_blank">💬</a>
 
 <script>
-const form = document.querySelector(".contact-form");
-const status = document.querySelector(".form-status");
+const form=document.querySelector(".contact-form");
+const status=document.querySelector(".form-status");
 
-form.addEventListener("submit", async function(e){
+form.addEventListener("submit",async function(e){
 e.preventDefault();
-const data = new FormData(form);
-const response = await fetch(form.action, {
-method: form.method,
-body: data,
-headers: { 'Accept': 'application/json' }
+const data=new FormData(form);
+const response=await fetch(form.action,{
+method:form.method,
+body:data,
+headers:{'Accept':'application/json'}
 });
 if(response.ok){
-status.innerHTML = "✅ Message Sent Successfully!";
-status.style.color = "#00f5ff";
+status.innerHTML="✅ Message Sent Successfully!";
+status.style.color="#00f5ff";
 form.reset();
 }else{
-status.innerHTML = "❌ Something went wrong.";
-status.style.color = "red";
+status.innerHTML="❌ Something went wrong.";
+status.style.color="red";
 }
 });
 

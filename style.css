@@ -37,13 +37,18 @@ font-weight:600;
 
 /* HERO */
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:radial-gradient(circle at center, rgba(0,255,255,0.15), transparent 60%);
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1 span{
+    color:#00f5ff;
+    font-weight:800;
+    text-shadow:none;
 }
 
 .hero span{

@@ -13,6 +13,7 @@
 <!-- NAVBAR -->
 <nav class="navbar">
 <div class="logo">Khokon Ahmed</div>
+
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
@@ -20,6 +21,8 @@
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
+
+<button id="modeToggle" class="mode-btn">🌙</button>
 </nav>
 
 <!-- HERO -->
@@ -32,7 +35,7 @@ Hire Me on Fiverr
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="reveal">
 <h2>My Services</h2>
 <div class="grid">
 
@@ -55,7 +58,7 @@ Hire Me on Fiverr
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="reveal">
 <h2>My Skills</h2>
 
 <div class="skill">
@@ -76,7 +79,7 @@ Hire Me on Fiverr
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="reveal">
 <h2>My Projects</h2>
 <div class="grid">
 
@@ -108,7 +111,7 @@ Hire Me on Fiverr
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="reveal">
 <h2>Contact Me</h2>
 <div class="card contact-card">
 
@@ -126,6 +129,10 @@ Hire Me on Fiverr
 </footer>
 
 <script>
+
+/* =========================
+Typing Effect
+========================= */
 const texts=["Frontend Developer","Website Designer","Freelancer"];
 let count=0,index=0,currentText="",letter="";
 (function type(){
@@ -138,14 +145,54 @@ count++;index=0;setTimeout(type,1000);
 }else{setTimeout(type,100);}
 })();
 
+/* =========================
+Skill Animation + Scroll Reveal
+========================= */
 window.addEventListener("scroll",()=>{
+
 document.querySelectorAll(".progress").forEach(bar=>{
 let rect=bar.getBoundingClientRect().top;
 if(rect<window.innerHeight-50){
 bar.style.width=bar.getAttribute("data-width");
 }
 });
+
+document.querySelectorAll(".reveal").forEach(el=>{
+let rect=el.getBoundingClientRect().top;
+if(rect<window.innerHeight-100){
+el.classList.add("active");
+}
 });
+
+/* =========================
+Active Navbar
+========================= */
+let current="";
+document.querySelectorAll("section").forEach(section=>{
+const sectionTop=section.offsetTop-150;
+if(pageYOffset>=sectionTop){
+current=section.getAttribute("id");
+}
+});
+document.querySelectorAll(".navbar a").forEach(a=>{
+a.classList.remove("active");
+if(a.getAttribute("href")==="#"+current){
+a.classList.add("active");
+}
+});
+
+});
+
+/* =========================
+Dark / Light Mode
+========================= */
+const toggle=document.getElementById("modeToggle");
+toggle.onclick=()=>{
+document.body.classList.toggle("light-mode");
+toggle.textContent=
+document.body.classList.contains("light-mode")?"☀️":"🌙";
+};
+
 </script>
 
 </body>

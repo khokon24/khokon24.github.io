@@ -21,6 +21,11 @@ color:#fff;
 scroll-behavior:smooth;
 }
 
+/* GLOBAL FIX FOR FIXED NAV */
+section{
+scroll-margin-top:120px;
+}
+
 /* NAVBAR */
 nav{
 display:flex;
@@ -57,7 +62,7 @@ color:#00f5ff;
 
 /* HERO */
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -65,17 +70,13 @@ text-align:center;
 background:linear-gradient(270deg,#000,#0f2027,#000);
 background-size:400% 400%;
 animation:bgAnimation 10s ease infinite;
-padding:20px;
+padding:120px 20px 40px;
 }
 
 @keyframes bgAnimation{
 0%{background-position:0% 50%;}
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
-}
-
-.hero-content{
-margin-top:80px;
 }
 
 .hero h1{
@@ -194,8 +195,8 @@ margin-bottom:15px;
 /* CONTACT */
 #contact{
 padding:100px 10%;
-text-align:center;
 background:#111;
+text-align:center;
 }
 
 form{
@@ -214,6 +215,7 @@ background:#000;
 color:#fff;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -221,10 +223,35 @@ background:#000;
 color:#777;
 }
 
+/* MOBILE OPTIMIZATION */
 @media(max-width:768px){
-.hero h1{
-font-size:34px;
+
+nav{
+flex-direction:column;
+gap:10px;
+padding:15px 5%;
 }
+
+nav h2{
+font-size:22px;
+}
+
+nav ul{
+gap:20px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.hero h2{
+font-size:20px;
+}
+
+.section-title{
+font-size:28px;
+}
+
 }
 </style>
 </head>
@@ -242,7 +269,7 @@ font-size:34px;
 </nav>
 
 <section class="hero">
-<div class="hero-content">
+<div>
 <h1>Hello, I'm <span>Khokon Ahmed</span></h1>
 <h2>Professional Web Designer & Frontend Developer</h2>
 <p>I build modern, responsive & high-converting websites for businesses and startups.</p>
@@ -275,22 +302,18 @@ font-size:34px;
 <section id="projects">
 <h2 class="section-title">My Projects</h2>
 <div class="projects-grid">
-
 <div class="project-card">
 <h3>Business Website</h3>
 <p>Responsive corporate website built with modern UI.</p>
 </div>
-
 <div class="project-card">
 <h3>Ecommerce Landing Page</h3>
 <p>High-converting product landing page design.</p>
 </div>
-
 <div class="project-card">
 <h3>Portfolio Website</h3>
 <p>Clean personal portfolio for freelancer.</p>
 </div>
-
 </div>
 </section>
 

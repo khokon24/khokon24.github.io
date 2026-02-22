@@ -55,7 +55,7 @@ nav ul li a:hover{
 color:#00f5ff;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
 height:100vh;
 display:flex;
@@ -64,7 +64,7 @@ align-items:center;
 text-align:center;
 background:linear-gradient(270deg,#000,#0f2027,#000);
 background-size:400% 400%;
-animation:bgAnimation 10s ease infinite;
+animation:bgAnimation 12s ease infinite;
 padding:20px;
 }
 
@@ -76,9 +76,15 @@ padding:20px;
 
 .hero-content{
 margin-top:80px;
+animation:fadeIn 1.5s ease forwards;
+opacity:0;
 }
 
-/* ✅ Profile Image Added */
+@keyframes fadeIn{
+to{opacity:1;}
+}
+
+/* PROFILE IMAGE */
 .profile-img{
 width:160px;
 height:160px;
@@ -89,19 +95,39 @@ border:4px solid #00f5ff;
 box-shadow:0 0 30px #00f5ff;
 }
 
-.hero h1{
+/* TITLE */
+.hero-title{
 font-size:52px;
 font-weight:800;
 margin-bottom:15px;
+line-height:1.2;
 }
 
-.hero h1 span{
+.hello{
+font-size:32px;
+font-weight:400;
+color:#fff;
+animation:fadeHello 1.2s ease forwards;
+opacity:0;
+}
+
+@keyframes fadeHello{
+to{opacity:1;}
+}
+
+.name{
 color:#00f5ff;
 text-shadow:0 0 20px #00f5ff;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #00f5ff; }
+to{ text-shadow:0 0 30px #00f5ff; }
 }
 
 .hero h2{
-font-size:28px;
+font-size:26px;
 margin-bottom:20px;
 color:#aaa;
 }
@@ -112,8 +138,9 @@ margin:0 auto 35px;
 color:#ccc;
 }
 
+/* BUTTON */
 .btn{
-padding:15px 40px;
+padding:16px 45px;
 border-radius:50px;
 background:#00f5ff;
 color:#000;
@@ -121,10 +148,35 @@ font-weight:700;
 text-decoration:none;
 transition:0.3s;
 display:inline-block;
+box-shadow:0 0 20px #00f5ff;
 }
 
 .btn:hover{
 background:#fff;
+transform:scale(1.05);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.hero-title{
+font-size:38px;
+}
+
+.hello{
+font-size:24px;
+}
+
+.profile-img{
+width:130px;
+height:130px;
+}
+
 }
 
 </style>
@@ -137,6 +189,7 @@ background:#fff;
 <ul>
 <li><a href="#">Home</a></li>
 <li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
 <li><a href="#">Projects</a></li>
 <li><a href="#">Contact</a></li>
 </ul>
@@ -145,14 +198,18 @@ background:#fff;
 <section class="hero">
 <div class="hero-content">
 
-<!-- ✅ Profile Image -->
 <img src="profile.jpg" alt="Khokon Ahmed" class="profile-img">
 
-<h1>Hi, I'm <span>Khokon Ahmed</span></h1>
-<h2>Professional Web Developer</h2>
-<p>I design and develop modern, responsive and high-converting websites for businesses.</p>
+<h1 class="hero-title">
+<span class="hello">Hello,</span><br>
+I'm <span class="name">Khokon Ahmed</span>
+</h1>
 
-<a href="#" class="btn">Hire Me</a>
+<h2>Professional Web Designer & Frontend Developer</h2>
+
+<p>I build modern, responsive & high-converting websites for businesses and startups.</p>
+
+<a href="#" class="btn">Hire Me on Fiverr</a>
 
 </div>
 </section>

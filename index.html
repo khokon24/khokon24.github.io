@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Khokon Ahmed | Frontend Developer</title>
+<meta name="description" content="Khokon Ahmed - Professional Frontend Developer. I build modern, responsive and high-converting websites. Hire me on Fiverr.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -25,8 +27,16 @@
 <!-- HERO -->
 <section id="home" class="hero">
 <h1>Hello, I'm <span>Khokon Ahmed</span></h1>
-<h3>I Build Modern & High-Converting Websites</h3>
-<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Hire Me on Fiverr</a>
+
+<h3>I am a <span class="typing"></span></h3>
+
+<p class="hero-sub">
+I build modern, responsive & high-converting websites for businesses and startups.
+</p>
+
+<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">
+Hire Me on Fiverr
+</a>
 </section>
 
 <!-- SERVICES -->
@@ -36,17 +46,17 @@
 
 <div class="card">
 <h3>Website Design</h3>
-<p>Modern UI with clean and responsive layout.</p>
+<p>Premium UI/UX design focused on conversion, performance and clean layout.</p>
 </div>
 
 <div class="card">
 <h3>Frontend Development</h3>
-<p>HTML, CSS & JavaScript professional coding.</p>
+<p>Clean, scalable & optimized HTML, CSS & JavaScript coding.</p>
 </div>
 
 <div class="card">
-<h3>Bug Fixing</h3>
-<p>Fix layout, responsiveness & performance issues.</p>
+<h3>Bug Fixing & Optimization</h3>
+<p>Fix layout, responsiveness, speed & cross-browser issues professionally.</p>
 </div>
 
 </div>
@@ -81,7 +91,7 @@
 <div class="project">
 <img src="https://picsum.photos/400/250?1">
 <div class="overlay">
-<h3>Landing Page</h3>
+<h3>Landing Page Project</h3>
 <a href="#" class="btn">View Project</a>
 </div>
 </div>
@@ -89,7 +99,7 @@
 <div class="project">
 <img src="https://picsum.photos/400/250?2">
 <div class="overlay">
-<h3>Portfolio Website</h3>
+<h3>Business Website</h3>
 <a href="#" class="btn">View Project</a>
 </div>
 </div>
@@ -97,7 +107,7 @@
 <div class="project">
 <img src="https://picsum.photos/400/250?3">
 <div class="overlay">
-<h3>Web App</h3>
+<h3>Web Application</h3>
 <a href="#" class="btn">View Project</a>
 </div>
 </div>
@@ -114,7 +124,9 @@
 <input type="email" placeholder="Your Email">
 <textarea rows="4" placeholder="Your Message"></textarea>
 
-<button class="btn">Send Message</button>
+<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">
+Contact Me on Fiverr
+</a>
 
 </div>
 </section>
@@ -126,14 +138,20 @@
 <script>
 const texts=["Frontend Developer","Website Designer","Freelancer"];
 let count=0,index=0,currentText="",letter="";
+
 (function type(){
 if(count===texts.length){count=0;}
 currentText=texts[count];
 letter=currentText.slice(0,++index);
 document.querySelector(".typing").textContent=letter;
+
 if(letter.length===currentText.length){
-count++;index=0;setTimeout(type,1000);
-}else{setTimeout(type,100);}
+count++;
+index=0;
+setTimeout(type,1000);
+}else{
+setTimeout(type,100);
+}
 })();
 
 window.addEventListener("scroll",()=>{

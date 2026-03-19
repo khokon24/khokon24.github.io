@@ -271,4 +271,22 @@ font-size:34px;
 flex-direction:column;
 gap:10px;
 }
+/* Remove big gaps between sections */
+section {
+  padding: 60px 20px;
+  margin: 0;
+}
+
+#hero {
+  padding: 80px 20px;
+  margin-bottom: 0;
+}
+
+#projects {
+  padding-top: 40px;
+  margin-top: 0;
+}
+
+section + section {
+  margin-top: 0;
 }

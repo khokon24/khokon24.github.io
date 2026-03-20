@@ -1,45 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Landing Page Demo | KhokonWeb</title>
+<title>Landing Page Pro | KhokonWeb</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
 <style>
 body{
 margin:0;
 font-family:Poppins;
-background:linear-gradient(120deg,#000,#0f2027);
+background:linear-gradient(135deg,#000,#0f2027,#000);
 color:white;
 text-align:center;
 }
 
 .hero{
-padding:100px 20px;
+padding:120px 20px;
 }
 
-h1{font-size:50px;color:#00f5ff;}
-p{max-width:600px;margin:auto;color:#ccc;}
+h1{
+font-size:55px;
+color:#00f5ff;
+animation:fade 2s ease-in-out;
+}
+
+p{
+max-width:650px;
+margin:auto;
+color:#ccc;
+font-size:18px;
+}
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:15px 30px;
+margin-top:25px;
+padding:15px 35px;
 background:#00f5ff;
 color:black;
-text-decoration:none;
-border-radius:30px;
 font-weight:bold;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
 }
 
-.section{
-padding:60px 20px;
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #00f5ff;
 }
 
-.box{
+.features{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:60px;
+gap:20px;
+}
+
+.card{
 background:rgba(255,255,255,0.05);
-margin:10px;
-padding:20px;
-border-radius:10px;
-display:inline-block;
+padding:25px;
+border-radius:15px;
 width:250px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00f5ff;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(-20px);}
+to{opacity:1;transform:translateY(0);}
 }
 </style>
 </head>
@@ -47,15 +78,15 @@ width:250px;
 <body>
 
 <div class="hero">
-<h1>Grow Your Business Fast 🚀</h1>
-<p>I build high converting landing pages that turn visitors into customers.</p>
-<a href="#" class="btn">Get Started</a>
-</div>
+<h1>Boost Your Business Online 🚀</h1>
+<p>I create high converting landing pages that turn visitors into paying customers.</p>
+<a class="btn" href="#">Get Started</a>
 
-<div class="section">
-<div class="box">🔥 High Conversion Design</div>
-<div class="box">⚡ Fast Loading</div>
-<div class="box">📱 Mobile Friendly</div>
+<div class="features">
+<div class="card">⚡ Fast Loading</div>
+<div class="card">📱 Mobile Friendly</div>
+<div class="card">💰 High Conversion</div>
+</div>
 </div>
 
 </body>

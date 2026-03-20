@@ -3,95 +3,120 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ecommerce Demo</title>
-<link rel="stylesheet" href="style.css">
+<title>Shop Demo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:#0b1220;
+color:#fff;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px;
+background:#111;
+}
+
+/* HERO */
+.hero{
+padding:60px;
+text-align:center;
+background:linear-gradient(135deg,#ff7b00,#ff0055);
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.product{
+background:#111a2b;
+padding:20px;
+border-radius:12px;
+text-align:center;
+}
+
+.product img{
+width:100%;
+border-radius:10px;
+}
+
+.price{color:#00f5ff;}
+
+.btn{
+background:#00f5ff;
+padding:10px 20px;
+border-radius:20px;
+display:inline-block;
+margin-top:10px;
+color:#000;
+}
+
+/* BADGE */
+.badge{
+background:red;
+padding:4px 8px;
+font-size:12px;
+border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+}
+</style>
 </head>
 
 <body>
 
+<nav>
+<h2>ShopX</h2>
+<div>Cart (0)</div>
+</nav>
+
 <section class="hero">
+<h1>🔥 New Collection</h1>
+<p>Best quality products for your lifestyle</p>
+</section>
 
-<div class="hero-inner">
+<section class="grid">
 
-<div class="badge">🛒 Modern Ecommerce UI</div>
-
-<h1>Shop Smarter With Clean Product Design</h1>
-
-<p>
-A modern ecommerce interface designed for better user experience & sales.
-</p>
-
-<div class="btn-group">
-<a href="#" class="btn primary">Shop Now</a>
-<a href="#" class="btn secondary">View Products</a>
+<div class="product">
+<span class="badge">Sale</span>
+<img src="https://via.placeholder.com/200">
+<h3>Product 1</h3>
+<p class="price">$20</p>
+<a class="btn">Add to Cart</a>
 </div>
 
+<div class="product">
+<img src="https://via.placeholder.com/200">
+<h3>Product 2</h3>
+<p class="price">$25</p>
+<a class="btn">Add to Cart</a>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/200">
+<h3>Product 3</h3>
+<p class="price">$30</p>
+<a class="btn">Add to Cart</a>
 </div>
 
 </section>
 
-<!-- PRODUCTS -->
-<section>
-
-<h2 class="section-title">Featured Products</h2>
-
-<div class="flex">
-
-<div class="box">
-<h3>Smart Watch</h3>
-<p>$49.99</p>
-<a class="demo-btn" href="#">Buy Now</a>
-</div>
-
-<div class="box">
-<h3>Headphones</h3>
-<p>$29.99</p>
-<a class="demo-btn" href="#">Buy Now</a>
-</div>
-
-<div class="box">
-<h3>Gaming Mouse</h3>
-<p>$19.99</p>
-<a class="demo-btn" href="#">Buy Now</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- FEATURES -->
-<section class="dark">
-
-<h2 class="section-title">Why This Ecommerce UI?</h2>
-
-<div class="flex">
-
-<div class="box">
-⚡ Fast Checkout System
-</div>
-
-<div class="box">
-📱 Mobile Optimized UI
-</div>
-
-<div class="box">
-💳 Secure Design Layout
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-<section>
-
-<h2 class="section-title">Ready To Sell Online?</h2>
-
-<a href="#" class="btn primary">Hire Me Now</a>
-
-</section>
+<footer>© Shop Demo</footer>
 
 </body>
 </html>

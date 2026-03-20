@@ -237,3 +237,63 @@ justify-content:center;
 }
 
 }
+.hidden{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.6s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* smooth glow effect */
+.hero h1{
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* premium glow buttons */
+.primary{
+box-shadow:0 0 15px rgba(0,229,255,0.3);
+}
+
+.primary:hover{
+box-shadow:0 0 25px rgba(0,229,255,0.6);
+}
+
+/* ultra smooth cards */
+.card{
+transition:all 0.4s ease;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+}
+
+/* hero upgrade */
+.hero{
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(0,229,255,0.08),transparent 40%);
+animation:move 8s linear infinite;
+}
+
+@keyframes move{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}

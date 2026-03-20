@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Final Portfolio</title>
+<title>KhokonDev | Pro Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,9 @@
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
+<a href="#work">My Work</a>
 <a href="#projects">Projects</a>
+<a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
@@ -29,13 +31,11 @@
 <div class="glow2"></div>
 
 <div class="hero-content">
-
 <div class="badge">🚀 Available for Freelance Work</div>
 
 <h1>Hi, I'm <span>Khokon Ahmed</span></h1>
 <h2 class="typing"></h2>
 
-<!-- STATS -->
 <div class="stats">
 <div class="stat"><span class="counter" data-target="100">0</span>%<p>Fast Delivery</p></div>
 <div class="stat"><span class="counter" data-target="100">0</span>%<p>Conversion Focus</p></div>
@@ -45,9 +45,8 @@
 
 <div class="cta">
 <a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me</a>
-<a href="#projects" class="btn ghost">View Work</a>
+<a href="#work" class="btn ghost">View Work</a>
 </div>
-
 </div>
 </section>
 
@@ -59,16 +58,96 @@
 <div class="card">Business Website</div>
 <div class="card">Ecommerce UI</div>
 <div class="card">Website Redesign</div>
+<div class="card">Responsive Fix</div>
+<div class="card">Speed Optimization</div>
+</div>
+</section>
+
+<!-- MY WORK -->
+<section id="work" class="section dark">
+<h2>My Work</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>High converting design</p>
+<a href="landing.html">View Demo</a>
+</div>
+
+<div class="card">
+<h3>Ecommerce UI</h3>
+<p>Modern product layout</p>
+<a href="ecommerce.html">View Demo</a>
+</div>
+
+<div class="card">
+<h3>Portfolio</h3>
+<p>Personal branding website</p>
+</div>
+
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section dark">
+<section id="projects" class="section">
 <h2>Projects</h2>
 <div class="grid">
-<div class="card">Landing Page (Demo)</div>
-<div class="card">Ecommerce UI (Demo)</div>
-<div class="card">Portfolio Website</div>
+<div class="card">Agency Website</div>
+<div class="card">SaaS Landing Page</div>
+<div class="card">Startup UI</div>
+<div class="card">Business Website</div>
+</div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="section dark">
+<h2>Case Study</h2>
+<div class="grid">
+<div class="card">
+<h3>Problem</h3>
+<p>Low conversion & poor UI</p>
+</div>
+<div class="card">
+<h3>Solution</h3>
+<p>Modern UI + CTA optimization</p>
+</div>
+<div class="card">
+<h3>Result</h3>
+<p>+40% conversion increase</p>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section">
+<h2>Testimonials</h2>
+<div class="grid">
+<div class="card">“Excellent work and fast delivery!”</div>
+<div class="card">“Highly professional and responsive.”</div>
+<div class="card">“Clean UI and great communication.”</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="section dark">
+<h2>Pricing</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Starter</h3>
+<p>$30</p>
+</div>
+
+<div class="card highlight">
+<h3>Pro</h3>
+<p>$70</p>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<p>$120</p>
+</div>
+
 </div>
 </section>
 
@@ -89,9 +168,7 @@
 <p>© 2026 KhokonDev</p>
 </footer>
 
-<!-- SCRIPT -->
 <script>
-
 // typing
 const text="I build high-converting modern websites.";
 let i=0;
@@ -105,14 +182,12 @@ typing();
 
 // counter
 const counters=document.querySelectorAll('.counter');
-
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 counters.forEach(counter=>{
 const target=+counter.getAttribute('data-target');
 let count=0;
-
 const update=()=>{
 const inc=target/60;
 if(count<target){
@@ -123,7 +198,6 @@ requestAnimationFrame(update);
 counter.innerText=target;
 }
 };
-
 update();
 });
 }
@@ -131,7 +205,6 @@ update();
 },{threshold:0.5});
 
 observer.observe(document.querySelector('.stats'));
-
 </script>
 
 </body>

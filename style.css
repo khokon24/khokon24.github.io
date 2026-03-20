@@ -184,3 +184,36 @@ justify-content:center;
 }
 
 }
+.demo-hero{
+padding:120px 10%;
+text-align:center;
+background:#0f1624;
+}
+
+.demo-hero h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero-boxes{
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.mini-box{
+background:#111a2b;
+padding:10px 15px;
+border-radius:10px;
+font-size:14px;
+}
+
+.product{
+text-align:center;
+}
+
+.product button{
+margin-top:10px;
+}

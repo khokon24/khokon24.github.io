@@ -3,152 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SaaS Landing Demo</title>
+<title>Landing Demo | KhokonDev</title>
 
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-body{
-margin:0;
-font-family:Poppins;
-background:#0b1220;
-color:#fff;
-}
-
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 10%;
-background:#111;
-}
-
-nav a{color:#fff;margin-left:15px;text-decoration:none;}
-
-/* HERO */
-.hero{
-padding:100px 10%;
-text-align:center;
-background:linear-gradient(135deg,#00f5ff,#0066ff);
-}
-
-.hero h1{font-size:42px;}
-.hero p{max-width:600px;margin:auto;}
-
-.btn{
-background:#000;
-padding:12px 25px;
-border-radius:25px;
-display:inline-block;
-margin-top:20px;
-}
-
-/* FEATURES */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:60px 10%;
-}
-
-.card{
-background:#111a2b;
-padding:25px;
-border-radius:12px;
-}
-
-/* PRICING */
-.pricing{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-padding:60px 10%;
-}
-
-.price{
-background:#111a2b;
-padding:30px;
-border-radius:15px;
-text-align:center;
-}
-
-/* FAQ */
-.faq{
-padding:60px 10%;
-}
-
-.faq div{
-margin-bottom:15px;
-}
-
-/* CTA */
-.cta{
-padding:60px;
-text-align:center;
-}
-
-footer{
-padding:20px;
-background:#111;
-text-align:center;
-}
-</style>
 </head>
 
 <body>
 
+<header class="nav">
+<h2 class="logo">StartupX</h2>
 <nav>
-<h2>WebFlowX</h2>
-<div>
-<a href="#">Features</a>
-<a href="#">Pricing</a>
-<a href="#">Contact</a>
-</div>
+<a href="#">Home</a>
+<a href="#features">Features</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
 </nav>
+</header>
 
-<section class="hero">
-<h1>Build High-Converting Websites 🚀</h1>
-<p>We help businesses grow online with modern, responsive and conversion-focused design.</p>
-<a class="btn">Start Free Trial</a>
-</section>
+<section class="hero demo-hero">
 
-<section class="grid">
-<div class="card">⚡ Fast Performance</div>
-<div class="card">📱 Fully Responsive</div>
-<div class="card">🎯 Conversion Optimized</div>
-</section>
+<h1>Grow Your Business With A High Converting Website</h1>
 
-<section class="pricing">
-<div class="price">
-<h3>Starter</h3>
-<p>$29</p>
+<p>
+We build modern landing pages that convert visitors into customers.
+</p>
+
+<div class="cta">
+<a href="#" class="btn primary">Get Started</a>
+<a href="#" class="btn outline">Learn More</a>
 </div>
 
-<div class="price">
+<div class="hero-boxes">
+
+<div class="mini-box">⚡ Fast Loading</div>
+<div class="mini-box">🎯 High Conversion</div>
+<div class="mini-box">📱 Mobile Ready</div>
+
+</div>
+
+</section>
+
+<section id="features" class="section">
+
+<h2>Features</h2>
+
+<div class="grid">
+
+<div class="card">SEO Optimized</div>
+<div class="card">Responsive Design</div>
+<div class="card">Clean UI</div>
+<div class="card">Fast Performance</div>
+
+</div>
+
+</section>
+
+<section id="pricing" class="section dark">
+
+<h2>Pricing Plans</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Basic</h3>
+<p>$20</p>
+</div>
+
+<div class="card highlight">
 <h3>Pro</h3>
-<p>$59</p>
+<p>$50</p>
 </div>
 
-<div class="price">
-<h3>Premium</h3>
-<p>$99</p>
+<div class="card">
+<h3>Business</h3>
+<p>$100</p>
 </div>
+
+</div>
+
 </section>
 
-<section class="faq">
-<h2>FAQ</h2>
-<div>How fast delivery? → 2-3 days</div>
-<div>Support? → Yes</div>
-<div>Responsive? → 100%</div>
+<section id="contact" class="section">
+
+<h2>Contact</h2>
+
+<form action="https://formspree.io/f/xojnlako" method="POST">
+
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Project details"></textarea>
+
+<button class="btn primary">Send</button>
+
+</form>
+
 </section>
 
-<section class="cta">
-<h2>Ready to Grow Your Business?</h2>
-<a class="btn">Hire Now</a>
-</section>
-
-<footer>© SaaS Demo</footer>
+<footer>
+<p>© StartupX Landing Demo</p>
+</footer>
 
 </body>
 </html>

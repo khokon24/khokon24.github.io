@@ -12,43 +12,80 @@
 html{scroll-behavior:smooth;}
 body{background:#000;color:#fff;overflow-x:hidden;}
 
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:#000;position:fixed;width:100%;top:0;z-index:1000;}
+/* NAV */
+nav{
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 10%;background:#000;
+position:fixed;width:100%;top:0;z-index:1000;
+}
 nav h2{color:#00f5ff;font-weight:800;}
 nav ul{display:flex;gap:25px;list-style:none;}
 nav ul li a{text-decoration:none;color:#fff;transition:.3s;}
 nav ul li a:hover{color:#00f5ff;}
 
+/* SECTION */
 section{padding:100px 10%;}
 .section-title{text-align:center;font-size:38px;margin-bottom:50px;color:#00f5ff;}
 
-.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(270deg,#000,#0f2027,#000);background-size:400% 400%;animation:bgAnimation 12s ease infinite;}
-@keyframes bgAnimation{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-
-.profile-img{width:150px;height:150px;border-radius:50%;border:4px solid #00f5ff;box-shadow:0 0 25px #00f5ff;margin-bottom:20px;}
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;justify-content:center;align-items:center;text-align:center;
+background:linear-gradient(270deg,#000,#0f2027,#000);
+background-size:400% 400%;
+animation:bgAnimation 12s ease infinite;
+}
+@keyframes bgAnimation{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+.profile-img{
+width:150px;height:150px;border-radius:50%;
+border:4px solid #00f5ff;box-shadow:0 0 25px #00f5ff;margin-bottom:20px;
+}
 .hero h1{font-size:42px;}
 .hero span{color:#00f5ff;}
 .hero p{color:#ccc;margin:20px auto;max-width:600px;}
 
-.btn{padding:14px 35px;border-radius:40px;background:#00f5ff;color:#000;font-weight:700;text-decoration:none;display:inline-block;transition:.3s;}
-.btn:hover{transform:scale(1.08);box-shadow:0 0 20px #00f5ff;}
+/* BUTTON */
+.btn{
+padding:14px 35px;border-radius:40px;
+background:#00f5ff;color:#000;font-weight:700;
+text-decoration:none;display:inline-block;
+transition:.3s;
+}
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #00f5ff;
+}
 
-.service-container,.project-container{display:flex;gap:25px;flex-wrap:wrap;justify-content:center;}
-
+/* CARDS */
+.service-container,.project-container{
+display:flex;gap:25px;flex-wrap:wrap;justify-content:center;
+}
 .service-box,.project-box{
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
-padding:25px;border-radius:15px;flex:1;min-width:250px;text-align:center;transition:.3s;
+padding:25px;border-radius:15px;
+flex:1;min-width:250px;text-align:center;
+transition:.3s;
 }
-.service-box:hover,.project-box:hover{transform:translateY(-10px);box-shadow:0 0 25px #00f5ff;}
+.service-box:hover,.project-box:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 25px #00f5ff;
+}
 
+/* ANIMATION */
 .reveal{opacity:0;transform:translateY(60px);transition:1s;}
 .reveal.active{opacity:1;transform:translateY(0);}
 
+/* FOOTER */
 footer{text-align:center;padding:25px;background:#111;margin-top:40px;}
 
 @media(max-width:768px){
-nav{flex-direction:column;}
+nav{flex-direction:column;gap:10px;}
 .hero h1{font-size:30px;}
 }
 </style>
@@ -67,20 +104,25 @@ nav{flex-direction:column;}
 </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div>
 <img src="profile.jpg" class="profile-img">
 <h1>I Build <span>Modern Websites</span></h1>
-<p>Helping businesses grow online with clean & responsive design.</p>
+<p>I'm Khokon Ahmed, a passionate Frontend Developer helping businesses grow online.</p>
 <a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Hire Me on Fiverr</a>
 </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="reveal">
 <h2 class="section-title">About Me</h2>
-<p style="text-align:center;">I build responsive and modern websites that help businesses grow online.</p>
+<p style="text-align:center;max-width:700px;margin:auto;">
+I am Khokon Ahmed, a professional Frontend Developer from Bangladesh. I specialize in building modern, responsive, and user-friendly websites. My goal is to deliver high-quality work that helps businesses grow online.
+</p>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="reveal">
 <h2 class="section-title">Services</h2>
 <div class="service-container">
@@ -90,6 +132,7 @@ nav{flex-direction:column;}
 </div>
 </section>
 
+<!-- WHY HIRE ME -->
 <section class="reveal">
 <h2 class="section-title">Why Hire Me</h2>
 <div class="service-container">
@@ -99,6 +142,7 @@ nav{flex-direction:column;}
 </div>
 </section>
 
+<!-- WORK PROCESS -->
 <section class="reveal">
 <h2 class="section-title">My Work Process</h2>
 <div class="service-container">
@@ -109,6 +153,7 @@ nav{flex-direction:column;}
 </div>
 </section>
 
+<!-- TECH STACK -->
 <section class="reveal">
 <h2 class="section-title">Tech Stack</h2>
 <div class="service-container">
@@ -118,15 +163,26 @@ nav{flex-direction:column;}
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="reveal">
 <h2 class="section-title">Projects</h2>
 <div class="project-container">
-<div class="project-box">Business Website</div>
-<div class="project-box">Ecommerce Landing</div>
-<div class="project-box">Portfolio Website</div>
+<div class="project-box">
+<h3>Business Website</h3>
+<p>Modern responsive business design</p>
+</div>
+<div class="project-box">
+<h3>Ecommerce Landing</h3>
+<p>High converting landing page</p>
+</div>
+<div class="project-box">
+<h3>Portfolio Website</h3>
+<p>Clean personal portfolio</p>
+</div>
 </div>
 </section>
 
+<!-- TESTIMONIAL -->
 <section class="reveal">
 <h2 class="section-title">Client Feedback</h2>
 <div class="service-container">
@@ -136,19 +192,22 @@ nav{flex-direction:column;}
 </div>
 </section>
 
+<!-- CTA -->
 <section class="reveal" style="text-align:center;">
 <h2 class="section-title">Let’s Work Together 🚀</h2>
+<p>Need a modern website? Let's build something great.</p><br>
 <a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Start Your Project</a>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="reveal" style="text-align:center;">
 <h2 class="section-title">Contact Me</h2>
-<p>Available on Fiverr for fast response</p>
+<p>Available on Fiverr for fast response</p><br>
 <a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Hire Me on Fiverr</a>
 </section>
 
 <footer>
-<p>© 2026 Khokon Ahmed</p>
+<p>© 2026 Khokon Ahmed | All Rights Reserved</p>
 </footer>
 
 <script>

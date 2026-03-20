@@ -1,42 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Ecommerce Demo</title>
+<title>Ecommerce Demo | KhokonWeb</title>
 <style>
-body{font-family:Arial;background:#0a0a0a;color:#fff;margin:0}
-h1{text-align:center;color:#00f5ff;padding:20px}
-.container{display:flex;justify-content:center;flex-wrap:wrap}
-.card{background:#1c1c1c;margin:10px;padding:20px;border-radius:10px;width:200px;text-align:center}
-button{padding:10px 20px;background:#00f5ff;border:none;border-radius:20px}
-a{color:#00f5ff;text-decoration:none}
+body{
+margin:0;
+font-family:Poppins;
+background:#0a0a0a;
+color:white;
+}
+
+header{
+padding:20px;
+background:#111;
+text-align:center;
+color:#00f5ff;
+font-size:22px;
+font-weight:bold;
+}
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:30px;
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:15px;
+border-radius:10px;
+width:220px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #00f5ff;
+}
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+.price{
+color:#00f5ff;
+font-weight:bold;
+}
+
+button{
+padding:10px;
+background:#00f5ff;
+border:none;
+border-radius:20px;
+font-weight:bold;
+margin-top:10px;
+cursor:pointer;
+}
 </style>
 </head>
+
 <body>
 
-<h1>Fashion Store UI</h1>
-<div style="text-align:center">
-<a href="index.html">Back to Portfolio</a>
-</div>
+<header>🛒 Modern Ecommerce UI Demo</header>
 
 <div class="container">
 
 <div class="card">
-<h3>Shirt</h3>
-<p>$25</p>
-<button>Add to Cart</button>
+<img src="https://via.placeholder.com/200">
+<h3>Product 1</h3>
+<p class="price">$29</p>
+<button>Buy Now</button>
 </div>
 
 <div class="card">
-<h3>Shoes</h3>
-<p>$50</p>
-<button>Add to Cart</button>
+<img src="https://via.placeholder.com/200">
+<h3>Product 2</h3>
+<p class="price">$49</p>
+<button>Buy Now</button>
 </div>
 
 <div class="card">
-<h3>Watch</h3>
-<p>$80</p>
-<button>Add to Cart</button>
+<img src="https://via.placeholder.com/200">
+<h3>Product 3</h3>
+<p class="price">$99</p>
+<button>Buy Now</button>
 </div>
 
 </div>

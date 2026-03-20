@@ -3,92 +3,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Page Demo</title>
-<link rel="stylesheet" href="style.css">
+<title>SaaS Landing Demo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:Poppins;
+background:#0b1220;
+color:#fff;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:#111;
+}
+
+nav a{color:#fff;margin-left:15px;text-decoration:none;}
+
+/* HERO */
+.hero{
+padding:100px 10%;
+text-align:center;
+background:linear-gradient(135deg,#00f5ff,#0066ff);
+}
+
+.hero h1{font-size:42px;}
+.hero p{max-width:600px;margin:auto;}
+
+.btn{
+background:#000;
+padding:12px 25px;
+border-radius:25px;
+display:inline-block;
+margin-top:20px;
+}
+
+/* FEATURES */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:60px 10%;
+}
+
+.card{
+background:#111a2b;
+padding:25px;
+border-radius:12px;
+}
+
+/* PRICING */
+.pricing{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+padding:60px 10%;
+}
+
+.price{
+background:#111a2b;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+/* FAQ */
+.faq{
+padding:60px 10%;
+}
+
+.faq div{
+margin-bottom:15px;
+}
+
+/* CTA */
+.cta{
+padding:60px;
+text-align:center;
+}
+
+footer{
+padding:20px;
+background:#111;
+text-align:center;
+}
+</style>
 </head>
 
 <body>
 
+<nav>
+<h2>WebFlowX</h2>
+<div>
+<a href="#">Features</a>
+<a href="#">Pricing</a>
+<a href="#">Contact</a>
+</div>
+</nav>
+
 <section class="hero">
-
-<div class="hero-inner">
-
-<div class="badge">🔥 High Conversion Landing Page</div>
-
-<h1>Grow Your Business With A Powerful Website</h1>
-
-<p>
-We design modern landing pages that turn visitors into paying customers.
-</p>
-
-<div class="btn-group">
-<a href="#" class="btn primary">Get Started</a>
-<a href="#" class="btn secondary">Learn More</a>
-</div>
-
-</div>
-
+<h1>Build High-Converting Websites 🚀</h1>
+<p>We help businesses grow online with modern, responsive and conversion-focused design.</p>
+<a class="btn">Start Free Trial</a>
 </section>
 
-<!-- FEATURES -->
-<section>
-
-<h2 class="section-title">Why Choose This Landing Page?</h2>
-
-<div class="flex">
-
-<div class="box">
-<h3>⚡ Fast Loading</h3>
-<p>Optimized for speed & SEO.</p>
-</div>
-
-<div class="box">
-<h3>📱 Mobile Ready</h3>
-<p>Fully responsive on all devices.</p>
-</div>
-
-<div class="box">
-<h3>💰 High Conversion</h3>
-<p>Designed to increase sales.</p>
-</div>
-
-</div>
-
+<section class="grid">
+<div class="card">⚡ Fast Performance</div>
+<div class="card">📱 Fully Responsive</div>
+<div class="card">🎯 Conversion Optimized</div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="dark">
-
-<h2 class="section-title">Client Feedback</h2>
-
-<div class="flex">
-
-<div class="box">
-“Outstanding landing page design. Increased my sales!”
+<section class="pricing">
+<div class="price">
+<h3>Starter</h3>
+<p>$29</p>
 </div>
 
-<div class="box">
-“Very professional and clean work.”
+<div class="price">
+<h3>Pro</h3>
+<p>$59</p>
 </div>
 
-<div class="box">
-“Highly recommended developer.”
+<div class="price">
+<h3>Premium</h3>
+<p>$99</p>
 </div>
-
-</div>
-
 </section>
 
-<!-- CTA -->
-<section>
-
-<h2 class="section-title">Start Your Project Today</h2>
-
-<a href="#" class="btn primary">Hire Me Now</a>
-
+<section class="faq">
+<h2>FAQ</h2>
+<div>How fast delivery? → 2-3 days</div>
+<div>Support? → Yes</div>
+<div>Responsive? → 100%</div>
 </section>
+
+<section class="cta">
+<h2>Ready to Grow Your Business?</h2>
+<a class="btn">Hire Now</a>
+</section>
+
+<footer>© SaaS Demo</footer>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Full Stack Portfolio</title>
+<title>KhokonDev | Ultra Elite Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,6 @@
 
 <body>
 
-<!-- NAV -->
 <header class="nav">
 <h2 class="logo">KhokonDev</h2>
 
@@ -26,20 +25,22 @@
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section id="home" class="hero reveal">
+
+<div class="glow"></div>
 
 <div class="hero-content">
 
-<div class="badge">🚀 Available for Freelance Work</div>
+<div class="badge">🚀 Available for Freelance Projects</div>
 
 <h1>Hi, I'm <span>Khokon Ahmed</span></h1>
 
-<p>Modern, high-converting websites that help businesses grow, sell, and scale online.</p>
+<p>Building high-converting, modern & animated websites that grow your business online.</p>
 
 <div class="stats">
 <div>⚡ Fast Delivery</div>
 <div>🎯 Conversion Focus</div>
-<div>💼 Clean UI Expert</div>
+<div>💼 50+ Projects</div>
 </div>
 
 <div class="cta">
@@ -52,16 +53,15 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
+<section id="about" class="section reveal">
 <h2>About Me</h2>
-
 <p class="text">
-I am a frontend developer specialized in modern UI/UX design, landing pages, ecommerce UI, and conversion-optimized websites.
+Frontend developer specialized in UI/UX, landing pages, ecommerce systems and conversion-focused web design.
 </p>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section dark">
+<section id="services" class="section dark reveal">
 <h2>Services</h2>
 
 <div class="grid">
@@ -75,93 +75,75 @@ I am a frontend developer specialized in modern UI/UX design, landing pages, eco
 </section>
 
 <!-- WORK -->
-<section id="work" class="section">
+<section id="work" class="section reveal">
 <h2>My Work</h2>
 
 <div class="grid">
 
-<div class="card">
-<h3>Portfolio Website</h3>
-</div>
+<div class="card">Portfolio Website</div>
+<div class="card"><a href="landing.html">Landing Demo</a></div>
+<div class="card"><a href="ecommerce.html">Ecommerce Demo</a></div>
 
-<div class="card">
-<h3>Landing Page Demo</h3>
-<a href="landing.html">Open</a>
-</div>
-
-<div class="card">
-<h3>Ecommerce Demo</h3>
-<a href="ecommerce.html">Open</a>
-</div>
-
-</div>
-</section>
-
-<!-- SKILLS -->
-<section class="section dark">
-<h2>Skills</h2>
-
-<div class="grid">
-<div class="card">HTML</div>
-<div class="card">CSS</div>
-<div class="card">JavaScript</div>
-<div class="card">Responsive Design</div>
 </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" class="section">
+<section id="pricing" class="section dark reveal">
 <h2>Pricing</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Starter</h3>
-<p>$30 Landing Page</p>
+<p>$30</p>
 </div>
 
 <div class="card highlight">
 <h3>Pro</h3>
-<p>$70 Business Website</p>
+<p>$70</p>
 </div>
 
 <div class="card">
 <h3>Premium</h3>
-<p>$120 Ecommerce</p>
+<p>$120</p>
 </div>
 
-</div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="section dark">
-<h2>Testimonials</h2>
-
-<div class="grid">
-<div class="card">“Clean design and good communication.”</div>
-<div class="card">“Very professional developer.”</div>
-<div class="card">“Fast delivery and modern UI.”</div>
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section reveal">
 <h2>Contact Me</h2>
 
 <form action="https://formspree.io/f/xojnlako" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Project" required></textarea>
+<textarea name="message" placeholder="Your Project Details" required></textarea>
 
 <button class="btn primary">Send Message</button>
 
 </form>
+
 </section>
 
 <footer>
-<p>© 2026 KhokonDev</p>
+<p>© 2026 KhokonDev | Ultra Elite Mode</p>
 </footer>
+
+<!-- SCROLL SCRIPT -->
+<script>
+const elements = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+elements.forEach(el => {
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+el.classList.add("active");
+}
+});
+});
+</script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Final Master Portfolio</title>
+<title>KhokonDev | Ultra Clean Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,9 +17,8 @@
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
-<a href="#work">My Work</a>
+<a href="#work">Work</a>
 <a href="#projects">Projects</a>
-<a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
@@ -27,22 +26,33 @@
 <!-- HERO -->
 <section id="home" class="hero">
 
-<div class="glow"></div>
-<div class="glow2"></div>
-
 <div class="hero-content">
 
 <div class="badge">🚀 Available for Freelance Work</div>
 
-<h1>Hi, I'm <span>Khokon Ahmed</span></h1>
+<h1>I’m <span>Khokon Ahmed</span></h1>
 
-<h2 class="typing"></h2>
-
-<p class="sub">
-High-converting websites + HTML/CSS bug fixing expert
+<p class="subtitle">
+High-converting websites • Landing pages • Ecommerce UI • Bug Fix Expert
 </p>
 
+<div class="cta">
+<a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me</a>
+<a href="#work" class="btn outline">View Work</a>
+</div>
+
+<!-- STATS -->
 <div class="stats">
+
+<div class="stat">
+<span class="counter" data-target="50">0</span>+
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<span class="counter" data-target="30">0</span>+
+<p>Clients</p>
+</div>
 
 <div class="stat">
 <span class="counter" data-target="100">0</span>%
@@ -51,27 +61,13 @@ High-converting websites + HTML/CSS bug fixing expert
 
 <div class="stat">
 <span class="counter" data-target="100">0</span>%
-<p>Conversion Focus</p>
-</div>
-
-<div class="stat">
-<span class="counter" data-target="50">0</span>+
-<p>Projects</p>
-</div>
-
-<div class="stat">
-<span class="counter" data-target="20">0</span>+
-<p>Clients</p>
+<p>Client Satisfaction</p>
 </div>
 
 </div>
 
-<div class="cta">
-<a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me</a>
-<a href="#work" class="btn ghost">View Work</a>
 </div>
 
-</div>
 </section>
 
 <!-- SERVICES -->
@@ -79,45 +75,46 @@ High-converting websites + HTML/CSS bug fixing expert
 <h2>Services</h2>
 
 <div class="grid">
-
 <div class="card">Landing Page Design</div>
 <div class="card">Business Website</div>
 <div class="card">Ecommerce UI</div>
-<div class="card">Website Redesign</div>
-<div class="card">Responsive Fix</div>
 <div class="card">HTML CSS Bug Fix</div>
-
+<div class="card">Responsive Fix</div>
+<div class="card">Website Redesign</div>
 </div>
+
 </section>
 
-<!-- MY WORK -->
+<!-- WORK -->
 <section id="work" class="section dark">
 <h2>My Work</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Landing Page</h3>
-<p>High converting SaaS style design</p>
-<a href="landing.html">View Demo</a>
+<h3>Landing Demo</h3>
+<p>High converting SaaS landing page</p>
+<a href="landing.html">Open</a>
 </div>
 
 <div class="card">
-<h3>Ecommerce UI</h3>
-<p>Modern shop interface design</p>
-<a href="ecommerce.html">View Demo</a>
+<h3>Ecommerce Demo</h3>
+<p>Modern shopping UI design</p>
+<a href="ecommerce.html">Open</a>
 </div>
 
 <div class="card">
-<h3>Portfolio Website</h3>
-<p>Personal branding site</p>
+<h3>Portfolio</h3>
+<p>Personal branding system</p>
 </div>
 
 </div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
+
 <h2>Projects</h2>
 
 <div class="grid">
@@ -129,42 +126,16 @@ High-converting websites + HTML/CSS bug fixing expert
 
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="section dark">
-<h2>Pricing</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Starter</h3>
-<p>$30</p>
-<p>Basic Website</p>
-</div>
-
-<div class="card highlight">
-<h3>Pro</h3>
-<p>$70</p>
-<p>Landing + Optimization</p>
-</div>
-
-<div class="card">
-<h3>Bug Fix</h3>
-<p>$10+</p>
-<p>HTML / CSS Fix</p>
-</div>
-
-</div>
-</section>
-
 <!-- CONTACT -->
-<section id="contact" class="section">
-<h2>Contact</h2>
+<section id="contact" class="section dark">
+
+<h2>Contact Me</h2>
 
 <form action="https://formspree.io/f/xojnlako" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Project Details" required></textarea>
+<textarea name="message" placeholder="Tell me your project..." required></textarea>
 
 <button class="btn primary">Send Message</button>
 
@@ -173,30 +144,16 @@ High-converting websites + HTML/CSS bug fixing expert
 </section>
 
 <footer>
-<p>© 2026 KhokonDev | All Rights Reserved</p>
+<p>© 2026 KhokonDev</p>
 </footer>
 
 <script>
-
-// typing
-const text="I build high-converting websites & fix HTML/CSS bugs fast.";
-let i=0;
-function typing(){
-if(i<text.length){
-document.querySelector(".typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(typing,40);
-}}
-typing();
-
 // counter
-const counters=document.querySelectorAll('.counter');
+const counters=document.querySelectorAll(".counter");
 
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
+const runCounter=()=>{
 counters.forEach(counter=>{
-const target=+counter.getAttribute('data-target');
+const target=+counter.getAttribute("data-target");
 let count=0;
 
 const update=()=>{
@@ -211,12 +168,15 @@ counter.innerText=target;
 };
 update();
 });
+};
+
+window.addEventListener("scroll",()=>{
+const section=document.querySelector(".stats");
+const rect=section.getBoundingClientRect();
+if(rect.top<window.innerHeight){
+runCounter();
 }
 });
-},{threshold:0.5});
-
-observer.observe(document.querySelector('.stats'));
-
 </script>
 
 </body>

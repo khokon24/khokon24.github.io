@@ -120,11 +120,16 @@
 <section id="contact" class="dark">
 <h2 class="section-title">Contact</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Project Details"></textarea>
-<button class="btn primary">Send Message</button>
+<form action="https://formspree.io/f/xojnlako" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+<button type="submit" class="btn primary">Send Message</button>
+
 </form>
 </section>
 

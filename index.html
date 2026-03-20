@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Pro Portfolio</title>
+<title>KhokonDev | Final Master Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -31,58 +31,86 @@
 <div class="glow2"></div>
 
 <div class="hero-content">
+
 <div class="badge">🚀 Available for Freelance Work</div>
 
 <h1>Hi, I'm <span>Khokon Ahmed</span></h1>
+
 <h2 class="typing"></h2>
 
+<p class="sub">
+High-converting websites + HTML/CSS bug fixing expert
+</p>
+
 <div class="stats">
-<div class="stat"><span class="counter" data-target="100">0</span>%<p>Fast Delivery</p></div>
-<div class="stat"><span class="counter" data-target="100">0</span>%<p>Conversion Focus</p></div>
-<div class="stat"><span class="counter" data-target="50">0</span>+<p>Projects</p></div>
-<div class="stat"><span class="counter" data-target="20">0</span>+<p>Clients</p></div>
+
+<div class="stat">
+<span class="counter" data-target="100">0</span>%
+<p>Fast Delivery</p>
+</div>
+
+<div class="stat">
+<span class="counter" data-target="100">0</span>%
+<p>Conversion Focus</p>
+</div>
+
+<div class="stat">
+<span class="counter" data-target="50">0</span>+
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<span class="counter" data-target="20">0</span>+
+<p>Clients</p>
+</div>
+
 </div>
 
 <div class="cta">
 <a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me</a>
 <a href="#work" class="btn ghost">View Work</a>
 </div>
+
 </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
 <h2>Services</h2>
+
 <div class="grid">
+
 <div class="card">Landing Page Design</div>
 <div class="card">Business Website</div>
 <div class="card">Ecommerce UI</div>
 <div class="card">Website Redesign</div>
 <div class="card">Responsive Fix</div>
-<div class="card">Speed Optimization</div>
+<div class="card">HTML CSS Bug Fix</div>
+
 </div>
 </section>
 
 <!-- MY WORK -->
 <section id="work" class="section dark">
 <h2>My Work</h2>
+
 <div class="grid">
 
 <div class="card">
 <h3>Landing Page</h3>
-<p>High converting design</p>
+<p>High converting SaaS style design</p>
 <a href="landing.html">View Demo</a>
 </div>
 
 <div class="card">
 <h3>Ecommerce UI</h3>
-<p>Modern product layout</p>
+<p>Modern shop interface design</p>
 <a href="ecommerce.html">View Demo</a>
 </div>
 
 <div class="card">
-<h3>Portfolio</h3>
-<p>Personal branding website</p>
+<h3>Portfolio Website</h3>
+<p>Personal branding site</p>
 </div>
 
 </div>
@@ -91,61 +119,38 @@
 <!-- PROJECTS -->
 <section id="projects" class="section">
 <h2>Projects</h2>
+
 <div class="grid">
 <div class="card">Agency Website</div>
 <div class="card">SaaS Landing Page</div>
 <div class="card">Startup UI</div>
 <div class="card">Business Website</div>
 </div>
-</section>
 
-<!-- CASE STUDY -->
-<section class="section dark">
-<h2>Case Study</h2>
-<div class="grid">
-<div class="card">
-<h3>Problem</h3>
-<p>Low conversion & poor UI</p>
-</div>
-<div class="card">
-<h3>Solution</h3>
-<p>Modern UI + CTA optimization</p>
-</div>
-<div class="card">
-<h3>Result</h3>
-<p>+40% conversion increase</p>
-</div>
-</div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="section">
-<h2>Testimonials</h2>
-<div class="grid">
-<div class="card">“Excellent work and fast delivery!”</div>
-<div class="card">“Highly professional and responsive.”</div>
-<div class="card">“Clean UI and great communication.”</div>
-</div>
 </section>
 
 <!-- PRICING -->
 <section id="pricing" class="section dark">
 <h2>Pricing</h2>
+
 <div class="grid">
 
 <div class="card">
 <h3>Starter</h3>
 <p>$30</p>
+<p>Basic Website</p>
 </div>
 
 <div class="card highlight">
 <h3>Pro</h3>
 <p>$70</p>
+<p>Landing + Optimization</p>
 </div>
 
 <div class="card">
-<h3>Premium</h3>
-<p>$120</p>
+<h3>Bug Fix</h3>
+<p>$10+</p>
+<p>HTML / CSS Fix</p>
 </div>
 
 </div>
@@ -156,21 +161,25 @@
 <h2>Contact</h2>
 
 <form action="https://formspree.io/f/xojnlako" method="POST">
+
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your project details..." required></textarea>
+<textarea name="message" placeholder="Your Project Details" required></textarea>
+
 <button class="btn primary">Send Message</button>
+
 </form>
 
 </section>
 
 <footer>
-<p>© 2026 KhokonDev</p>
+<p>© 2026 KhokonDev | All Rights Reserved</p>
 </footer>
 
 <script>
+
 // typing
-const text="I build high-converting modern websites.";
+const text="I build high-converting websites & fix HTML/CSS bugs fast.";
 let i=0;
 function typing(){
 if(i<text.length){
@@ -182,12 +191,14 @@ typing();
 
 // counter
 const counters=document.querySelectorAll('.counter');
+
 const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 counters.forEach(counter=>{
 const target=+counter.getAttribute('data-target');
 let count=0;
+
 const update=()=>{
 const inc=target/60;
 if(count<target){
@@ -205,6 +216,7 @@ update();
 },{threshold:0.5});
 
 observer.observe(document.querySelector('.stats'));
+
 </script>
 
 </body>

@@ -3,120 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Demo</title>
+<title>Ecommerce Demo | KhokonDev</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-body{
-margin:0;
-font-family:Poppins;
-background:#0b1220;
-color:#fff;
-}
-
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px;
-background:#111;
-}
-
-/* HERO */
-.hero{
-padding:60px;
-text-align:center;
-background:linear-gradient(135deg,#ff7b00,#ff0055);
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-padding:40px;
-}
-
-.product{
-background:#111a2b;
-padding:20px;
-border-radius:12px;
-text-align:center;
-}
-
-.product img{
-width:100%;
-border-radius:10px;
-}
-
-.price{color:#00f5ff;}
-
-.btn{
-background:#00f5ff;
-padding:10px 20px;
-border-radius:20px;
-display:inline-block;
-margin-top:10px;
-color:#000;
-}
-
-/* BADGE */
-.badge{
-background:red;
-padding:4px 8px;
-font-size:12px;
-border-radius:5px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<header class="nav">
+<h2 class="logo">ShopZone</h2>
 <nav>
-<h2>ShopX</h2>
-<div>Cart (0)</div>
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Deals</a>
+<a href="#">Contact</a>
 </nav>
+</header>
 
-<section class="hero">
-<h1>🔥 New Collection</h1>
-<p>Best quality products for your lifestyle</p>
-</section>
+<section class="hero demo-hero">
 
-<section class="grid">
+<h1>Best Online Shopping Experience</h1>
 
-<div class="product">
-<span class="badge">Sale</span>
-<img src="https://via.placeholder.com/200">
-<h3>Product 1</h3>
-<p class="price">$20</p>
-<a class="btn">Add to Cart</a>
-</div>
+<p>Modern ecommerce UI designed for high sales conversion.</p>
 
-<div class="product">
-<img src="https://via.placeholder.com/200">
-<h3>Product 2</h3>
-<p class="price">$25</p>
-<a class="btn">Add to Cart</a>
-</div>
-
-<div class="product">
-<img src="https://via.placeholder.com/200">
-<h3>Product 3</h3>
-<p class="price">$30</p>
-<a class="btn">Add to Cart</a>
-</div>
+<a href="#" class="btn primary">Shop Now</a>
 
 </section>
 
-<footer>© Shop Demo</footer>
+<section class="section">
+
+<h2>Top Products</h2>
+
+<div class="grid">
+
+<div class="card product">
+<h3>Smart Watch</h3>
+<p>$120</p>
+<button class="btn primary">Buy</button>
+</div>
+
+<div class="card product">
+<h3>Headphones</h3>
+<p>$80</p>
+<button class="btn primary">Buy</button>
+</div>
+
+<div class="card product">
+<h3>Gaming Mouse</h3>
+<p>$40</p>
+<button class="btn primary">Buy</button>
+</div>
+
+</div>
+
+</section>
+
+<section class="section dark">
+
+<h2>Why Choose Us</h2>
+
+<div class="grid">
+
+<div class="card">Fast Delivery</div>
+<div class="card">Secure Payment</div>
+<div class="card">24/7 Support</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© ShopZone Ecommerce Demo</p>
+</footer>
 
 </body>
 </html>

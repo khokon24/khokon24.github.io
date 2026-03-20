@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khokon Ahmed | Web Developer</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,122 +14,85 @@
 <!-- NAV -->
 <nav>
 <h2>KhokonWeb</h2>
-
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#experience">Experience</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-<div class="badge">🔥 Available for Freelance Work</div>
-
-<h1>I’m <span>Khokon Ahmed</span></h1>
-<p>Frontend Developer building modern, responsive and high-converting websites for global clients.</p>
+<section id="home" class="hero">
+<div class="hero-content">
+<span class="badge">Frontend Developer</span>
+<h1>Hi, I'm <span>Khokon Ahmed</span></h1>
+<p>I build modern, responsive & high-converting websites for businesses and Fiverr clients.</p>
 
 <div class="btn-group">
-<a href="https://www.fiverr.com/khokondev" class="btn primary">🚀 Hire Me</a>
-<a href="landing.html" class="btn secondary">🌐 Landing Demo</a>
-<a href="ecommerce.html" class="btn secondary">🛒 Ecommerce Demo</a>
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="#contact" class="btn secondary">Hire Me</a>
+</div>
 </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-<h2 class="section-title">Services</h2>
-
-<div class="flex">
-<div class="box">Landing Page Design</div>
-<div class="box">Business Website</div>
-<div class="box">Ecommerce UI</div>
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="dark">
-<h2 class="section-title">Experience</h2>
-
-<div class="flex">
-<div class="box"><h3>1+ Years</h3>Frontend Development</div>
-<div class="box"><h3>50+ Projects</h3>Completed</div>
-<div class="box"><h3>30+ Clients</h3>Happy Clients</div>
-</div>
-</section>
-
-<!-- SKILLS -->
-<section>
-<h2 class="section-title">Skills</h2>
-
-<div class="flex">
-<div class="box">HTML / CSS</div>
-<div class="box">JavaScript</div>
-<div class="box">Responsive Design</div>
-<div class="box">Landing Pages</div>
-<div class="box">Ecommerce UI</div>
-<div class="box">UI/UX Basics</div>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section class="dark">
-<h2 class="section-title">Working Process</h2>
-
-<div class="flex">
-<div class="box">1. Requirement</div>
-<div class="box">2. Design</div>
-<div class="box">3. Development</div>
-<div class="box">4. Delivery</div>
-</div>
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<p class="center">
+I am Khokon Ahmed, a passionate web developer from Bangladesh. I specialize in building clean, fast and modern websites that help businesses grow online and convert visitors into clients.
+</p>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-<h2 class="section-title">Projects</h2>
+<section id="projects" class="dark">
+<h2 class="section-title">My Demo Projects</h2>
 
 <div class="flex">
-<div class="box">Portfolio Website</div>
-<div class="box">Landing Page</div>
-<div class="box">Ecommerce UI</div>
+
+<div class="box">
+<h3>Portfolio Website</h3>
+<p>Modern personal branding portfolio with animations and responsive UI.</p>
 </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section class="dark">
-<h2 class="section-title">Testimonials</h2>
-
-<div class="flex">
-<div class="box">“Excellent work and fast delivery.” — John</div>
-<div class="box">“Very professional developer.” — Sarah</div>
-<div class="box">“Clean and modern design.” — Ahmed</div>
+<div class="box">
+<h3>Landing Page</h3>
+<p>High converting business landing page designed for sales.</p>
 </div>
-</section>
 
-<!-- CTA -->
-<section>
-<h2 class="section-title">Let’s Build Something Amazing 🚀</h2>
-<p>High-converting websites that grow your business online.</p>
+<div class="box">
+<h3>Ecommerce UI</h3>
+<p>Clean ecommerce UI design with product showcase layout.</p>
+</div>
 
-<a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me Now</a>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="dark">
-<h2 class="section-title">Contact</h2>
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Project Details"></textarea>
-<button class="btn primary">Send Message</button>
+<form action="https://formspree.io/f/xojnlako" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+<button type="submit" class="btn primary">Send Message</button>
+
 </form>
+
+<p class="trust">
+⚡ Fast Response | Fiverr Ready | Available 24/7
+</p>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Khokon Ahmed | KhokonWeb</p>
+<p>© 2026 KhokonWeb | All Rights Reserved</p>
 </footer>
 
 </body>

@@ -50,12 +50,12 @@ opacity:1;
 
 /* HERO */
 .hero{
-min-height:90vh;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:100px 20px 60px;
+padding:120px 20px 60px;
 }
 
 .hero h1{
@@ -80,7 +80,58 @@ border-radius:20px;
 margin-bottom:15px;
 }
 
-/* BUTTONS */
+/* PREMIUM STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin:25px auto;
+max-width:420px;
+}
+
+.stat{
+background:rgba(255,255,255,0.05);
+padding:15px;
+border-radius:12px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.3s;
+opacity:0;
+transform:translateY(20px);
+animation:fadeUp 0.6s forwards;
+}
+
+.stat:nth-child(1){animation-delay:0.2s;}
+.stat:nth-child(2){animation-delay:0.4s;}
+.stat:nth-child(3){animation-delay:0.6s;}
+.stat:nth-child(4){animation-delay:0.8s;}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.stat:hover{
+transform:translateY(-6px) scale(1.03);
+border-color:#00f5ff;
+}
+
+.counter{
+font-size:22px;
+font-weight:700;
+color:#00f5ff;
+display:block;
+}
+
+.stat p{
+font-size:13px;
+opacity:0.8;
+margin-top:5px;
+}
+
+/* BUTTON */
 .cta{
 margin-top:20px;
 }
@@ -114,18 +165,16 @@ background:#00f5ff;
 color:#000;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section{
 padding:80px 10%;
 text-align:center;
-background:transparent;
 }
 
 .dark{
 background:#0f1624;
 }
 
-/* TEXT */
 .text{
 max-width:700px;
 margin:auto;
@@ -190,5 +239,9 @@ font-size:32px;
 
 nav{
 justify-content:center;
+}
+
+.stats{
+grid-template-columns:1fr;
 }
 }

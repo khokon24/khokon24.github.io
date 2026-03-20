@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ecommerce Pro | KhokonWeb</title>
+<title>Ecommerce Demo | KhokonWeb</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -17,16 +17,38 @@ padding:25px;
 text-align:center;
 background:#111;
 color:#00f5ff;
-font-size:24px;
+font-size:22px;
 font-weight:bold;
 }
 
+/* NEW NAV BAR */
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+background:#000;
+padding:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+}
+
+.hero{
+text-align:center;
+padding:30px;
+color:#ccc;
+}
+
+/* PRODUCT GRID */
 .grid{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:20px;
-padding:40px;
+padding:30px;
 }
 
 .product{
@@ -35,6 +57,7 @@ width:220px;
 padding:15px;
 border-radius:15px;
 transition:.3s;
+position:relative;
 }
 
 .product:hover{
@@ -52,6 +75,18 @@ color:#00f5ff;
 font-weight:bold;
 }
 
+/* NEW BADGE */
+.badge{
+position:absolute;
+top:10px;
+left:10px;
+background:red;
+padding:5px 10px;
+font-size:12px;
+border-radius:10px;
+}
+
+/* NEW CART BUTTON */
 button{
 margin-top:10px;
 padding:10px;
@@ -62,6 +97,13 @@ background:#00f5ff;
 font-weight:bold;
 cursor:pointer;
 }
+
+footer{
+text-align:center;
+padding:20px;
+color:#777;
+font-size:12px;
+}
 </style>
 </head>
 
@@ -69,30 +111,48 @@ cursor:pointer;
 
 <header>🛒 Premium Ecommerce UI Demo</header>
 
+<nav>
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">Deals</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="hero">
+<p>Modern Ecommerce UI with product showcase, cart system look & clean design</p>
+</div>
+
 <div class="grid">
 
 <div class="product">
+<div class="badge">NEW</div>
 <img src="https://via.placeholder.com/220">
 <h3>Smart Watch</h3>
 <p class="price">$49</p>
-<button>Buy Now</button>
+<button>Add to Cart</button>
 </div>
 
 <div class="product">
+<div class="badge">HOT</div>
 <img src="https://via.placeholder.com/220">
 <h3>Headphones</h3>
 <p class="price">$79</p>
-<button>Buy Now</button>
+<button>Add to Cart</button>
 </div>
 
 <div class="product">
+<div class="badge">SALE</div>
 <img src="https://via.placeholder.com/220">
-<h3>Shoes</h3>
+<h3>Running Shoes</h3>
 <p class="price">$99</p>
-<button>Buy Now</button>
+<button>Add to Cart</button>
 </div>
 
 </div>
+
+<footer>
+© 2026 KhokonWeb | Ecommerce UI Demo
+</footer>
 
 </body>
 </html>

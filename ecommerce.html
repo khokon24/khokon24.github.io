@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ecommerce Demo | KhokonWeb</title>
+<title>Ecommerce Pro | KhokonWeb</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -12,20 +12,34 @@ background:#0a0a0a;
 color:white;
 }
 
+/* HEADER */
 header{
-padding:25px;
-text-align:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
 background:#111;
+}
+
+.logo{
 color:#00f5ff;
 font-size:22px;
 font-weight:bold;
 }
 
-/* NEW NAV BAR */
+.cart{
+background:#00f5ff;
+color:black;
+padding:5px 12px;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* NAV */
 nav{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:25px;
 background:#000;
 padding:10px;
 }
@@ -36,17 +50,22 @@ text-decoration:none;
 font-size:14px;
 }
 
+/* HERO */
 .hero{
 text-align:center;
-padding:30px;
-color:#ccc;
+padding:40px;
+background:linear-gradient(120deg,#000,#0f2027);
 }
 
-/* PRODUCT GRID */
+.hero h1{
+color:#00f5ff;
+}
+
+/* PRODUCTS */
 .grid{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 gap:20px;
 padding:30px;
 }
@@ -75,18 +94,18 @@ color:#00f5ff;
 font-weight:bold;
 }
 
-/* NEW BADGE */
+/* BADGE */
 .badge{
 position:absolute;
 top:10px;
 left:10px;
-background:red;
 padding:5px 10px;
 font-size:12px;
 border-radius:10px;
+background:red;
 }
 
-/* NEW CART BUTTON */
+/* BUTTON */
 button{
 margin-top:10px;
 padding:10px;
@@ -98,6 +117,7 @@ font-weight:bold;
 cursor:pointer;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -109,7 +129,10 @@ font-size:12px;
 
 <body>
 
-<header>🛒 Premium Ecommerce UI Demo</header>
+<header>
+<div class="logo">KhokonShop</div>
+<div class="cart">Cart: 0</div>
+</header>
 
 <nav>
 <a href="#">Home</a>
@@ -119,7 +142,8 @@ font-size:12px;
 </nav>
 
 <div class="hero">
-<p>Modern Ecommerce UI with product showcase, cart system look & clean design</p>
+<h1>🔥 Big Sale Up To 50% Off</h1>
+<p>Modern Ecommerce UI built with clean design & real store feel</p>
 </div>
 
 <div class="grid">
@@ -129,7 +153,7 @@ font-size:12px;
 <img src="https://via.placeholder.com/220">
 <h3>Smart Watch</h3>
 <p class="price">$49</p>
-<button>Add to Cart</button>
+<button onclick="addToCart()">Add to Cart</button>
 </div>
 
 <div class="product">
@@ -137,7 +161,7 @@ font-size:12px;
 <img src="https://via.placeholder.com/220">
 <h3>Headphones</h3>
 <p class="price">$79</p>
-<button>Add to Cart</button>
+<button onclick="addToCart()">Add to Cart</button>
 </div>
 
 <div class="product">
@@ -145,7 +169,7 @@ font-size:12px;
 <img src="https://via.placeholder.com/220">
 <h3>Running Shoes</h3>
 <p class="price">$99</p>
-<button>Add to Cart</button>
+<button onclick="addToCart()">Add to Cart</button>
 </div>
 
 </div>
@@ -153,6 +177,15 @@ font-size:12px;
 <footer>
 © 2026 KhokonWeb | Ecommerce UI Demo
 </footer>
+
+<script>
+let count = 0;
+
+function addToCart(){
+count++;
+document.querySelector(".cart").innerText = "Cart: " + count;
+}
+</script>
 
 </body>
 </html>

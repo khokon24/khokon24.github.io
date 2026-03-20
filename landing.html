@@ -18,9 +18,8 @@ padding:120px 20px;
 }
 
 h1{
-font-size:55px;
+font-size:52px;
 color:#00f5ff;
-animation:fade 2s ease-in-out;
 }
 
 p{
@@ -32,26 +31,20 @@ font-size:18px;
 
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:15px 35px;
+margin-top:20px;
+padding:14px 30px;
 background:#00f5ff;
 color:black;
 font-weight:bold;
 border-radius:40px;
 text-decoration:none;
-transition:.3s;
 }
 
-.btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #00f5ff;
-}
-
-.features{
+.section{
+padding:60px 20px;
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
-margin-top:60px;
+justify-content:center;
 gap:20px;
 }
 
@@ -68,9 +61,21 @@ transform:translateY(-10px);
 box-shadow:0 0 20px #00f5ff;
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(-20px);}
-to{opacity:1;transform:translateY(0);}
+/* NEW ADDED TRUST SECTION */
+.trust{
+background:#111;
+padding:50px 20px;
+margin-top:40px;
+}
+
+.badge{
+display:inline-block;
+margin:10px;
+padding:10px 20px;
+background:rgba(0,245,255,0.1);
+border:1px solid #00f5ff;
+border-radius:20px;
+font-size:14px;
 }
 </style>
 </head>
@@ -78,15 +83,28 @@ to{opacity:1;transform:translateY(0);}
 <body>
 
 <div class="hero">
-<h1>Boost Your Business Online 🚀</h1>
-<p>I create high converting landing pages that turn visitors into paying customers.</p>
+<h1>Boost Your Business 🚀</h1>
+<p>High converting landing pages that turn visitors into real customers.</p>
 <a class="btn" href="#">Get Started</a>
-
-<div class="features">
-<div class="card">⚡ Fast Loading</div>
-<div class="card">📱 Mobile Friendly</div>
-<div class="card">💰 High Conversion</div>
 </div>
+
+<div class="section">
+<div class="card">⚡ Fast Loading</div>
+<div class="card">📱 Mobile Responsive</div>
+<div class="card">💰 High Conversion Rate</div>
+<div class="card">🎯 SEO Friendly Layout</div>
+</div>
+
+<!-- NEW TRUST SECTION -->
+<div class="trust">
+<h2>Why Clients Choose Me</h2>
+
+<div class="badge">✔ 100% Responsive Design</div>
+<div class="badge">✔ Clean Code</div>
+<div class="badge">✔ Fast Delivery</div>
+<div class="badge">✔ Unlimited Revisions</div>
+<div class="badge">✔ Modern UI/UX</div>
+
 </div>
 
 </body>

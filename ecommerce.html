@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ecommerce Demo | KhokonWeb</title>
+<title>Ecommerce Pro | KhokonWeb</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
 <style>
 body{
 margin:0;
@@ -11,34 +13,33 @@ color:white;
 }
 
 header{
-padding:20px;
-background:#111;
+padding:25px;
 text-align:center;
+background:#111;
 color:#00f5ff;
-font-size:22px;
+font-size:24px;
 font-weight:bold;
 }
 
-.container{
+.grid{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-padding:30px;
+flex-wrap:wrap;
 gap:20px;
+padding:40px;
 }
 
-.card{
+.product{
 background:rgba(255,255,255,0.05);
-padding:15px;
-border-radius:10px;
 width:220px;
-text-align:center;
+padding:15px;
+border-radius:15px;
 transition:.3s;
 }
 
-.card:hover{
+.product:hover{
 transform:scale(1.05);
-box-shadow:0 0 20px #00f5ff;
+box-shadow:0 0 25px #00f5ff;
 }
 
 img{
@@ -52,12 +53,13 @@ font-weight:bold;
 }
 
 button{
+margin-top:10px;
 padding:10px;
-background:#00f5ff;
+width:100%;
 border:none;
 border-radius:20px;
+background:#00f5ff;
 font-weight:bold;
-margin-top:10px;
 cursor:pointer;
 }
 </style>
@@ -65,27 +67,27 @@ cursor:pointer;
 
 <body>
 
-<header>🛒 Modern Ecommerce UI Demo</header>
+<header>🛒 Premium Ecommerce UI Demo</header>
 
-<div class="container">
+<div class="grid">
 
-<div class="card">
-<img src="https://via.placeholder.com/200">
-<h3>Product 1</h3>
-<p class="price">$29</p>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/200">
-<h3>Product 2</h3>
+<div class="product">
+<img src="https://via.placeholder.com/220">
+<h3>Smart Watch</h3>
 <p class="price">$49</p>
 <button>Buy Now</button>
 </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/200">
-<h3>Product 3</h3>
+<div class="product">
+<img src="https://via.placeholder.com/220">
+<h3>Headphones</h3>
+<p class="price">$79</p>
+<button>Buy Now</button>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/220">
+<h3>Shoes</h3>
 <p class="price">$99</p>
 <button>Buy Now</button>
 </div>

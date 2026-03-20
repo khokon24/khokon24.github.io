@@ -1,172 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Landing Page Pro | KhokonWeb</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page Demo</title>
+<link rel="stylesheet" href="style.css">
 
-<style>
-body{
-margin:0;
-font-family:Poppins;
-background:linear-gradient(135deg,#000,#0f2027,#000);
-color:white;
-text-align:center;
-}
-
-/* HERO */
-.hero{
-padding:120px 20px;
-}
-
-h1{
-font-size:52px;
-color:#00f5ff;
-}
-
-p{
-max-width:650px;
-margin:auto;
-color:#ccc;
-font-size:18px;
-}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 30px;
-background:#00f5ff;
-color:black;
-font-weight:bold;
-border-radius:40px;
-text-decoration:none;
-transition:.3s;
-}
-.btn:hover{
-transform:scale(1.1);
-box-shadow:0 0 20px #00f5ff;
-}
-
-/* FEATURES */
-.section{
-padding:60px 20px;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-width:250px;
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #00f5ff;
-}
-
-/* TRUST */
-.trust{
-background:#111;
-padding:50px 20px;
-}
-
-.badge{
-display:inline-block;
-margin:10px;
-padding:10px 20px;
-background:rgba(0,245,255,0.1);
-border:1px solid #00f5ff;
-border-radius:20px;
-font-size:14px;
-}
-
-/* TESTIMONIAL */
-.testimonial{
-padding:60px 20px;
-background:#0b1c22;
-}
-
-.testi-box{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-width:280px;
-}
-
-/* CTA */
-.cta{
-padding:80px 20px;
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-<h1>Boost Your Business 🚀</h1>
-<p>I create high converting landing pages that turn visitors into real customers.</p>
-<a class="btn" href="#">Get Started</a>
-</div>
+<section class="hero">
 
-<!-- FEATURES -->
-<div class="section">
-<div class="card">⚡ Fast Loading</div>
-<div class="card">📱 Mobile Responsive</div>
-<div class="card">💰 High Conversion</div>
-<div class="card">🎯 SEO Friendly</div>
-</div>
+<div class="hero-inner">
 
-<!-- TRUST -->
-<div class="trust">
-<h2>Why Clients Choose Me</h2>
-<div class="badge">✔ Clean Code</div>
-<div class="badge">✔ Fast Delivery</div>
-<div class="badge">✔ Responsive Design</div>
-<div class="badge">✔ Modern UI/UX</div>
-<div class="badge">✔ Unlimited Revisions</div>
-</div>
+<div class="badge">🔥 High Conversion Landing Page</div>
 
-<!-- TESTIMONIAL -->
-<div class="testimonial">
-<h2 style="color:#00f5ff;">Client Feedback</h2>
+<h1>Grow Your Business With A Powerful Website</h1>
 
-<p style="color:#ccc;max-width:600px;margin:auto;">
-Sample feedback based on project experience and design quality demonstration.
+<p>
+We design modern landing pages that turn visitors into paying customers.
 </p>
 
-<br><br>
-
-<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
-
-<div class="testi-box">
-<p style="color:#ccc;">"Amazing work! The landing page increased conversions."</p>
-<h4 style="color:#00f5ff;">— John Smith</h4>
-</div>
-
-<div class="testi-box">
-<p style="color:#ccc;">"Very clean design and fast delivery."</p>
-<h4 style="color:#00f5ff;">— Sarah Williams</h4>
-</div>
-
-<div class="testi-box">
-<p style="color:#ccc;">"Great communication and quality work."</p>
-<h4 style="color:#00f5ff;">— David Lee</h4>
+<div class="btn-group">
+<a href="#" class="btn primary">Get Started</a>
+<a href="#" class="btn secondary">Learn More</a>
 </div>
 
 </div>
+
+</section>
+
+<!-- FEATURES -->
+<section>
+
+<h2 class="section-title">Why Choose This Landing Page?</h2>
+
+<div class="flex">
+
+<div class="box">
+<h3>⚡ Fast Loading</h3>
+<p>Optimized for speed & SEO.</p>
 </div>
+
+<div class="box">
+<h3>📱 Mobile Ready</h3>
+<p>Fully responsive on all devices.</p>
+</div>
+
+<div class="box">
+<h3>💰 High Conversion</h3>
+<p>Designed to increase sales.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="dark">
+
+<h2 class="section-title">Client Feedback</h2>
+
+<div class="flex">
+
+<div class="box">
+“Outstanding landing page design. Increased my sales!”
+</div>
+
+<div class="box">
+“Very professional and clean work.”
+</div>
+
+<div class="box">
+“Highly recommended developer.”
+</div>
+
+</div>
+
+</section>
 
 <!-- CTA -->
-<div class="cta">
-<h2>Let’s Build Your Website 🚀</h2>
-<a href="https://www.fiverr.com/khokondev" class="btn">Hire Me on Fiverr</a>
-</div>
+<section>
+
+<h2 class="section-title">Start Your Project Today</h2>
+
+<a href="#" class="btn primary">Hire Me Now</a>
+
+</section>
 
 </body>
 </html>

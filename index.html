@@ -12,11 +12,7 @@
 html{scroll-behavior:smooth;}
 body{background:#000;color:#fff;overflow-x:hidden;}
 
-nav{
-display:flex;justify-content:space-between;align-items:center;
-padding:20px 10%;background:#000;
-position:fixed;width:100%;top:0;z-index:1000;
-}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:#000;position:fixed;width:100%;top:0;z-index:1000;}
 nav h2{color:#00f5ff;font-weight:800;}
 nav ul{display:flex;gap:25px;list-style:none;}
 nav ul li a{text-decoration:none;color:#fff;transition:.3s;}
@@ -25,94 +21,26 @@ nav ul li a:hover{color:#00f5ff;}
 section{padding:100px 10%;}
 .section-title{text-align:center;font-size:38px;margin-bottom:50px;color:#00f5ff;}
 
-.hero{
-min-height:100vh;
-display:flex;justify-content:center;align-items:center;text-align:center;
-background:linear-gradient(270deg,#000,#0f2027,#000);
-background-size:400% 400%;
-animation:bgAnimation 12s ease infinite;
-}
-@keyframes bgAnimation{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-.hero-content{margin-top:80px;}
-.profile-img{
-width:150px;height:150px;border-radius:50%;
-object-fit:cover;margin-bottom:20px;
-border:4px solid #00f5ff;box-shadow:0 0 25px #00f5ff;
-}
-.hero h1{font-size:42px;margin-bottom:15px;}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(270deg,#000,#0f2027,#000);background-size:400% 400%;animation:bgAnimation 12s ease infinite;}
+@keyframes bgAnimation{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+.profile-img{width:150px;height:150px;border-radius:50%;border:4px solid #00f5ff;box-shadow:0 0 25px #00f5ff;margin-bottom:20px;}
+.hero h1{font-size:42px;}
 .hero span{color:#00f5ff;}
-.hero p{max-width:600px;margin:20px auto;color:#ccc;}
-.btn{
-padding:14px 35px;border-radius:40px;
-background:#00f5ff;color:#000;font-weight:700;
-text-decoration:none;display:inline-block;
-}
+.hero p{color:#ccc;margin:20px auto;max-width:600px;}
 
-.about{background:#0b1c22;}
-.about-container{display:flex;gap:50px;flex-wrap:wrap;}
-.about-text,.about-skills{flex:1;min-width:260px;}
+.btn{padding:14px 35px;border-radius:40px;background:#00f5ff;color:#000;font-weight:700;text-decoration:none;display:inline-block;transition:.3s;}
+.btn:hover{transform:scale(1.08);box-shadow:0 0 20px #00f5ff;}
 
-.service-container,.project-container{
-display:flex;gap:25px;flex-wrap:wrap;justify-content:center;
-}
+.service-container,.project-container{display:flex;gap:25px;flex-wrap:wrap;justify-content:center;}
+
 .service-box,.project-box{
-background:#111;padding:25px;border-radius:15px;
-flex:1;min-width:250px;text-align:center;
-transition:.3s;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:25px;border-radius:15px;flex:1;min-width:250px;text-align:center;transition:.3s;
 }
-.service-box:hover,.project-box:hover{
-transform:translateY(-8px);
-box-shadow:0 0 15px #00f5ff;
-}
-
-.contact-wrapper{
-display:flex;gap:40px;flex-wrap:wrap;
-}
-.contact-form{
-flex:1;min-width:280px;
-display:flex;flex-direction:column;gap:18px;
-}
-.contact-form input,
-.contact-form textarea{
-padding:14px;border:none;border-radius:10px;
-background:#111;color:#fff;
-}
-.contact-form button{
-padding:14px;border:none;border-radius:30px;
-background:#00f5ff;font-weight:700;cursor:pointer;
-}
-.form-status{text-align:center;font-weight:600;}
-
-.contact-info{
-flex:1;min-width:250px;
-background:#111;padding:25px;border-radius:15px;
-}
-.contact-info p{margin:12px 0;color:#ccc;}
-.contact-info a{
-color:#00f5ff;text-decoration:none;font-weight:600;
-}
-.contact-info a:hover{text-decoration:underline;}
-
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:#fff;
-font-size:26px;
-width:60px;height:60px;
-border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-text-decoration:none;
-box-shadow:0 0 15px rgba(0,0,0,0.4);
-z-index:1000;
-transition:.3s;
-}
-.whatsapp-float:hover{transform:scale(1.1);}
+.service-box:hover,.project-box:hover{transform:translateY(-10px);box-shadow:0 0 25px #00f5ff;}
 
 .reveal{opacity:0;transform:translateY(60px);transition:1s;}
 .reveal.active{opacity:1;transform:translateY(0);}
@@ -120,7 +48,7 @@ transition:.3s;
 footer{text-align:center;padding:25px;background:#111;margin-top:40px;}
 
 @media(max-width:768px){
-nav{flex-direction:column;gap:12px;}
+nav{flex-direction:column;}
 .hero h1{font-size:30px;}
 }
 </style>
@@ -140,121 +68,99 @@ nav{flex-direction:column;gap:12px;}
 </nav>
 
 <section class="hero">
-<div class="hero-content">
-<img src="profile.jpg" alt="Khokon Ahmed" class="profile-img">
-<h1>I'm <span>Khokon Ahmed</span></h1>
-<p>Professional Web Designer & Frontend Developer from Bangladesh.</p>
-<a href="https://www.fiverr.com/khokondev" class="btn" target="_blank">Hire Me on Fiverr</a>
+<div>
+<img src="profile.jpg" class="profile-img">
+<h1>I Build <span>Modern Websites</span></h1>
+<p>Helping businesses grow online with clean & responsive design.</p>
+<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Hire Me on Fiverr</a>
 </div>
 </section>
 
-<section class="about reveal" id="about">
+<section id="about" class="reveal">
 <h2 class="section-title">About Me</h2>
-<div class="about-container">
-<div class="about-text">
-<p>I build responsive and modern websites that help businesses grow online.</p>
-</div>
-<div class="about-skills">
-<p>HTML - 95%</p>
-<p>CSS - 90%</p>
-<p>JavaScript - 80%</p>
-</div>
-</div>
+<p style="text-align:center;">I build responsive and modern websites that help businesses grow online.</p>
 </section>
 
 <section id="services" class="reveal">
 <h2 class="section-title">Services</h2>
 <div class="service-container">
-<div class="service-box"><h3>Website Design</h3></div>
-<div class="service-box"><h3>Landing Page</h3></div>
-<div class="service-box"><h3>Frontend Development</h3></div>
+<div class="service-box">Website Design</div>
+<div class="service-box">Landing Page</div>
+<div class="service-box">Frontend Development</div>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="section-title">Why Hire Me</h2>
+<div class="service-container">
+<div class="service-box">⚡ Fast Delivery</div>
+<div class="service-box">💻 Clean Code</div>
+<div class="service-box">📱 Responsive Design</div>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="section-title">My Work Process</h2>
+<div class="service-container">
+<div class="service-box">Discussion</div>
+<div class="service-box">Design</div>
+<div class="service-box">Development</div>
+<div class="service-box">Delivery</div>
+</div>
+</section>
+
+<section class="reveal">
+<h2 class="section-title">Tech Stack</h2>
+<div class="service-container">
+<div class="service-box">HTML</div>
+<div class="service-box">CSS</div>
+<div class="service-box">JavaScript</div>
 </div>
 </section>
 
 <section id="projects" class="reveal">
 <h2 class="section-title">Projects</h2>
 <div class="project-container">
-<div class="project-box"><h3>Business Website</h3></div>
-<div class="project-box"><h3>Ecommerce Landing</h3></div>
-<div class="project-box"><h3>Portfolio Website</h3></div>
-</div>
+<div class="project-box">Business Website</div>
+<div class="project-box">Ecommerce Landing</div>
+<div class="project-box">Portfolio Website</div>
 </div>
 </section>
 
-<section id="contact" class="reveal">
+<section class="reveal">
+<h2 class="section-title">Client Feedback</h2>
+<div class="service-container">
+<div class="service-box">"Amazing work!"</div>
+<div class="service-box">"Very professional"</div>
+<div class="service-box">"Highly recommended"</div>
+</div>
+</section>
+
+<section class="reveal" style="text-align:center;">
+<h2 class="section-title">Let’s Work Together 🚀</h2>
+<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Start Your Project</a>
+</section>
+
+<section id="contact" class="reveal" style="text-align:center;">
 <h2 class="section-title">Contact Me</h2>
-
-<div class="contact-wrapper">
-
-<form class="contact-form" action="https://formspree.io/f/xojnlako" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-<button type="submit">Send Message</button>
-<p class="form-status"></p>
-</form>
-
-<div class="contact-info">
-<p>📧 Email:<br>
-<a href="mailto:contact.khokonweb@gmail.com">contact.khokonweb@gmail.com</a></p>
-
-<p>📞 Phone:<br>
-<a href="tel:+8801739656582">+8801739656582</a></p>
-
-<p>💬 WhatsApp:<br>
-<a href="https://wa.me/8801739656582" target="_blank">Chat Now</a></p>
-
-<p>💻 GitHub:<br>
-<a href="https://khokon24.github.io" target="_blank">khokon24.github.io</a></p>
-
-<p>🎯 Fiverr:<br>
-<a href="https://www.fiverr.com/khokondev" target="_blank">fiverr.com/khokondev</a></p>
-</div>
-
-</div>
+<p>Available on Fiverr for fast response</p>
+<a href="https://www.fiverr.com/khokondev" target="_blank" class="btn">Hire Me on Fiverr</a>
 </section>
 
 <footer>
-<p>© 2026 Khokon Ahmed | All Rights Reserved</p>
+<p>© 2026 Khokon Ahmed</p>
 </footer>
 
-<a href="https://wa.me/8801739656582" class="whatsapp-float" target="_blank">💬</a>
-
 <script>
-const form=document.querySelector(".contact-form");
-const status=document.querySelector(".form-status");
-
-form.addEventListener("submit",async function(e){
-e.preventDefault();
-const data=new FormData(form);
-const response=await fetch(form.action,{
-method:form.method,
-body:data,
-headers:{'Accept':'application/json'}
-});
-if(response.ok){
-status.innerHTML="✅ Message Sent Successfully!";
-status.style.color="#00f5ff";
-form.reset();
-}else{
-status.innerHTML="❌ Something went wrong.";
-status.style.color="red";
-}
-});
-
 function reveal(){
-var reveals=document.querySelectorAll(".reveal");
-for(var i=0;i<reveals.length;i++){
-var windowHeight=window.innerHeight;
-var elementTop=reveals[i].getBoundingClientRect().top;
-if(elementTop<windowHeight-100){
-reveals[i].classList.add("active");
+document.querySelectorAll(".reveal").forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add("active");
 }
-}
+});
 }
 window.addEventListener("scroll",reveal);
 </script>
 
 </body>
 </html>
-

@@ -10,7 +10,8 @@ body{
 margin:0;
 font-family:sans-serif;
 background:#0b0b0b;
-color:white;
+color:#fff;
+scroll-behavior:smooth;
 }
 
 /* NAV */
@@ -21,78 +22,87 @@ padding:15px 30px;
 background:#111;
 position:sticky;
 top:0;
+z-index:100;
 }
+.nav a{
+color:#aaa;
+margin:0 10px;
+text-decoration:none;
+}
+.nav a:hover{color:#00ffcc}
 
 /* HERO */
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:90px 20px;
 }
-.hero h1 span{
-color:#00ffcc;
-}
+.hero h1 span{color:#00ffcc}
 
 /* BUTTON */
 .btn{
 padding:10px 15px;
-margin:5px;
 border:none;
-cursor:pointer;
+margin:5px;
 border-radius:6px;
+cursor:pointer;
 }
 .primary{
 background:#00ffcc;
 color:black;
 }
 
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+text-align:center;
+margin-top:30px;
+}
+.stat{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+}
+
 /* SECTION */
 .section{
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
 margin-top:20px;
 }
 .card{
 background:#1a1a1a;
-padding:15px;
-border-radius:10px;
-}
-
-/* LOGIN */
-.auth{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
-}
-.box{
-background:#111;
 padding:20px;
 border-radius:10px;
-width:280px;
 }
 
-/* DASHBOARD */
-.dashboard{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#000;
-padding:30px;
+/* DARK */
+.dark{background:#111}
+
+/* CONTACT */
+input,textarea{
+width:90%;
+max-width:400px;
+padding:10px;
+margin:5px;
+border:none;
+border-radius:5px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+margin-top:30px;
 }
 </style>
 
@@ -100,67 +110,114 @@ padding:30px;
 
 <body>
 
-<header class="nav">
+<!-- NAV -->
+<div class="nav">
 <h2>KhokonDev</h2>
-<button onclick="openLogin()" class="btn primary">Login</button>
-</header>
+<div>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
 
-<section class="hero">
-<h1>Build <span>High Converting Websites</span></h1>
-<p>Landing page • Ecommerce • SaaS</p>
+<!-- HERO -->
+<section id="home" class="hero">
+<h1>High Converting <span>Websites & SaaS UI</span></h1>
+<p>Landing Page • Ecommerce • Business Website</p>
+
 <button class="btn primary">Hire Me</button>
+<button class="btn">View Work</button>
+
+<!-- STATS -->
+<div class="stats">
+<div class="stat"><span id="p1">0</span>+ Projects</div>
+<div class="stat"><span id="p2">0</span>+ Clients</div>
+<div class="stat"><span id="p3">0</span>% Satisfaction</div>
+<div class="stat"><span id="p4">0</span>h Response</div>
+</div>
 </section>
 
-<section class="section">
+<!-- SERVICES -->
+<section id="services" class="section">
 <h2>Services</h2>
 <div class="grid">
-<div class="card">Landing Page</div>
-<div class="card">Ecommerce</div>
+<div class="card">Landing Page Design</div>
+<div class="card">Ecommerce UI</div>
+<div class="card">SaaS Dashboard</div>
 <div class="card">Bug Fix</div>
 </div>
 </section>
 
-<!-- LOGIN -->
-<div class="auth" id="auth">
-<div class="box">
-<h3>Login</h3>
-<input id="u" placeholder="user"><br><br>
-<input id="p" type="password" placeholder="pass"><br><br>
-<button onclick="login()" class="btn primary">Login</button>
-<button onclick="closeLogin()" class="btn">Close</button>
-</div>
-</div>
+<!-- ABOUT -->
+<section class="section dark">
+<h2>About Me</h2>
+<p>I am a web developer focused on conversion optimized landing pages, ecommerce UI and SaaS systems.</p>
+</section>
 
-<!-- DASHBOARD -->
-<div class="dashboard" id="dash">
-<h1>Dashboard</h1>
-<p>Welcome to system</p>
-<button onclick="logout()" class="btn primary">Logout</button>
+<!-- WORK -->
+<section id="work" class="section">
+<h2>My Work</h2>
+<div class="grid">
+<div class="card">Landing Page Demo</div>
+<div class="card">Ecommerce Demo</div>
+<div class="card">Portfolio System</div>
 </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section dark">
+<h2>Process</h2>
+<div class="grid">
+<div class="card">Requirement</div>
+<div class="card">Design</div>
+<div class="card">Development</div>
+<div class="card">Delivery</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2>Client Reviews</h2>
+<div class="grid">
+<div class="card">"Great work!" - John</div>
+<div class="card">"Very professional" - Sarah</div>
+<div class="card">"Fast delivery" - Ahmed</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+<h2>Contact Me</h2>
+
+<form action="https://formspree.io/f/xojnlako" method="POST">
+<input name="name" placeholder="Name" required><br>
+<input name="email" placeholder="Email" required><br>
+<textarea name="message" placeholder="Message"></textarea><br>
+<button class="btn primary">Send</button>
+</form>
+</section>
+
+<footer>
+© 2026 KhokonDev
+</footer>
 
 <script>
-function openLogin(){
-document.getElementById("auth").style.display="flex";
+function animate(id, value){
+let i=0;
+let el=document.getElementById(id);
+let interval=setInterval(()=>{
+i++;
+el.innerText=i;
+if(i>=value) clearInterval(interval);
+},20);
 }
 
-function closeLogin(){
-document.getElementById("auth").style.display="none";
-}
-
-function login(){
-let u=document.getElementById("u").value;
-let p=document.getElementById("p").value;
-
-if(u==="user" && p==="1234"){
-document.getElementById("auth").style.display="none";
-document.getElementById("dash").style.display="block";
-}else{
-alert("Wrong login");
-}
-}
-
-function logout(){
-document.getElementById("dash").style.display="none";
+window.onload=()=>{
+animate("p1",50);
+animate("p2",30);
+animate("p3",100);
+animate("p4",24);
 }
 </script>
 

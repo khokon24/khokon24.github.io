@@ -252,3 +252,203 @@ grid-template-columns:repeat(2,1fr);
 padding:60px 15px;
 }
 }
+/* =====================================
+   🚀 CASE STUDY ULTIMATE UPGRADE PACK
+   (Before/After + Progress + Slider UI)
+===================================== */
+
+
+/* =========================
+   SECTION BASE
+========================= */
+
+#case{
+position:relative;
+}
+
+#case h2{
+margin-bottom:20px;
+}
+
+/* =========================
+   CASE CARD PREMIUM STYLE
+========================= */
+
+#case .card{
+position:relative;
+overflow:hidden;
+border-left:3px solid #00ff88;
+transition:0.3s ease;
+}
+
+#case .card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,255,136,0.08);
+}
+
+/* =========================
+   PROGRESS IMPACT BAR
+========================= */
+
+.progress-bar{
+width:100%;
+height:8px;
+background:#1c1c1c;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-bar span{
+display:block;
+height:100%;
+background:#00ff88;
+width:0;
+border-radius:20px;
+animation:loadBar 2s ease forwards;
+}
+
+@keyframes loadBar{
+from{width:0;}
+to{width:var(--progress);}
+}
+
+/* text % */
+.progress-text{
+font-size:12px;
+color:#00ff88;
+margin-top:5px;
+}
+
+/* =========================
+   BEFORE / AFTER SLIDER
+========================= */
+
+.case-slider{
+margin-top:40px;
+padding:20px;
+background:#0f141b;
+border:1px solid #1c1c1c;
+border-radius:10px;
+text-align:center;
+}
+
+.case-slider h3{
+color:#fff;
+margin-bottom:15px;
+font-size:16px;
+}
+
+.slider-box{
+position:relative;
+width:100%;
+max-width:500px;
+height:260px;
+margin:auto;
+overflow:hidden;
+border-radius:10px;
+border:1px solid #1c1c1c;
+}
+
+/* layers */
+.slider-box .img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:600;
+color:#fff;
+}
+
+.after{
+background:#00ff88;
+color:#000;
+z-index:1;
+}
+
+.before{
+background:#1a1f27;
+z-index:2;
+width:50%;
+overflow:hidden;
+transition:0.2s;
+}
+
+/* slider input */
+.slider{
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+z-index:5;
+accent-color:#00ff88;
+}
+
+.note{
+font-size:12px;
+color:#777;
+margin-top:10px;
+}
+
+/* =========================
+   CASE STUDY SLIDER WRAPPER
+========================= */
+
+.case-wrapper{
+display:flex;
+gap:15px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+padding-bottom:10px;
+}
+
+.case-wrapper .card{
+min-width:280px;
+scroll-snap-align:start;
+}
+
+/* hide scrollbar */
+.case-wrapper::-webkit-scrollbar{
+display:none;
+}
+
+/* =========================
+   ANIMATION (soft premium feel)
+========================= */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#case .card{
+animation:fadeUp 0.6s ease;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.case-wrapper{
+flex-direction:column;
+}
+
+.slider-box{
+height:220px;
+}
+
+}

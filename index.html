@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Ultimate Portfolio</title>
+<title>KhokonDev | Ultra Pro Portfolio</title>
 
 <style>
-body{
+*{
 margin:0;
-font-family:sans-serif;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
 background:#0b0b0b;
 color:#fff;
 scroll-behavior:smooth;
@@ -34,21 +39,31 @@ text-decoration:none;
 /* HERO */
 .hero{
 text-align:center;
-padding:90px 20px;
+padding:100px 20px;
+position:relative;
 }
-.hero h1 span{color:#00ffcc}
+.hero h1{
+font-size:40px;
+}
+.hero span{
+color:#00ffcc;
+}
 
 /* BUTTON */
 .btn{
-padding:10px 15px;
-border:none;
+padding:10px 16px;
 margin:5px;
+border:none;
 border-radius:6px;
 cursor:pointer;
+transition:0.3s;
 }
 .primary{
 background:#00ffcc;
-color:black;
+color:#000;
+}
+.btn:hover{
+transform:scale(1.05);
 }
 
 /* STATS */
@@ -56,8 +71,7 @@ color:black;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:10px;
-text-align:center;
-margin-top:30px;
+margin-top:40px;
 }
 .stat{
 background:#1a1a1a;
@@ -67,14 +81,14 @@ border-radius:10px;
 
 /* SECTION */
 .section{
-padding:70px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:15px;
 margin-top:20px;
 }
@@ -82,27 +96,38 @@ margin-top:20px;
 background:#1a1a1a;
 padding:20px;
 border-radius:10px;
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-5px);
 }
 
 /* DARK */
-.dark{background:#111}
+.dark{
+background:#111;
+}
+
+/* CTA FLOAT */
+.cta{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00ffcc;
+color:#000;
+padding:12px 18px;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+}
 
 /* CONTACT */
 input,textarea{
 width:90%;
-max-width:400px;
+max-width:420px;
 padding:10px;
 margin:5px;
 border:none;
 border-radius:5px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:#111;
-margin-top:30px;
 }
 </style>
 
@@ -123,72 +148,53 @@ margin-top:30px;
 
 <!-- HERO -->
 <section id="home" class="hero">
-<h1>High Converting <span>Websites & SaaS UI</span></h1>
-<p>Landing Page • Ecommerce • Business Website</p>
+
+<h1>Build <span>High Converting Websites</span></h1>
+<p>Landing Pages • Ecommerce • SaaS UI</p>
 
 <button class="btn primary">Hire Me</button>
 <button class="btn">View Work</button>
 
 <!-- STATS -->
 <div class="stats">
-<div class="stat"><span id="p1">0</span>+ Projects</div>
-<div class="stat"><span id="p2">0</span>+ Clients</div>
-<div class="stat"><span id="p3">0</span>% Satisfaction</div>
-<div class="stat"><span id="p4">0</span>h Response</div>
+<div class="stat"><h2 id="s1">0</h2><p>Projects</p></div>
+<div class="stat"><h2 id="s2">0</h2><p>Clients</p></div>
+<div class="stat"><h2 id="s3">0</h2><p>Reviews</p></div>
+<div class="stat"><h2 id="s4">0</h2><p>Hours Support</p></div>
 </div>
+
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
 <h2>Services</h2>
 <div class="grid">
-<div class="card">Landing Page Design</div>
-<div class="card">Ecommerce UI</div>
-<div class="card">SaaS Dashboard</div>
-<div class="card">Bug Fix</div>
+<div class="card">⚡ Landing Page Design</div>
+<div class="card">🛒 Ecommerce UI</div>
+<div class="card">💼 SaaS Dashboard</div>
+<div class="card">🔧 Bug Fix</div>
+</div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="section dark">
+<h2>My Work</h2>
+<div class="grid">
+<div class="card">🔥 Landing Page Demo</div>
+<div class="card">🛒 Ecommerce Demo</div>
+<div class="card">🚀 SaaS System</div>
 </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section dark">
-<h2>About Me</h2>
-<p>I am a web developer focused on conversion optimized landing pages, ecommerce UI and SaaS systems.</p>
-</section>
-
-<!-- WORK -->
-<section id="work" class="section">
-<h2>My Work</h2>
-<div class="grid">
-<div class="card">Landing Page Demo</div>
-<div class="card">Ecommerce Demo</div>
-<div class="card">Portfolio System</div>
-</div>
-</section>
-
-<!-- PROCESS -->
-<section class="section dark">
-<h2>Process</h2>
-<div class="grid">
-<div class="card">Requirement</div>
-<div class="card">Design</div>
-<div class="card">Development</div>
-<div class="card">Delivery</div>
-</div>
-</section>
-
-<!-- TESTIMONIALS -->
 <section class="section">
-<h2>Client Reviews</h2>
-<div class="grid">
-<div class="card">"Great work!" - John</div>
-<div class="card">"Very professional" - Sarah</div>
-<div class="card">"Fast delivery" - Ahmed</div>
-</div>
+<h2>About Me</h2>
+<p>I create conversion-focused websites that help businesses grow faster.</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section dark">
-<h2>Contact Me</h2>
+<h2>Contact</h2>
 
 <form action="https://formspree.io/f/xojnlako" method="POST">
 <input name="name" placeholder="Name" required><br>
@@ -198,27 +204,37 @@ margin-top:30px;
 </form>
 </section>
 
-<footer>
-© 2026 KhokonDev
-</footer>
+<!-- CTA -->
+<div class="cta" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+🚀 Hire Me
+</div>
 
 <script>
-function animate(id, value){
-let i=0;
+function animate(id, target){
 let el=document.getElementById(id);
+let count=0;
+
 let interval=setInterval(()=>{
-i++;
-el.innerText=i;
-if(i>=value) clearInterval(interval);
-},20);
+count++;
+el.innerText=count;
+if(count>=target) clearInterval(interval);
+},30);
 }
 
-window.onload=()=>{
-animate("p1",50);
-animate("p2",30);
-animate("p3",100);
-animate("p4",24);
+let started=false;
+
+window.addEventListener("scroll",()=>{
+let hero=document.querySelector(".stats");
+let rect=hero.getBoundingClientRect();
+
+if(rect.top<window.innerHeight && !started){
+started=true;
+animate("s1",50);
+animate("s2",30);
+animate("s3",120);
+animate("s4",24);
 }
+});
 </script>
 
 </body>

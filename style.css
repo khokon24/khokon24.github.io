@@ -42,9 +42,10 @@ box-shadow:0 10px 30px rgba(0,0,0,0.5);
 
 .logo{
 color:#00ff88;
-font-weight:700;
-font-size:20px;
-text-shadow:0 0 12px rgba(0,255,136,0.6);
+font-weight:800;
+font-size:22px;
+letter-spacing:1px;
+text-shadow:none;
 }
 
 /* nav links */

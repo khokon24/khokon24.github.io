@@ -452,3 +452,255 @@ height:220px;
 }
 
 }
+/* =====================================
+   🚀 GLOBAL PREMIUM UI SYSTEM
+   (FULL PORTFOLIO UNIFY DESIGN)
+===================================== */
+
+:root{
+--primary:#00ff88;
+--bg:#0b0f14;
+--card:#121922;
+--text:#ffffff;
+--muted:#b8b8b8;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:var(--bg);
+color:var(--text);
+scroll-behavior:smooth;
+}
+
+/* =========================
+   SECTION STYLE (ALL SAME)
+========================= */
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:28px;
+margin-bottom:30px;
+position:relative;
+}
+
+.section h2::after{
+content:"";
+width:60px;
+height:3px;
+background:var(--primary);
+display:block;
+margin:10px auto;
+border-radius:5px;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+/* =========================
+   CARD SYSTEM (MAIN UNIFY)
+========================= */
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:12px;
+border:1px solid #1c1c1c;
+transition:0.3s ease;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,255,136,0.08);
+border-color:var(--primary);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn.primary{
+background:var(--primary);
+color:#000;
+}
+
+.btn.primary:hover{
+opacity:0.8;
+}
+
+.btn.outline{
+border:1px solid var(--primary);
+color:var(--primary);
+}
+
+.btn.outline:hover{
+background:var(--primary);
+color:#000;
+}
+
+/* =========================
+   HERO FIX (CENTER PREMIUM)
+========================= */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:40px;
+max-width:800px;
+margin:auto;
+}
+
+.hero p{
+max-width:600px;
+margin:15px auto;
+color:var(--muted);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:15px;
+margin-top:40px;
+}
+
+.stat{
+background:var(--card);
+padding:15px;
+border-radius:10px;
+border:1px solid #1c1c1c;
+}
+
+/* =========================
+   NAV PREMIUM FIX
+========================= */
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+position:sticky;
+top:0;
+background:#0b0f14;
+z-index:999;
+border-bottom:1px solid #1c1c1c;
+}
+
+.nav a{
+color:#fff;
+text-decoration:none;
+margin:0 10px;
+transition:0.3s;
+}
+
+.nav a:hover{
+color:var(--primary);
+}
+
+/* =========================
+   CASE STUDY SPECIAL (ENHANCED)
+========================= */
+
+#case .card{
+border-left:3px solid var(--primary);
+}
+
+/* =========================
+   TRUST SYSTEM
+========================= */
+
+#trust .card{
+text-align:center;
+font-weight:500;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #1c1c1c;
+background:#0f141b;
+color:#fff;
+}
+
+textarea{
+min-height:120px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid #1c1c1c;
+color:#777;
+margin-top:40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:28px;
+}
+
+.nav{
+flex-direction:column;
+gap:10px;
+}
+
+.section{
+padding:60px 15px;
+}
+}

@@ -1,130 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Developer Portfolio</title>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+body{
+background:#0b0f14;
+color:#eaeaea;
+}
 
-<body>
+/* NAV */
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+position:sticky;
+top:0;
+background:rgba(15,20,27,0.8);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #1c1c1c;
+z-index:100;
+}
 
-<!-- NAV -->
-<header class="nav">
-  <h2 class="logo">KhokonDev</h2>
+.logo{
+color:#00ff88;
+}
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="#process">Process</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+.nav a{
+color:#aaa;
+margin:0 10px;
+text-decoration:none;
+transition:0.3s;
+}
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="badge">🚀 Available for Freelance Projects</div>
+.nav a:hover{
+color:#00ff88;
+}
 
-  <h1>High-Converting Websites That Grow Your Business</h1>
+/* HERO */
+.hero{
+text-align:center;
+padding:90px 20px;
+}
 
-  <p>I build landing pages, ecommerce UI & SaaS websites with modern design & clean code.</p>
+.hero h1{
+font-size:40px;
+margin:20px 0;
+}
 
-  <div class="cta">
-    <a href="#work" class="btn primary">View Work</a>
-    <a href="#contact" class="btn">Hire Me</a>
-  </div>
+.badge{
+display:inline-block;
+padding:6px 12px;
+background:#1a1f27;
+border-radius:20px;
+}
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">50+ Projects</div>
-    <div class="stat">30+ Clients</div>
-    <div class="stat">100% Satisfaction</div>
-    <div class="stat">24h Response</div>
-  </div>
-</section>
+/* CTA */
+.cta{
+margin-top:15px;
+}
 
-<!-- SERVICES -->
-<section id="services" class="section">
-  <h2>Services</h2>
+.btn{
+padding:10px 15px;
+margin:5px;
+border-radius:6px;
+border:1px solid #333;
+text-decoration:none;
+color:#fff;
+display:inline-block;
+}
 
-  <div class="grid">
-    <div class="card">⚡ Landing Page Design</div>
-    <div class="card">🛒 Ecommerce UI</div>
-    <div class="card">💼 Business Website</div>
-    <div class="card">🚀 SaaS UI Design</div>
-    <div class="card">🔧 Bug Fix</div>
-    <div class="card">📱 Responsive Fix</div>
-  </div>
-</section>
+.primary{
+background:#00ff88;
+color:#000;
+}
 
-<!-- WORK -->
-<section id="work" class="section dark">
-  <h2>Live Demos</h2>
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:30px;
+}
 
-  <div class="grid">
+.stat{
+background:#0f141b;
+padding:15px;
+border-radius:10px;
+border:1px solid #1c1c1c;
+text-align:center;
+}
 
-    <div class="card">
-      <h3>Landing Page Demo</h3>
-      <p>High converting SaaS UI</p>
-      <a class="demo" href="landing.html">Open Demo →</a>
-    </div>
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
+max-width:1100px;
+margin:auto;
+}
 
-    <div class="card">
-      <h3>Ecommerce Demo</h3>
-      <p>Modern shopping UI system</p>
-      <a class="demo" href="ecommerce.html">Open Demo →</a>
-    </div>
+.dark{
+background:#0f141b;
+border-radius:12px;
+}
 
-    <div class="card">
-      <h3>Portfolio System</h3>
-      <p>Developer level UI system</p>
-    </div>
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
 
-  </div>
-</section>
+/* CARD */
+.card{
+background:#0f141b;
+padding:20px;
+border-radius:10px;
+border:1px solid #1c1c1c;
+transition:0.3s;
+}
 
-<!-- PROCESS -->
-<section id="process" class="section">
-  <h2>Working Process</h2>
+.card:hover{
+transform:translateY(-8px);
+border-color:#00ff88;
+box-shadow:0 0 20px rgba(0,255,136,0.2);
+}
 
-  <div class="grid">
-    <div class="card">1. Requirement Analysis</div>
-    <div class="card">2. UI Design</div>
-    <div class="card">3. Development</div>
-    <div class="card">4. Testing & Delivery</div>
-  </div>
-</section>
+/* DEMO */
+.demo{
+display:inline-block;
+margin-top:10px;
+color:#00ff88;
+text-decoration:none;
+}
 
-<!-- REVIEWS -->
-<section id="reviews" class="section dark">
-  <h2>Client Reviews</h2>
+/* FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+max-width:500px;
+margin:auto;
+}
 
-  <div class="grid">
-    <div class="card">“Amazing work! My website looks premium.” — John</div>
-    <div class="card">“Very fast delivery and clean design.” — Sarah</div>
-    <div class="card">“Highly recommended developer.” — Ahmed</div>
-  </div>
-</section>
+input,textarea{
+padding:10px;
+border-radius:6px;
+border:1px solid #222;
+background:#0f141b;
+color:#fff;
+}
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Let’s Work Together</h2>
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+color:#777;
+}
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Tell me about your project..." required></textarea>
-    <button class="btn primary">Send Message</button>
-  </form>
-</section>
+/* RESPONSIVE */
+@media(max-width:768px){
 
-<footer>
-  © 2026 KhokonDev | All Rights Reserved
-</footer>
+.hero h1{
+font-size:26px;
+}
 
-</body>
-</html>
+.stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.nav{
+flex-direction:column;
+gap:10px;
+}
+}

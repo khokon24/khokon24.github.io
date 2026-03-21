@@ -3,102 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Developer Portfolio</title>
-
-<style>
-body{
-margin:0;
-font-family:system-ui;
-background:#0f0f0f;
-color:#eaeaea;
-line-height:1.6;
-}
-
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-padding:15px 25px;
-background:#151515;
-position:sticky;
-top:0;
-}
-nav a{
-color:#aaa;
-margin:0 10px;
-text-decoration:none;
-}
-nav a:hover{color:#00ff99}
-
-/* HERO */
-.hero{
-padding:90px 20px;
-max-width:900px;
-margin:auto;
-}
-.hero h1{
-font-size:38px;
-}
-.highlight{color:#00ff99}
-
-/* BUTTON */
-.btn{
-display:inline-block;
-padding:10px 15px;
-margin:8px 5px;
-border:1px solid #333;
-border-radius:6px;
-text-decoration:none;
-color:#fff;
-}
-.btn.primary{
-background:#00ff99;
-color:#000;
-border:none;
-}
-
-/* SECTION */
-section{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
-
-.card{
-background:#1a1a1a;
-padding:15px;
-border-radius:8px;
-border:1px solid #222;
-}
-
-/* PROJECT TAG */
-.tag{
-font-size:12px;
-color:#00ff99;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-color:#777;
-border-top:1px solid #222;
-margin-top:40px;
-}
-</style>
+<title>KhokonDev | Dev Pro Max</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-<div><b>KhokonDev</b></div>
+<div class="logo">KhokonDev</div>
 <div>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
@@ -107,39 +19,37 @@ margin-top:40px;
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-<h1>Hi, I'm <span class="highlight">Frontend Developer</span></h1>
-<p>
-I build clean, fast and responsive websites using HTML, CSS & JavaScript.
-Focused on performance and real-world usability.
-</p>
-
-<a class="btn primary" href="#">View Projects</a>
-<a class="btn" href="https://github.com/">GitHub</a>
+<section class="hero">
+<div class="terminal">
+> loading developer profile...<br>
+> frontend system ready ✔
 </div>
+
+<h1>Hi, I'm <span>Frontend Developer</span></h1>
+<p>I build fast, clean and responsive web applications.</p>
+
+<div class="btns">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="https://github.com/" class="btn">GitHub</a>
+</div>
+</section>
 
 <!-- PROJECTS -->
 <section id="projects">
-<h2>Projects</h2>
+<h2>Projects & Demos</h2>
 
 <div class="grid">
 
 <div class="card">
-<div class="tag">Landing Page</div>
-<h3>Product Landing UI</h3>
-<p>Responsive landing page with conversion focus.</p>
+<h3>Landing Page</h3>
+<p>High converting SaaS landing page UI</p>
+<a href="landing.html">Live Demo →</a>
 </div>
 
 <div class="card">
-<div class="tag">Ecommerce</div>
-<h3>Shop UI System</h3>
-<p>Simple ecommerce frontend with clean layout.</p>
-</div>
-
-<div class="card">
-<div class="tag">Portfolio</div>
-<h3>Developer Portfolio</h3>
-<p>Minimal portfolio template for developers.</p>
+<h3>Ecommerce UI</h3>
+<p>Modern shop interface with product layout</p>
+<a href="ecommerce.html">Live Demo →</a>
 </div>
 
 </div>
@@ -148,26 +58,23 @@ Focused on performance and real-world usability.
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
-
-<div class="grid">
-<div class="card">HTML5</div>
-<div class="card">CSS3</div>
-<div class="card">JavaScript</div>
-<div class="card">Git & GitHub</div>
+<div class="tags">
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>GitHub</span>
+<span>Responsive Design</span>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-
 <p>Email: yourmail@gmail.com</p>
-<p>Available for freelance projects</p>
-
 </section>
 
 <footer>
-© 2026 KhokonDev • Developer Portfolio
+© 2026 KhokonDev
 </footer>
 
 </body>

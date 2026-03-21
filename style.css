@@ -1,204 +1,130 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-scroll-behavior:smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KhokonDev | Developer Portfolio</title>
 
-body{
-background:#0b0f14;
-color:#eaeaea;
-overflow-x:hidden;
-}
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
-/* NAV */
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 25px;
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(15,20,27,0.7);
-backdrop-filter:blur(12px);
-border-bottom:1px solid #1c1c1c;
-}
+<body>
 
-.logo{
-color:#00ff88;
-font-weight:600;
-}
+<!-- NAV -->
+<header class="nav">
+  <h2 class="logo">KhokonDev</h2>
 
-.nav nav{
-display:flex;
-gap:18px;
-}
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-.nav nav a{
-color:#aaa;
-text-decoration:none;
-transition:0.3s;
-}
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="badge">🚀 Available for Freelance Projects</div>
 
-.nav nav a:hover{
-color:#00ff88;
-transform:scale(1.1);
-}
+  <h1>High-Converting Websites That Grow Your Business</h1>
 
-/* HAMBURGER */
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
-}
+  <p>I build landing pages, ecommerce UI & SaaS websites with modern design & clean code.</p>
 
-/* HERO */
-.hero{
-padding:90px 20px;
-text-align:center;
-}
+  <div class="cta">
+    <a href="#work" class="btn primary">View Work</a>
+    <a href="#contact" class="btn">Hire Me</a>
+  </div>
 
-.glow{
-font-size:44px;
-text-shadow:0 0 20px #00ff88;
-animation:glow 2s infinite alternate;
-}
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">50+ Projects</div>
+    <div class="stat">30+ Clients</div>
+    <div class="stat">100% Satisfaction</div>
+    <div class="stat">24h Response</div>
+  </div>
+</section>
 
-@keyframes glow{
-from{text-shadow:0 0 5px #00ff88;}
-to{text-shadow:0 0 25px #00ff88;}
-}
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Services</h2>
 
-.badge{
-display:inline-block;
-padding:6px 12px;
-background:#1a1f27;
-border-radius:20px;
-margin-bottom:15px;
-}
+  <div class="grid">
+    <div class="card">⚡ Landing Page Design</div>
+    <div class="card">🛒 Ecommerce UI</div>
+    <div class="card">💼 Business Website</div>
+    <div class="card">🚀 SaaS UI Design</div>
+    <div class="card">🔧 Bug Fix</div>
+    <div class="card">📱 Responsive Fix</div>
+  </div>
+</section>
 
-/* BUTTONS */
-.btn{
-padding:10px 16px;
-border-radius:6px;
-border:1px solid #333;
-color:#fff;
-text-decoration:none;
-transition:0.3s;
-display:inline-block;
-margin:5px;
-}
+<!-- WORK -->
+<section id="work" class="section dark">
+  <h2>Live Demos</h2>
 
-.primary{
-background:#00ff88;
-color:#000;
-}
+  <div class="grid">
 
-/* SECTION */
-.section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-text-align:center;
-}
+    <div class="card">
+      <h3>Landing Page Demo</h3>
+      <p>High converting SaaS UI</p>
+      <a class="demo" href="landing.html">Open Demo →</a>
+    </div>
 
-.dark{
-background:#0f141b;
-border-radius:10px;
-}
+    <div class="card">
+      <h3>Ecommerce Demo</h3>
+      <p>Modern shopping UI system</p>
+      <a class="demo" href="ecommerce.html">Open Demo →</a>
+    </div>
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:20px;
-}
+    <div class="card">
+      <h3>Portfolio System</h3>
+      <p>Developer level UI system</p>
+    </div>
 
-.card{
-background:#0f141b;
-padding:20px;
-border-radius:10px;
-border:1px solid #1c1c1c;
-transition:0.3s;
-}
+  </div>
+</section>
 
-.card:hover{
-transform:translateY(-8px) scale(1.02);
-border-color:#00ff88;
-box-shadow:0 0 20px rgba(0,255,136,0.2);
-}
+<!-- PROCESS -->
+<section id="process" class="section">
+  <h2>Working Process</h2>
 
-/* DEMO LINK */
-.demo{
-display:inline-block;
-margin-top:10px;
-color:#00ff88;
-text-decoration:none;
-}
+  <div class="grid">
+    <div class="card">1. Requirement Analysis</div>
+    <div class="card">2. UI Design</div>
+    <div class="card">3. Development</div>
+    <div class="card">4. Testing & Delivery</div>
+  </div>
+</section>
 
-/* FORM */
-form{
-display:flex;
-flex-direction:column;
-gap:10px;
-max-width:500px;
-margin:auto;
-}
+<!-- REVIEWS -->
+<section id="reviews" class="section dark">
+  <h2>Client Reviews</h2>
 
-input,textarea{
-padding:10px;
-border-radius:6px;
-border:1px solid #222;
-background:#0f141b;
-color:#fff;
-}
+  <div class="grid">
+    <div class="card">“Amazing work! My website looks premium.” — John</div>
+    <div class="card">“Very fast delivery and clean design.” — Sarah</div>
+    <div class="card">“Highly recommended developer.” — Ahmed</div>
+  </div>
+</section>
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:25px;
-color:#777;
-}
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Let’s Work Together</h2>
 
-/* REVEAL ANIMATION */
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:0.6s ease;
-}
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Tell me about your project..." required></textarea>
+    <button class="btn primary">Send Message</button>
+  </form>
+</section>
 
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
+<footer>
+  © 2026 KhokonDev | All Rights Reserved
+</footer>
 
-/* MOBILE */
-@media(max-width:768px){
-
-.menu-toggle{
-display:block;
-color:#fff;
-}
-
-.nav nav{
-position:absolute;
-top:70px;
-left:0;
-right:0;
-background:#0f141b;
-flex-direction:column;
-display:none;
-padding:15px;
-}
-
-.nav nav.active{
-display:flex;
-}
-
-.glow{
-font-size:28px;
-}
-}
+</body>
+</html>

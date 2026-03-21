@@ -253,3 +253,136 @@ grid-template-columns:repeat(2,1fr);
 padding:60px 15px;
 }
 }
+/* =========================
+   🌟 PREMIUM UI UPGRADE LAYER
+========================= */
+
+/* background glow vibe */
+body::before{
+content:"";
+position:fixed;
+top:-200px;
+left:-200px;
+width:500px;
+height:500px;
+background:radial-gradient(circle, rgba(0,255,136,0.15), transparent 60%);
+filter:blur(80px);
+z-index:-1;
+animation:floatGlow 8s infinite alternate ease-in-out;
+}
+
+body::after{
+content:"";
+position:fixed;
+bottom:-200px;
+right:-200px;
+width:500px;
+height:500px;
+background:radial-gradient(circle, rgba(0,150,255,0.12), transparent 60%);
+filter:blur(80px);
+z-index:-1;
+animation:floatGlow 10s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlow{
+0%{transform:translate(0,0);}
+100%{transform:translate(40px,-40px);}
+}
+
+/* glass nav upgrade */
+.nav{
+background:rgba(10,15,20,0.6);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+/* logo glow */
+.logo{
+text-shadow:0 0 15px rgba(0,255,136,0.5);
+letter-spacing:1px;
+}
+
+/* HERO premium spacing */
+.hero h1{
+background:linear-gradient(90deg,#fff,#00ff88);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* badge glow */
+.badge{
+box-shadow:0 0 15px rgba(0,255,136,0.15);
+}
+
+/* cards premium glass effect */
+.card{
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.06);
+}
+
+/* hover glow upgrade */
+.card:hover{
+box-shadow:0 0 25px rgba(0,255,136,0.25);
+border-color:rgba(0,255,136,0.4);
+}
+
+/* buttons premium feel */
+.primary{
+box-shadow:0 0 15px rgba(0,255,136,0.4);
+}
+
+.primary:hover{
+box-shadow:0 0 25px rgba(0,255,136,0.6);
+}
+
+/* section title glow */
+.section h2{
+position:relative;
+display:inline-block;
+}
+
+.section h2::after{
+content:"";
+width:60%;
+height:3px;
+background:#00ff88;
+position:absolute;
+left:20%;
+bottom:-8px;
+border-radius:10px;
+}
+
+/* smooth scroll feel upgrade */
+html{
+scroll-behavior:smooth;
+}
+
+/* stats glow upgrade */
+.stat{
+backdrop-filter:blur(8px);
+background:rgba(255,255,255,0.03);
+}
+
+.stat:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 0 20px rgba(0,255,136,0.2);
+}
+
+/* form premium glass */
+input,textarea{
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(8px);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+input:focus,textarea:focus{
+border-color:#00ff88;
+box-shadow:0 0 15px rgba(0,255,136,0.2);
+}
+
+/* footer upgrade */
+footer{
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(10px);
+}

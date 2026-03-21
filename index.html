@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Pro Portfolio</title>
+<title>KhokonDev | Animated Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,6 @@
 
 <body>
 
-<!-- NAV (NO EXTRA TOP BAR REMOVED) -->
 <header class="nav">
   <h2 class="logo">KhokonDev</h2>
 
@@ -21,57 +20,55 @@
     <a href="#work">Work</a>
     <a href="#case">Case Study</a>
     <a href="#trust">Trust</a>
-    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
-  <div class="badge">🚀 Available for Freelance Projects</div>
+<section id="home" class="hero fade-in">
+  <div class="badge pulse">🚀 Available for Freelance Projects</div>
 
-  <h1>High-Converting Websites That Grow Your Business</h1>
+  <h1 class="slide-up">High-Converting Websites That Grow Your Business</h1>
 
-  <p>I build SaaS, landing pages & ecommerce UI with modern conversion-focused design.</p>
+  <p class="fade-in-delay">I build SaaS, landing pages & ecommerce UI with premium animations.</p>
 
-  <div class="cta">
+  <div class="cta zoom-in">
     <a href="#work" class="btn primary">View Work</a>
     <a href="#contact" class="btn">Hire Me</a>
   </div>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">50+ Projects</div>
-    <div class="stat">30+ Clients</div>
-    <div class="stat">100% Satisfaction</div>
-    <div class="stat">24h Response</div>
+  <div class="stats fade-in">
+    <div class="stat pop">50+ Projects</div>
+    <div class="stat pop">30+ Clients</div>
+    <div class="stat pop">100% Satisfaction</div>
+    <div class="stat pop">24h Response</div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section reveal">
   <h2>Services</h2>
 
   <div class="grid">
-    <div class="card">Landing Page Design</div>
-    <div class="card">SaaS UI Design</div>
-    <div class="card">Ecommerce UI</div>
-    <div class="card">Website Fix</div>
+    <div class="card float">Landing Page Design</div>
+    <div class="card float">SaaS UI</div>
+    <div class="card float">Ecommerce UI</div>
+    <div class="card float">Bug Fix</div>
   </div>
 </section>
 
 <!-- WORK -->
-<section id="work" class="section dark">
+<section id="work" class="section dark reveal">
   <h2>Live Demos</h2>
 
   <div class="grid">
 
-    <div class="card">
+    <div class="card glow">
       <h3>Landing Page</h3>
       <a class="demo" href="landing.html">Open Demo →</a>
     </div>
 
-    <div class="card">
+    <div class="card glow">
       <h3>Ecommerce</h3>
       <a class="demo" href="ecommerce.html">Open Demo →</a>
     </div>
@@ -79,71 +76,43 @@
   </div>
 </section>
 
-<!-- CASE STUDY (NEW) -->
-<section id="case" class="section">
+<!-- CASE STUDY -->
+<section id="case" class="section reveal">
   <h2>Case Studies</h2>
 
   <div class="grid">
-
-    <div class="card">
-      <h3>SaaS Landing Page</h3>
-      <p>Improved conversion rate by 45% using UI optimization.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ecommerce UI Revamp</h3>
-      <p>Redesigned product flow → increased engagement by 60%.</p>
-    </div>
-
-    <div class="card">
-      <h3>Portfolio Optimization</h3>
-      <p>Clean redesign increased client inquiries by 2x.</p>
-    </div>
-
+    <div class="card float">SaaS Conversion +45%</div>
+    <div class="card float">UI Revamp +60% Engagement</div>
+    <div class="card float">Portfolio Boost x2 Leads</div>
   </div>
 </section>
 
-<!-- TRUST SYSTEM (NEW) -->
-<section id="trust" class="section dark">
-  <h2>Trust & Proof</h2>
+<!-- TRUST -->
+<section id="trust" class="section dark reveal">
+  <h2>Trust System</h2>
 
   <div class="grid">
-
-    <div class="card">✔ Verified Developer</div>
-    <div class="card">✔ Fiverr Level Experience</div>
-    <div class="card">✔ 100% Client Satisfaction</div>
-    <div class="card">✔ On-Time Delivery</div>
-    <div class="card">✔ Clean Code Guarantee</div>
-    <div class="card">✔ Mobile Optimized Work</div>
-
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="section">
-  <h2>Client Reviews</h2>
-
-  <div class="grid">
-    <div class="card">“Amazing quality work!” — John</div>
-    <div class="card">“Very fast delivery” — Sarah</div>
-    <div class="card">“Highly professional developer” — Ahmed</div>
+    <div class="card glow">✔ Verified Developer</div>
+    <div class="card glow">✔ 100% Satisfaction</div>
+    <div class="card glow">✔ On-Time Delivery</div>
+    <div class="card glow">✔ Clean Code</div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section dark">
-  <h2>Let’s Work Together</h2>
+<section id="contact" class="section reveal">
+  <h2>Contact</h2>
 
-  <form>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Project Details"></textarea>
-    <button class="btn primary">Send Message</button>
+  <form class="form-anim">
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button class="btn primary bounce">Send Message</button>
   </form>
 </section>
 
 <footer>
-  © 2026 KhokonDev | All Rights Reserved
+  © 2026 KhokonDev
 </footer>
 
 </body>

@@ -3,239 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Ultra Pro Portfolio</title>
+<title>KhokonDev | Developer Portfolio</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
 body{
-background:#0b0b0b;
-color:#fff;
-scroll-behavior:smooth;
+margin:0;
+font-family:system-ui;
+background:#0f0f0f;
+color:#eaeaea;
+line-height:1.6;
 }
 
 /* NAV */
-.nav{
+nav{
 display:flex;
 justify-content:space-between;
-padding:15px 30px;
-background:#111;
+padding:15px 25px;
+background:#151515;
 position:sticky;
 top:0;
-z-index:100;
 }
-.nav a{
+nav a{
 color:#aaa;
 margin:0 10px;
 text-decoration:none;
 }
-.nav a:hover{color:#00ffcc}
+nav a:hover{color:#00ff99}
 
 /* HERO */
 .hero{
-text-align:center;
-padding:100px 20px;
-position:relative;
+padding:90px 20px;
+max-width:900px;
+margin:auto;
 }
 .hero h1{
-font-size:40px;
+font-size:38px;
 }
-.hero span{
-color:#00ffcc;
-}
+.highlight{color:#00ff99}
 
 /* BUTTON */
 .btn{
-padding:10px 16px;
-margin:5px;
-border:none;
+display:inline-block;
+padding:10px 15px;
+margin:8px 5px;
+border:1px solid #333;
 border-radius:6px;
-cursor:pointer;
-transition:0.3s;
+text-decoration:none;
+color:#fff;
 }
-.primary{
-background:#00ffcc;
+.btn.primary{
+background:#00ff99;
 color:#000;
-}
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-margin-top:40px;
-}
-.stat{
-background:#1a1a1a;
-padding:20px;
-border-radius:10px;
+border:none;
 }
 
 /* SECTION */
-.section{
-padding:80px 20px;
-text-align:center;
+section{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
-margin-top:20px;
 }
+
 .card{
 background:#1a1a1a;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-}
-.card:hover{
-transform:translateY(-5px);
+padding:15px;
+border-radius:8px;
+border:1px solid #222;
 }
 
-/* DARK */
-.dark{
-background:#111;
+/* PROJECT TAG */
+.tag{
+font-size:12px;
+color:#00ff99;
 }
 
-/* CTA FLOAT */
-.cta{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#00ffcc;
-color:#000;
-padding:12px 18px;
-border-radius:50px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* CONTACT */
-input,textarea{
-width:90%;
-max-width:420px;
-padding:10px;
-margin:5px;
-border:none;
-border-radius:5px;
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+border-top:1px solid #222;
+margin-top:40px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
-<h2>KhokonDev</h2>
+<nav>
+<div><b>KhokonDev</b></div>
 <div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#work">Work</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </div>
-</div>
+</nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<div class="hero">
+<h1>Hi, I'm <span class="highlight">Frontend Developer</span></h1>
+<p>
+I build clean, fast and responsive websites using HTML, CSS & JavaScript.
+Focused on performance and real-world usability.
+</p>
 
-<h1>Build <span>High Converting Websites</span></h1>
-<p>Landing Pages • Ecommerce • SaaS UI</p>
-
-<button class="btn primary">Hire Me</button>
-<button class="btn">View Work</button>
-
-<!-- STATS -->
-<div class="stats">
-<div class="stat"><h2 id="s1">0</h2><p>Projects</p></div>
-<div class="stat"><h2 id="s2">0</h2><p>Clients</p></div>
-<div class="stat"><h2 id="s3">0</h2><p>Reviews</p></div>
-<div class="stat"><h2 id="s4">0</h2><p>Hours Support</p></div>
+<a class="btn primary" href="#">View Projects</a>
+<a class="btn" href="https://github.com/">GitHub</a>
 </div>
 
-</section>
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-<h2>Services</h2>
 <div class="grid">
-<div class="card">⚡ Landing Page Design</div>
-<div class="card">🛒 Ecommerce UI</div>
-<div class="card">💼 SaaS Dashboard</div>
-<div class="card">🔧 Bug Fix</div>
+
+<div class="card">
+<div class="tag">Landing Page</div>
+<h3>Product Landing UI</h3>
+<p>Responsive landing page with conversion focus.</p>
+</div>
+
+<div class="card">
+<div class="tag">Ecommerce</div>
+<h3>Shop UI System</h3>
+<p>Simple ecommerce frontend with clean layout.</p>
+</div>
+
+<div class="card">
+<div class="tag">Portfolio</div>
+<h3>Developer Portfolio</h3>
+<p>Minimal portfolio template for developers.</p>
+</div>
+
 </div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="section dark">
-<h2>My Work</h2>
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+
 <div class="grid">
-<div class="card">🔥 Landing Page Demo</div>
-<div class="card">🛒 Ecommerce Demo</div>
-<div class="card">🚀 SaaS System</div>
+<div class="card">HTML5</div>
+<div class="card">CSS3</div>
+<div class="card">JavaScript</div>
+<div class="card">Git & GitHub</div>
 </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-<h2>About Me</h2>
-<p>I create conversion-focused websites that help businesses grow faster.</p>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section dark">
+<section id="contact">
 <h2>Contact</h2>
 
-<form action="https://formspree.io/f/xojnlako" method="POST">
-<input name="name" placeholder="Name" required><br>
-<input name="email" placeholder="Email" required><br>
-<textarea name="message" placeholder="Message"></textarea><br>
-<button class="btn primary">Send</button>
-</form>
+<p>Email: yourmail@gmail.com</p>
+<p>Available for freelance projects</p>
+
 </section>
 
-<!-- CTA -->
-<div class="cta" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-🚀 Hire Me
-</div>
-
-<script>
-function animate(id, target){
-let el=document.getElementById(id);
-let count=0;
-
-let interval=setInterval(()=>{
-count++;
-el.innerText=count;
-if(count>=target) clearInterval(interval);
-},30);
-}
-
-let started=false;
-
-window.addEventListener("scroll",()=>{
-let hero=document.querySelector(".stats");
-let rect=hero.getBoundingClientRect();
-
-if(rect.top<window.innerHeight && !started){
-started=true;
-animate("s1",50);
-animate("s2",30);
-animate("s3",120);
-animate("s4",24);
-}
-});
-</script>
+<footer>
+© 2026 KhokonDev • Developer Portfolio
+</footer>
 
 </body>
 </html>

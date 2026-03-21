@@ -1,103 +1,101 @@
+ /* =====================================
+   KHOKONDEV - PREMIUM SAAS STYLE UI
+   ALL SECTION UNIFIED (CASE STUDY VIBE)
+===================================== */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins', sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
 background:#0b0f14;
-color:#eaeaea;
+color:#ffffff;
 line-height:1.6;
 }
 
-/* NAV */
+/* ================= NAV ================= */
+
 .nav{
+position:sticky;
+top:0;
+background:rgba(10,15,20,0.9);
+backdrop-filter:blur(10px);
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
-position:sticky;
-top:0;
-background:#0f141b;
+padding:15px 40px;
 border-bottom:1px solid #1c1c1c;
 z-index:1000;
 }
 
 .logo{
 color:#00ff88;
-font-weight:600;
-font-size:18px;
+font-weight:700;
+font-size:22px;
 }
 
-.nav a{
-color:#aaa;
-margin:0 10px;
+.nav nav a{
+color:#ccc;
+margin:0 12px;
 text-decoration:none;
-font-size:14px;
-transition:0.2s;
+transition:0.3s;
 }
 
-.nav a:hover{
+.nav nav a:hover{
 color:#00ff88;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
+padding:120px 20px 80px;
 text-align:center;
-padding:80px 20px;
-max-width:900px;
-margin:auto;
+background:radial-gradient(circle at top, #101820, #0b0f14);
 }
 
 .hero h1{
-font-size:34px;
-margin:15px 0;
-color:#ffffff;
+font-size:42px;
+max-width:900px;
+margin:20px auto;
 }
 
 .hero p{
 color:#aaa;
-font-size:15px;
 max-width:700px;
-margin:auto;
+margin:0 auto 30px;
 }
 
-/* BADGE */
 .badge{
 display:inline-block;
-padding:6px 12px;
-background:#111821;
-border:1px solid #1c1c1c;
+padding:8px 15px;
+background:#121922;
+border:1px solid #1f2a33;
 border-radius:20px;
-font-size:13px;
 color:#00ff88;
-margin-bottom:15px;
 }
 
-/* BUTTONS */
-.cta{
-margin-top:20px;
-}
+/* ================= BUTTONS ================= */
 
 .btn{
-padding:10px 16px;
-margin:5px;
-border-radius:6px;
-border:1px solid #2a2a2a;
-text-decoration:none;
-color:#fff;
 display:inline-block;
-font-size:14px;
-transition:0.2s;
+padding:12px 22px;
+margin:5px;
+border-radius:8px;
+text-decoration:none;
+transition:0.3s;
+font-weight:500;
 }
 
 .primary{
 background:#00ff88;
 color:#000;
-font-weight:600;
-border:none;
+}
+
+.primary:hover{
+transform:scale(1.05);
 }
 
 .outline{
@@ -105,628 +103,163 @@ border:1px solid #00ff88;
 color:#00ff88;
 }
 
-.btn:hover{
-opacity:0.85;
-}
-
-/* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-margin-top:30px;
-}
-
-.stat{
-background:#0f141b;
-padding:15px;
-border-radius:8px;
-border:1px solid #1c1c1c;
-text-align:center;
-font-size:14px;
-color:#ddd;
-transition:0.2s;
-}
-
-.stat:hover{
-transform:translateY(-3px);
-border-color:#00ff88;
-}
-
-/* SECTION */
-.section{
-padding:70px 20px;
-text-align:center;
-max-width:1100px;
-margin:auto;
-}
-
-.section h2{
-font-size:26px;
-margin-bottom:20px;
-color:#ffffff;
-}
-
-/* DARK SECTION */
-.dark{
-background:#0f141b;
-border-radius:10px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-margin-top:20px;
-}
-
-/* CARD */
-.card{
-background:#0f141b;
-padding:18px;
-border-radius:8px;
-border:1px solid #1c1c1c;
-transition:0.2s;
-font-size:14px;
-color:#ddd;
-}
-
-.card h3{
-color:#fff;
-margin-bottom:6px;
-}
-
-.card a{
-color:#00ff88;
-text-decoration:none;
-font-size:13px;
-display:inline-block;
-margin-top:8px;
-}
-
-/* CARD HOVER */
-.card:hover{
-border-color:#00ff88;
-transform:translateY(-4px);
-}
-
-/* FORM */
-form{
-display:flex;
-flex-direction:column;
-gap:10px;
-max-width:500px;
-margin:auto;
-}
-
-input,textarea{
-padding:12px;
-border-radius:6px;
-border:1px solid #1c1c1c;
-background:#0f141b;
-color:#fff;
-outline:none;
-font-size:14px;
-}
-
-textarea{
-min-height:120px;
-resize:none;
-}
-
-/* BUTTON */
-button{
-cursor:pointer;
-border:none;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:25px;
-color:#777;
-font-size:13px;
-border-top:1px solid #1c1c1c;
-margin-top:40px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-.nav{
-flex-direction:column;
-gap:10px;
-text-align:center;
-}
-
-.hero h1{
-font-size:24px;
-}
-
-.stats{
-grid-template-columns:repeat(2,1fr);
-}
-
-.section{
-padding:60px 15px;
-}
-}
-/* =====================================
-   🚀 CASE STUDY ULTIMATE UPGRADE PACK
-   (Before/After + Progress + Slider UI)
-===================================== */
-
-
-/* =========================
-   SECTION BASE
-========================= */
-
-#case{
-position:relative;
-}
-
-#case h2{
-margin-bottom:20px;
-}
-
-/* =========================
-   CASE CARD PREMIUM STYLE
-========================= */
-
-#case .card{
-position:relative;
-overflow:hidden;
-border-left:3px solid #00ff88;
-transition:0.3s ease;
-}
-
-#case .card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,255,136,0.08);
-}
-
-/* =========================
-   PROGRESS IMPACT BAR
-========================= */
-
-.progress-bar{
-width:100%;
-height:8px;
-background:#1c1c1c;
-border-radius:20px;
-overflow:hidden;
-margin-top:10px;
-}
-
-.progress-bar span{
-display:block;
-height:100%;
-background:#00ff88;
-width:0;
-border-radius:20px;
-animation:loadBar 2s ease forwards;
-}
-
-@keyframes loadBar{
-from{width:0;}
-to{width:var(--progress);}
-}
-
-/* text % */
-.progress-text{
-font-size:12px;
-color:#00ff88;
-margin-top:5px;
-}
-
-/* =========================
-   BEFORE / AFTER SLIDER
-========================= */
-
-.case-slider{
-margin-top:40px;
-padding:20px;
-background:#0f141b;
-border:1px solid #1c1c1c;
-border-radius:10px;
-text-align:center;
-}
-
-.case-slider h3{
-color:#fff;
-margin-bottom:15px;
-font-size:16px;
-}
-
-.slider-box{
-position:relative;
-width:100%;
-max-width:500px;
-height:260px;
-margin:auto;
-overflow:hidden;
-border-radius:10px;
-border:1px solid #1c1c1c;
-}
-
-/* layers */
-.slider-box .img{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:18px;
-font-weight:600;
-color:#fff;
-}
-
-.after{
+.outline:hover{
 background:#00ff88;
 color:#000;
-z-index:1;
 }
 
-.before{
-background:#1a1f27;
-z-index:2;
-width:50%;
-overflow:hidden;
-transition:0.2s;
-}
-
-/* slider input */
-.slider{
-position:absolute;
-bottom:10px;
-left:50%;
-transform:translateX(-50%);
-width:90%;
-z-index:5;
-accent-color:#00ff88;
-}
-
-.note{
-font-size:12px;
-color:#777;
-margin-top:10px;
-}
-
-/* =========================
-   CASE STUDY SLIDER WRAPPER
-========================= */
-
-.case-wrapper{
-display:flex;
-gap:15px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
-padding-bottom:10px;
-}
-
-.case-wrapper .card{
-min-width:280px;
-scroll-snap-align:start;
-}
-
-/* hide scrollbar */
-.case-wrapper::-webkit-scrollbar{
-display:none;
-}
-
-/* =========================
-   ANIMATION (soft premium feel)
-========================= */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(10px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-#case .card{
-animation:fadeUp 0.6s ease;
-}
-
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-.case-wrapper{
-flex-direction:column;
-}
-
-.slider-box{
-height:220px;
-}
-
-}
-/* =====================================
-   🚀 GLOBAL PREMIUM UI SYSTEM
-   (FULL PORTFOLIO UNIFY DESIGN)
-===================================== */
-
-:root{
---primary:#00ff88;
---bg:#0b0f14;
---card:#121922;
---text:#ffffff;
---muted:#b8b8b8;
-}
-
-/* =========================
-   BODY
-========================= */
-
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-background:var(--bg);
-color:var(--text);
-scroll-behavior:smooth;
-}
-
-/* =========================
-   SECTION STYLE (ALL SAME)
-========================= */
+/* ================= SECTIONS ================= */
 
 .section{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
+background:#0b0f14;
 }
 
 .section h2{
-font-size:28px;
-margin-bottom:30px;
+font-size:30px;
+margin-bottom:40px;
+color:#fff;
 position:relative;
 }
 
 .section h2::after{
-content:"";
+content:'';
 width:60px;
 height:3px;
-background:var(--primary);
+background:#00ff88;
 display:block;
 margin:10px auto;
-border-radius:5px;
+border-radius:10px;
 }
 
-/* =========================
-   GRID SYSTEM
-========================= */
+/* ================= DARK SECTION ================= */
+
+.section.dark{
+background:radial-gradient(circle at bottom, #0f1a14, #0b0f14);
+}
+
+/* ================= GRID ================= */
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
 gap:20px;
 max-width:1100px;
-margin:auto;
+margin:0 auto;
 }
 
-/* =========================
-   CARD SYSTEM (MAIN UNIFY)
-========================= */
+/* ================= CARD (MAIN PREMIUM STYLE) ================= */
 
 .card{
-background:var(--card);
-padding:20px;
-border-radius:12px;
-border:1px solid #1c1c1c;
-transition:0.3s ease;
+background:linear-gradient(145deg, #121922, #0f141b);
+border:1px solid #1f2a33;
+padding:25px;
+border-radius:14px;
+transition:0.4s;
 position:relative;
 overflow:hidden;
 }
 
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg, transparent, rgba(0,255,136,0.08), transparent);
+transition:0.6s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
 .card:hover{
 transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(0,255,136,0.08);
-border-color:var(--primary);
+border-color:#00ff88;
+box-shadow:0 10px 30px rgba(0,255,136,0.15);
 }
 
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-padding:10px 20px;
-border-radius:8px;
-text-decoration:none;
-font-weight:500;
-transition:0.3s;
-display:inline-block;
-}
-
-.btn.primary{
-background:var(--primary);
-color:#000;
-}
-
-.btn.primary:hover{
-opacity:0.8;
-}
-
-.btn.outline{
-border:1px solid var(--primary);
-color:var(--primary);
-}
-
-.btn.outline:hover{
-background:var(--primary);
-color:#000;
-}
-
-/* =========================
-   HERO FIX (CENTER PREMIUM)
-========================= */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h1{
-font-size:40px;
-max-width:800px;
-margin:auto;
-}
-
-.hero p{
-max-width:600px;
-margin:15px auto;
-color:var(--muted);
-}
-
-/* =========================
-   STATS
-========================= */
+/* ================= STATS ================= */
 
 .stats{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
 gap:15px;
 margin-top:40px;
 }
 
 .stat{
-background:var(--card);
-padding:15px;
-border-radius:10px;
-border:1px solid #1c1c1c;
+background:#121922;
+padding:20px;
+border-radius:12px;
+border:1px solid #1f2a33;
 }
 
-/* =========================
-   NAV PREMIUM FIX
-========================= */
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-position:sticky;
-top:0;
-background:#0b0f14;
-z-index:999;
-border-bottom:1px solid #1c1c1c;
-}
-
-.nav a{
-color:#fff;
-text-decoration:none;
-margin:0 10px;
-transition:0.3s;
-}
-
-.nav a:hover{
-color:var(--primary);
-}
-
-/* =========================
-   CASE STUDY SPECIAL (ENHANCED)
-========================= */
-
-#case .card{
-border-left:3px solid var(--primary);
-}
-
-/* =========================
-   TRUST SYSTEM
-========================= */
-
-#trust .card{
-text-align:center;
-font-weight:500;
-}
-
-/* =========================
-   CONTACT FORM
-========================= */
+/* ================= FORMS ================= */
 
 form{
-max-width:500px;
-margin:auto;
+max-width:600px;
+margin:0 auto;
 display:flex;
 flex-direction:column;
-gap:10px;
+gap:15px;
 }
 
 input,textarea{
 padding:12px;
+background:#121922;
+border:1px solid #1f2a33;
 border-radius:8px;
-border:1px solid #1c1c1c;
-background:#0f141b;
 color:#fff;
+outline:none;
 }
 
-textarea{
-min-height:120px;
+input:focus,textarea:focus{
+border-color:#00ff88;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 footer{
 text-align:center;
 padding:20px;
 border-top:1px solid #1c1c1c;
 color:#777;
-margin-top:40px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ================= ANIMATION ================= */
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0px);}
+}
+
+.card{
+animation:float 6s ease-in-out infinite;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:28px;
-}
 
 .nav{
 flex-direction:column;
 gap:10px;
 }
 
+.hero h1{
+font-size:28px;
+}
+
 .section{
 padding:60px 15px;
 }
-}
-/* ================================
-   FORCE PREMIUM OVERRIDE FIX
-================================ */
 
-.section,
-.section.dark{
-background:transparent !important;
-text-align:center !important;
-padding:80px 20px !important;
+.grid{
+grid-template-columns:1fr;
 }
-
-.card{
-background:#121922 !important;
-border:1px solid #1c1c1c !important;
-}
-
-.card:hover{
-transform:translateY(-6px) !important;
-box-shadow:0 12px 25px rgba(0,255,136,0.15) !important;
-border-color:#00ff88 !important;
-}
-
-.nav{
-background:#0b0f14 !important;
-border-bottom:1px solid #1c1c1c !important;
 }

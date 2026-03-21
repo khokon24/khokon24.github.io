@@ -1,6 +1,6 @@
- /* =====================================
-   KHOKONDEV - PREMIUM SAAS STYLE UI
-   ALL SECTION UNIFIED (CASE STUDY VIBE)
+/* =====================================
+   KHOKONDEV - FINAL SAAS UNIFIED SYSTEM
+   (CLEAN + FIXED + CONSISTENT UI)
 ===================================== */
 
 *{
@@ -108,7 +108,7 @@ background:#00ff88;
 color:#000;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= SECTION ================= */
 
 .section{
 padding:90px 20px;
@@ -149,7 +149,7 @@ max-width:1100px;
 margin:0 auto;
 }
 
-/* ================= CARD (MAIN PREMIUM STYLE) ================= */
+/* ================= CARD SYSTEM (FIXED CORE) ================= */
 
 .card{
 background:linear-gradient(145deg, #121922, #0f141b);
@@ -159,6 +159,9 @@ border-radius:14px;
 transition:0.4s;
 position:relative;
 overflow:hidden;
+
+/* FIX: remove conflicting animation stacking issue */
+animation:none;
 }
 
 .card::before{
@@ -230,7 +233,7 @@ border-top:1px solid #1c1c1c;
 color:#777;
 }
 
-/* ================= ANIMATION ================= */
+/* ================= CLEAN ANIMATION (GLOBAL SAFE) ================= */
 
 @keyframes float{
 0%{transform:translateY(0px);}
@@ -238,11 +241,12 @@ color:#777;
 100%{transform:translateY(0px);}
 }
 
-.card{
-animation:float 6s ease-in-out infinite;
+/* apply animation safely ONLY on hover */
+.card:hover{
+animation:float 3s ease-in-out infinite;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:768px){
 

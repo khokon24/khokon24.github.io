@@ -338,28 +338,6 @@ width:90%;
 accent-color:#00ff88;
 }
 
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-.nav{
-flex-direction:column;
-gap:10px;
-padding:15px 20px;
-}
-
-.hero h1{
-font-size:26px;
-}
-
-.section{
-padding:60px 15px;
-}
-
-.grid{
-gap:18px;
-}
-   }
 /* =========================
    🔥 MOBILE NAV FIX (FINAL)
 ========================= */

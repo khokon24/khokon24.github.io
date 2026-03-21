@@ -1,18 +1,21 @@
 /* =====================================
-   KHOKONDEV - FINAL SAAS UNIFIED SYSTEM
-   (CLEAN + FIXED + CONSISTENT UI)
+   KHOKONDEV - ULTRA PRO SAAS MASTER UI
+   (ALL FEATURES COMBINED FINAL VERSION)
 ===================================== */
+
+/* ================= RESET ================= */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#0b0f14;
-color:#ffffff;
+color:#fff;
 line-height:1.6;
 }
 
@@ -21,14 +24,14 @@ line-height:1.6;
 .nav{
 position:sticky;
 top:0;
-background:rgba(10,15,20,0.9);
-backdrop-filter:blur(10px);
+background:rgba(10,15,20,0.85);
+backdrop-filter:blur(12px);
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 40px;
 border-bottom:1px solid #1c1c1c;
-z-index:1000;
+z-index:999;
 }
 
 .logo{
@@ -96,6 +99,7 @@ color:#000;
 
 .primary:hover{
 transform:scale(1.05);
+box-shadow:0 0 20px rgba(0,255,136,0.3);
 }
 
 .outline{
@@ -119,7 +123,6 @@ background:#0b0f14;
 .section h2{
 font-size:30px;
 margin-bottom:40px;
-color:#fff;
 position:relative;
 }
 
@@ -143,13 +146,13 @@ background:radial-gradient(circle at bottom, #0f1a14, #0b0f14);
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
 gap:20px;
 max-width:1100px;
 margin:0 auto;
 }
 
-/* ================= CARD SYSTEM (FIXED CORE) ================= */
+/* ================= CARD ================= */
 
 .card{
 background:linear-gradient(145deg, #121922, #0f141b);
@@ -159,9 +162,6 @@ border-radius:14px;
 transition:0.4s;
 position:relative;
 overflow:hidden;
-
-/* FIX: remove conflicting animation stacking issue */
-animation:none;
 }
 
 .card::before{
@@ -171,7 +171,7 @@ top:0;
 left:-100%;
 width:100%;
 height:100%;
-background:linear-gradient(90deg, transparent, rgba(0,255,136,0.08), transparent);
+background:linear-gradient(90deg,transparent,rgba(0,255,136,0.08),transparent);
 transition:0.6s;
 }
 
@@ -180,16 +180,16 @@ left:100%;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 border-color:#00ff88;
-box-shadow:0 10px 30px rgba(0,255,136,0.15);
+box-shadow:0 15px 40px rgba(0,255,136,0.15);
 }
 
 /* ================= STATS ================= */
 
 .stats{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:15px;
 margin-top:40px;
 }
@@ -201,7 +201,7 @@ border-radius:12px;
 border:1px solid #1f2a33;
 }
 
-/* ================= FORMS ================= */
+/* ================= FORM ================= */
 
 form{
 max-width:600px;
@@ -217,7 +217,6 @@ background:#121922;
 border:1px solid #1f2a33;
 border-radius:8px;
 color:#fff;
-outline:none;
 }
 
 input:focus,textarea:focus{
@@ -233,17 +232,88 @@ border-top:1px solid #1c1c1c;
 color:#777;
 }
 
-/* ================= CLEAN ANIMATION (GLOBAL SAFE) ================= */
+/* ================= SMOOTH SCROLL EFFECT ================= */
 
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-6px);}
-100%{transform:translateY(0px);}
+html{
+scroll-behavior:smooth;
 }
 
-/* apply animation safely ONLY on hover */
-.card:hover{
-animation:float 3s ease-in-out infinite;
+/* ================= BEFORE / AFTER SLIDER ================= */
+
+.case-slider{
+margin-top:40px;
+padding:20px;
+background:#0f141b;
+border:1px solid #1c1c1c;
+border-radius:12px;
+text-align:center;
+}
+
+.slider-box{
+position:relative;
+width:100%;
+max-width:500px;
+height:260px;
+margin:auto;
+overflow:hidden;
+border-radius:12px;
+border:1px solid #1c1c1c;
+}
+
+.slider-box .img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:600;
+}
+
+.before{
+background:#1a1f27;
+width:50%;
+z-index:2;
+overflow:hidden;
+}
+
+.after{
+background:#00ff88;
+color:#000;
+z-index:1;
+}
+
+.slider{
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+width:90%;
+accent-color:#00ff88;
+}
+
+/* ================= SCROLL ANIMATION (SOFT REVEAL) ================= */
+
+.section, .card{
+opacity:0;
+transform:translateY(20px);
+animation:fadeIn 0.8s forwards;
+}
+
+.section:nth-child(1),
+.section:nth-child(2),
+.section:nth-child(3){
+animation-delay:0.1s;
+}
+
+@keyframes fadeIn{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* ================= MOBILE ================= */
@@ -261,9 +331,5 @@ font-size:28px;
 
 .section{
 padding:60px 15px;
-}
-
-.grid{
-grid-template-columns:1fr;
 }
 }

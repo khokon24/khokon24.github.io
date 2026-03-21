@@ -360,3 +360,55 @@ padding:60px 15px;
 gap:18px;
 }
    }
+/* =========================
+   🔥 MOBILE NAV FIX (FINAL)
+========================= */
+
+@media(max-width:768px){
+
+/* nav container fix */
+.nav{
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:12px 15px;
+gap:10px;
+overflow:hidden;
+}
+
+/* logo fix */
+.logo{
+font-size:18px;
+text-align:center;
+}
+
+/* nav links wrap fix */
+.nav nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+width:100%;
+padding:5px 0;
+}
+
+/* nav links smaller */
+.nav nav a{
+font-size:13px;
+padding:5px 8px;
+}
+
+/* hero fix */
+.hero h1{
+font-size:24px;
+}
+
+.hero p{
+font-size:13px;
+}
+
+/* prevent horizontal scroll */
+body{
+overflow-x:hidden;
+}
+}

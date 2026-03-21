@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | NAV PRO MAX</title>
+<title>KhokonDev | GOD MODE</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -34,84 +34,101 @@
 
 <div class="badge">🚀 Available for Freelance Projects</div>
 
-<h1>High-Converting Websites That Grow Your Business</h1>
+<h1 class="glow">I Build High Converting Websites</h1>
 
-<p>I design modern landing pages, ecommerce UI & business websites.</p>
+<p>Landing pages, ecommerce UI & modern SaaS systems that convert visitors into customers.</p>
 
 <div class="cta">
-<a href="#" class="btn primary">Hire Me Now</a>
-<a href="#work" class="btn outline">View Work</a>
+<a href="#work" class="btn primary">View Projects</a>
+<a href="#contact" class="btn">Hire Me</a>
 </div>
 
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section reveal">
 <h2>Services</h2>
 
 <div class="grid">
-<div class="card">Landing Page Design</div>
-<div class="card">Ecommerce UI</div>
-<div class="card">Business Website</div>
-<div class="card">Bug Fix</div>
-<div class="card">Responsive Fix</div>
-<div class="card">SEO Optimization</div>
-</div>
 
+<div class="card">⚡ Landing Page Design</div>
+<div class="card">🛒 Ecommerce UI</div>
+<div class="card">💼 Business Website</div>
+<div class="card">🔧 Bug Fix</div>
+<div class="card">📱 Responsive Fix</div>
+<div class="card">🚀 SEO Optimization</div>
+
+</div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="section dark">
-<h2>My Work</h2>
+<!-- WORK (DEMO RESTORED WITH LINKS) -->
+<section id="work" class="section dark reveal">
+<h2>Live Demos</h2>
 
 <div class="grid">
-<div class="card">Landing Page Demo</div>
-<div class="card">Ecommerce Demo</div>
-<div class="card">Portfolio System</div>
+
+<div class="card">
+<h3>Landing Page Demo</h3>
+<p>SaaS high conversion UI</p>
+<a class="demo" href="landing.html">Open Demo →</a>
 </div>
 
+<div class="card">
+<h3>Ecommerce Demo</h3>
+<p>Modern shopping UI system</p>
+<a class="demo" href="ecommerce.html">Open Demo →</a>
+</div>
+
+<div class="card">
+<h3>Portfolio System</h3>
+<p>Developer level UI system</p>
+</div>
+
+</div>
 </section>
 
 <!-- PROCESS -->
-<section id="process" class="section">
+<section id="process" class="section reveal">
 <h2>Process</h2>
 
 <div class="grid">
-<div class="card">Requirement</div>
-<div class="card">Design</div>
-<div class="card">Development</div>
-<div class="card">Delivery</div>
-</div>
 
+<div class="card">1. Requirement</div>
+<div class="card">2. UI Design</div>
+<div class="card">3. Development</div>
+<div class="card">4. Delivery</div>
+
+</div>
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews" class="section dark">
-<h2>Reviews</h2>
+<section id="reviews" class="section dark reveal">
+<h2>Client Reviews</h2>
 
 <div class="grid">
-<div class="card">"Great work!" - John</div>
-<div class="card">"Very professional" - Sarah</div>
-<div class="card">"Fast delivery" - Ahmed</div>
-</div>
 
+<div class="card">“Amazing work!” - John</div>
+<div class="card">“Super fast delivery” - Sarah</div>
+<div class="card">“Highly professional” - Ahmed</div>
+
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section reveal">
 <h2>Contact</h2>
 
 <form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
 <textarea placeholder="Message"></textarea>
-<button class="btn primary">Send</button>
+<button class="btn primary">Send Message</button>
 </form>
 
 </section>
 
 <footer>
-© 2026 KhokonDev
+© 2026 KhokonDev | GOD MODE UI
 </footer>
 
 <!-- JS -->
@@ -119,6 +136,19 @@
 function toggleMenu(){
 document.getElementById("navLinks").classList.toggle("active");
 }
+
+/* SCROLL REVEAL */
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.classList.add("active");
+}
+});
+});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
 </script>
 
 </body>

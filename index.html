@@ -3,86 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Final System</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>KhokonDev | Ultimate Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#050505;color:#fff;}
+body{
+margin:0;
+font-family:sans-serif;
+background:#0b0b0b;
+color:white;
+}
 
 /* NAV */
 .nav{
 display:flex;
 justify-content:space-between;
-padding:20px 40px;
+padding:15px 30px;
 background:#111;
-position:sticky;top:0;
+position:sticky;
+top:0;
 }
-.nav a{color:#fff;margin:0 10px;text-decoration:none;opacity:.7;}
-.nav a:hover{color:#00ffcc;}
 
 /* HERO */
-.hero{text-align:center;padding:100px 20px;}
-.hero h1{font-size:42px;}
-.hero span{color:#00ffcc;}
-.hero p{opacity:.7;margin-top:10px;}
-
-.btn{
-padding:10px 18px;
-border-radius:6px;
-border:none;
-margin:10px;
-cursor:pointer;
+.hero{
+text-align:center;
+padding:80px 20px;
 }
-.primary{background:#00ffcc;color:#000;}
-.outline{border:2px solid #00ffcc;color:#00ffcc;background:none;}
+.hero h1 span{
+color:#00ffcc;
+}
+
+/* BUTTON */
+.btn{
+padding:10px 15px;
+margin:5px;
+border:none;
+cursor:pointer;
+border-radius:6px;
+}
+.primary{
+background:#00ffcc;
+color:black;
+}
 
 /* SECTION */
-.section{text-align:center;padding:70px 20px;}
-.dark{background:#111;}
+.section{
+padding:60px 20px;
+text-align:center;
+}
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+gap:15px;
 margin-top:20px;
 }
 .card{
-background:#111;
-padding:20px;
+background:#1a1a1a;
+padding:15px;
 border-radius:10px;
 }
 
-/* FORM */
-form{
-max-width:400px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-input,textarea{
-padding:10px;
-border:none;
-border-radius:5px;
-}
-
-/* OVERLAY LOGIN */
+/* LOGIN */
 .auth{
 display:none;
 position:fixed;
-top:0;left:0;
-width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.8);
 justify-content:center;
 align-items:center;
-z-index:9999;
 }
-.form-box{
+.box{
 background:#111;
-padding:25px;
+padding:20px;
 border-radius:10px;
 width:280px;
 }
@@ -91,171 +87,81 @@ width:280px;
 .dashboard{
 display:none;
 position:fixed;
-top:0;left:0;
-width:100%;height:100%;
-background:#050505;
-padding:40px;
-z-index:9998;
-overflow:auto;
-}
-
-/* STICKY CTA */
-.sticky{
-position:fixed;
-bottom:15px;
-left:50%;
-transform:translateX(-50%);
-background:#00ffcc;
-color:#000;
-padding:10px 18px;
-border-radius:40px;
-font-weight:600;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+padding:30px;
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- NAV -->
 <header class="nav">
 <h2>KhokonDev</h2>
-<div>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#work">Work</a>
-<a href="#contact">Contact</a>
-<a href="#" onclick="openLogin()">SaaS</a>
-</div>
+<button onclick="openLogin()" class="btn primary">Login</button>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-<h1>I Build <span>Client Converting Systems</span></h1>
-<p>Landing page, ecommerce & SaaS dashboard solutions</p>
-
-<button class="btn primary" onclick="openLogin()">Open SaaS Demo</button>
-<button class="btn outline">View Work</button>
+<h1>Build <span>High Converting Websites</span></h1>
+<p>Landing page • Ecommerce • SaaS</p>
+<button class="btn primary">Hire Me</button>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
+<section class="section">
 <h2>Services</h2>
 <div class="grid">
 <div class="card">Landing Page</div>
-<div class="card">Ecommerce UI</div>
-<div class="card">SaaS Dashboard</div>
+<div class="card">Ecommerce</div>
+<div class="card">Bug Fix</div>
 </div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="section dark">
-<h2>My Work</h2>
-<div class="grid">
-<div class="card">SaaS Landing Page</div>
-<div class="card">Ecommerce System</div>
-<div class="card">Agency Portfolio</div>
-</div>
-</section>
-
-<!-- DEMO -->
-<section class="section">
-<h2>Live Demo</h2>
-<div class="grid">
-<div class="card">Landing Demo</div>
-<div class="card">Ecommerce Demo</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section dark">
-<h2>Contact Me</h2>
-<form>
-<input placeholder="Name">
-<input placeholder="Email">
-<textarea placeholder="Message"></textarea>
-<button class="btn primary">Send</button>
-</form>
-</section>
-
-<!-- LOGIN OVERLAY -->
-<div class="auth" id="authBox">
-<div class="form-box">
-<h2>Login</h2>
-<input id="user" placeholder="Username">
-<input id="pass" type="password" placeholder="Password">
-<button class="btn primary" onclick="login()">Login</button>
-<p>Demo: user / 1234</p>
-<button onclick="closeLogin()">Close</button>
+<!-- LOGIN -->
+<div class="auth" id="auth">
+<div class="box">
+<h3>Login</h3>
+<input id="u" placeholder="user"><br><br>
+<input id="p" type="password" placeholder="pass"><br><br>
+<button onclick="login()" class="btn primary">Login</button>
+<button onclick="closeLogin()" class="btn">Close</button>
 </div>
 </div>
 
 <!-- DASHBOARD -->
-<div class="dashboard" id="dashboard">
+<div class="dashboard" id="dash">
 <h1>Dashboard</h1>
-
-<div class="grid">
-<div class="card">Users: 120</div>
-<div class="card">Orders: 54</div>
-<div class="card">Revenue: $2400</div>
+<p>Welcome to system</p>
+<button onclick="logout()" class="btn primary">Logout</button>
 </div>
-
-<br>
-<button class="btn primary" onclick="logout()">Logout</button>
-</div>
-
-<!-- STICKY CTA -->
-<div class="sticky">🚀 Hire Me Now</div>
 
 <script>
-
-/* OPEN LOGIN */
 function openLogin(){
-document.getElementById("authBox").style.display="flex";
+document.getElementById("auth").style.display="flex";
 }
 
-/* CLOSE LOGIN */
 function closeLogin(){
-document.getElementById("authBox").style.display="none";
+document.getElementById("auth").style.display="none";
 }
 
-/* LOGIN */
 function login(){
-let u=document.getElementById("user").value;
-let p=document.getElementById("pass").value;
+let u=document.getElementById("u").value;
+let p=document.getElementById("p").value;
 
 if(u==="user" && p==="1234"){
-localStorage.setItem("auth","1");
-showDashboard();
+document.getElementById("auth").style.display="none";
+document.getElementById("dash").style.display="block";
 }else{
 alert("Wrong login");
 }
 }
 
-/* SHOW DASHBOARD */
-function showDashboard(){
-document.getElementById("authBox").style.display="none";
-document.getElementById("dashboard").style.display="block";
-}
-
-/* AUTO LOGIN */
-if(localStorage.getItem("auth")){
-showDashboard();
-}
-
-/* LOGOUT */
 function logout(){
-localStorage.removeItem("auth");
-document.getElementById("dashboard").style.display="none";
+document.getElementById("dash").style.display="none";
 }
-
-/* CLOSE ON OUTSIDE CLICK */
-window.onclick=function(e){
-let box=document.getElementById("authBox");
-if(e.target===box){
-box.style.display="none";
-}
-}
-
 </script>
 
 </body>

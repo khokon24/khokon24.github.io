@@ -3,79 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Dev Pro Max</title>
+<title>KhokonDev | Agency Portfolio</title>
+
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- NAV -->
+<header class="nav">
+<h2 class="logo">KhokonDev</h2>
 <nav>
-<div class="logo">KhokonDev</div>
-<div>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#process">Process</a>
+<a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
-</div>
 </nav>
+</header>
 
 <!-- HERO -->
-<section class="hero">
-<div class="terminal">
-> loading developer profile...<br>
-> frontend system ready ✔
+<section id="home" class="hero">
+
+<div class="badge">🚀 Available for Freelance Projects</div>
+
+<h1>High-Converting Websites That Grow Your Business</h1>
+
+<p>
+I design modern landing pages, ecommerce UI & business websites that convert visitors into customers.
+</p>
+
+<div class="cta">
+<a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me Now</a>
+<a href="#work" class="btn outline">View Work</a>
 </div>
 
-<h1>Hi, I'm <span>Frontend Developer</span></h1>
-<p>I build fast, clean and responsive web applications.</p>
+<!-- STATS -->
+<div class="stats">
 
-<div class="btns">
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="https://github.com/" class="btn">GitHub</a>
+<div class="stat"><span class="counter" data-target="50">0</span>+ Projects</div>
+<div class="stat"><span class="counter" data-target="30">0</span>+ Clients</div>
+<div class="stat"><span class="counter" data-target="100">0</span>% Satisfaction</div>
+<div class="stat"><span class="counter" data-target="24">0</span>h Response</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+<h2>Services</h2>
+
+<div class="grid">
+
+<div class="card">⚡ Landing Page Design</div>
+<div class="card">🛒 Ecommerce UI Design</div>
+<div class="card">💼 Business Website</div>
+<div class="card">🔧 HTML/CSS Bug Fix</div>
+<div class="card">📱 Responsive Fix</div>
+<div class="card">🎯 Conversion Optimization</div>
+
 </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-<h2>Projects & Demos</h2>
+<!-- WORK -->
+<section id="work" class="section dark">
+<h2>My Work</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Landing Page</h3>
-<p>High converting SaaS landing page UI</p>
-<a href="landing.html">Live Demo →</a>
+<h3>Landing Page Demo</h3>
+<p>High converting SaaS landing page</p>
+<a href="landing.html">Open Demo</a>
 </div>
 
 <div class="card">
-<h3>Ecommerce UI</h3>
-<p>Modern shop interface with product layout</p>
-<a href="ecommerce.html">Live Demo →</a>
+<h3>Ecommerce Demo</h3>
+<p>Modern shopping UI system</p>
+<a href="ecommerce.html">Open Demo</a>
+</div>
+
+<div class="card">
+<h3>Portfolio System</h3>
+<p>Clean agency-level portfolio</p>
 </div>
 
 </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-<h2>Skills</h2>
-<div class="tags">
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-<span>GitHub</span>
-<span>Responsive Design</span>
+<!-- PROCESS -->
+<section id="process" class="section">
+<h2>Working Process</h2>
+
+<div class="grid">
+<div class="card">1. Requirement Analysis</div>
+<div class="card">2. UI Design Strategy</div>
+<div class="card">3. Development</div>
+<div class="card">4. Testing & Delivery</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="section dark">
+<h2>Client Reviews</h2>
+
+<div class="grid">
+
+<div class="card">
+“Excellent work! My landing page conversion increased.” — John
+</div>
+
+<div class="card">
+“Very professional and fast delivery.” — Sarah
+</div>
+
+<div class="card">
+“Clean design and great communication.” — Ahmed
+</div>
+
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: yourmail@gmail.com</p>
+<section id="contact" class="section">
+
+<h2>Let’s Work Together</h2>
+
+<form action="https://formspree.io/f/xojnlako" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+<button class="btn primary">Send Message</button>
+
+</form>
+
 </section>
 
 <footer>
-© 2026 KhokonDev
+<p>© 2026 KhokonDev | Agency Level Developer</p>
 </footer>
+
+<script>
+const counters=document.querySelectorAll(".counter");
+
+const animate=()=>{
+counters.forEach(counter=>{
+const target=+counter.getAttribute("data-target");
+let count=0;
+
+const update=()=>{
+const inc=target/80;
+if(count<target){
+count+=inc;
+counter.innerText=Math.floor(count);
+requestAnimationFrame(update);
+}else{
+counter.innerText=target;
+}
+};
+update();
+});
+};
+
+window.addEventListener("scroll",()=>{
+const stats=document.querySelector(".stats");
+if(stats.getBoundingClientRect().top<window.innerHeight){
+animate();
+}
+});
+</script>
 
 </body>
 </html>

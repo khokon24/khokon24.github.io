@@ -29,8 +29,8 @@ overflow-x:hidden;
 .nav{
 position:sticky;
 top:0;
-background:rgba(10,15,20,0.85);
-backdrop-filter:blur(14px);
+background:rgba(10,15,20,0.95);
+backdrop-filter:blur(16px);
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -42,10 +42,14 @@ box-shadow:0 10px 30px rgba(0,0,0,0.5);
 
 .logo{
 color:#00ff88;
-font-weight:800;
+font-weight:900;
 font-size:22px;
-letter-spacing:1px;
+letter-spacing:1.2px;
 text-shadow:none;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+position:relative;
+z-index:10;
 }
 
 /* nav links */

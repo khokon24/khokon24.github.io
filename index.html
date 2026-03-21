@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KhokonDev | Final Portfolio</title>
+<title>KhokonDev | Final Agency Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,45 +18,46 @@
 <nav>
 <a href="#home">Home</a>
 <a href="#services">Services</a>
+<a href="#case">Case Study</a>
 <a href="#work">Work</a>
-<a href="#process">Process</a>
+<a href="#demos">Demos</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero">
+<div class="glow"></div>
 
-<div class="badge">🚀 Available for Freelance Projects</div>
+<div class="badge" data-aos="fade-down">🚀 Available for Freelance Projects</div>
 
-<h1>I Build High-Converting Websites That Grow Your Business</h1>
+<h1 data-aos="fade-up">I Build Websites That Generate REAL Clients</h1>
 
-<p>Landing pages, ecommerce UI & business websites focused on conversion and modern UI/UX.</p>
+<p data-aos="fade-up">High converting landing pages, ecommerce UI & business websites focused on sales, UX and performance.</p>
 
-<div class="cta">
+<div class="cta" data-aos="fade-up">
 <a href="https://www.fiverr.com/khokondev" class="btn primary">Hire Me Now</a>
-<a href="#work" class="btn outline">View Work</a>
+<a href="#demos" class="btn outline">View Demos</a>
 </div>
-
-<div class="trust">⭐ Trusted globally • ⚡ Fast Delivery • 🎯 Conversion Focused</div>
 
 </section>
 
-<!-- ACHIEVEMENT BAR -->
-<section class="achievements">
-<div>50+ Projects</div>
-<div>30+ Clients</div>
-<div>5+ Countries</div>
-<div>100% Satisfaction</div>
+<!-- ACHIEVEMENT -->
+<section class="achievements" data-aos="zoom-in">
+<div>🔥 50+ Projects</div>
+<div>💼 30+ Clients</div>
+<div>🌍 Global Work</div>
+<div>⚡ Fast Delivery</div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section">
+<section id="services" class="section" data-aos="fade-up">
 <h2>Services</h2>
 
 <div class="grid">
 <div class="card">Landing Page Design</div>
-<div class="card">Ecommerce UI Design</div>
+<div class="card">Ecommerce UI/UX</div>
 <div class="card">Business Website</div>
 <div class="card">Bug Fix</div>
 <div class="card">Responsive Fix</div>
@@ -64,7 +66,7 @@
 </section>
 
 <!-- WHY HIRE ME -->
-<section class="section dark">
+<section class="section dark" data-aos="fade-up">
 <h2>Why Hire Me</h2>
 
 <div class="grid">
@@ -76,42 +78,51 @@
 </section>
 
 <!-- CASE STUDY -->
-<section class="section">
+<section id="case" class="section" data-aos="fade-up">
 <h2>Case Study</h2>
 
 <div class="card case">
 <h3>Landing Page Optimization</h3>
-<p>Before: Low engagement page</p>
-<p>After: Improved UI + CTA optimization</p>
+<p>Problem: Low conversion landing page</p>
+<p>Solution: UI redesign + CTA optimization</p>
 <p><b>Result: +40% conversion increase</b></p>
 </div>
 </section>
 
 <!-- WORK -->
-<section id="work" class="section dark">
+<section id="work" class="section dark" data-aos="fade-up">
 <h2>My Work</h2>
 
 <div class="grid">
-<div class="card">Landing Page Project</div>
+<div class="card">SaaS Landing Page</div>
 <div class="card">Ecommerce UI Design</div>
 <div class="card">Business Website</div>
 </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process" class="section">
-<h2>Process</h2>
+<!-- DEMOS -->
+<section id="demos" class="section" data-aos="fade-up">
+<h2>Live Demos</h2>
 
 <div class="grid">
-<div class="card">1. Requirement</div>
-<div class="card">2. Design</div>
-<div class="card">3. Development</div>
-<div class="card">4. Delivery</div>
+
+<div class="card">
+<h3>🚀 Landing Page Demo</h3>
+<p>High converting sales landing page</p>
+<a class="btn primary" href="landing.html">Open Demo</a>
+</div>
+
+<div class="card">
+<h3>🛒 Ecommerce Demo</h3>
+<p>Modern shop UI system</p>
+<a class="btn primary" href="ecommerce.html">Open Demo</a>
+</div>
+
 </div>
 </section>
 
 <!-- FAQ -->
-<section class="section dark">
+<section id="faq" class="section dark" data-aos="fade-up">
 <h2>FAQ</h2>
 
 <div class="grid">
@@ -123,7 +134,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section" data-aos="fade-up">
 <h2>Let’s Work Together</h2>
 
 <form action="https://formspree.io/f/xojnlako" method="POST">
@@ -137,8 +148,13 @@
 </section>
 
 <footer>
-<p>© 2026 KhokonDev | Final Portfolio</p>
+<p>© 2026 KhokonDev | Final Agency Portfolio</p>
 </footer>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 900, once: true });
+</script>
+
 </body>
-  </html>
+</html>
